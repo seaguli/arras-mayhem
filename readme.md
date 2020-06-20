@@ -1,7 +1,4 @@
-# A fan-made sequel to diep.io, this time ran by a console controller with swords. 
-<sub><sup>
-    (Imperium#9339)
-</sub></sup>
+# A fan-made sequel to diep.io, this time with hypersonic cannons and unworldly spawners. 
 ****
 ## Requirements:
 - A Private Arras Server. (incompatible with kot32 arras servers.)
