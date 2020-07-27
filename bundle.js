@@ -1856,13 +1856,13 @@
                                 z.rendery = z.cy;
                                 z.renderv = z.view;
                                 ia && (clearInterval(qa), Y.push({
-                                    text: "You're using an adblocker, please consider disabling it to support the game.",
+                                    text: "You're using an adblocker, that's cool!",
                                     status: 2,
                                     alpha: 0,
                                     time: Date.now()
                                 }), qa = setInterval(() => {
                                     Y.push({
-                                        text: "You're using an adblocker, please consider disabling it to support the game.",
+                                        text: "You're using an adblocker, that's cool!",
                                         status: 2,
                                         alpha: 0,
                                         time: Date.now()
@@ -1954,7 +1954,7 @@
                         V.logEvent("disconnect");
                         g.open = !1;
                         b.disconnected = !0;
-                        b.isInGame && (b.isInGame = !1, b.died || b.message || (b.message = "Socket closed. If you disconnected, respawn now to regain your score."));
+                        b.isInGame && (b.isInGame = !1, b.died || b.message || (b.message = "Socket closed. Refresh to continue playing!"));
                         console.warn("WebSocket closed: ",
                             a)
                     };
@@ -2873,10 +2873,18 @@
                         let d = b.screenWidth / 2,
                             n = b.screenHeight / 2 - 50;
                         var m = D(A.type, A.color);
+                       var cap = [
+                        [" oof! ", "  oof!!  "],
+                        ["   oof!!!   ",
+                            "    oof!!!    ", "     oof!!", "oof!!", "oof!"
+                        ],
+                    ];
+                    cap = cap[Math.floor(Math.random() * cap.length)];
+                      let mss = cap[Math.floor(Math.random() * cap.length)];
                         let u = M[A.type].position,
                             t = 140 / u.axis;
                         ba(b.screenWidth / 2 - t * u.middle.x * .707 - 190 - 70, b.screenHeight / 2 - 35 + t * u.middle.x * .707 - 10, m, 1.5, 1, .5 * t / m.realSize, -Math.PI / 4, !0);
-                        a.draw("oof", d, n - 80, 8, l.guiwhite, "center");
+                        a.draw(mss, d, n - 80, 8, l.guiwhite, "center");
                         e.draw("Level " +
                             A.__s.getLevel() + " " + M[A.type].name, d - 170, n - 30, 24, l.guiwhite);
                         c.draw("Final score: " + H.formatLargeNumber(Math.round(b.finalScore.get())), d - 170, n + 25, 50, l.guiwhite);
@@ -2914,7 +2922,7 @@
                     var c = [
                         ["Stuck on connecting? Click the Starter tab on the client page!", "Stuck on connecting? Press the Starter tab on the client page!"],
                         ["Stuck on connecting? Push the Starter tab on the client page!",
-                            "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.", "Push the Tilde key to access TESTBED if you have a token.", "The server resets every 10 minutes to clear lag, be wary of this!", "All tanks have up to 10x reload!"
+                            "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.", "Want access to TESTBED? Join the Discord Server!", "The server resets every 10 minutes to clear lag, be wary of this!", "All tanks have up to 10x reload!"
                         ],
                         ["Avoid upgrading the reload stat if you wish for a smooth game", "Have Fun!",
                             "Good Luck!"

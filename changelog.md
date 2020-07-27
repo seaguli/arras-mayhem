@@ -1,4 +1,25 @@
 # Update
+- The client has been updated with a lot of new functions! Try clicking on the Arras logo to try them out!
+# Update
+- Added a ton of new tanks
+# Update
+- Added Exploder tank and branch
+# Update
+- Fixed up tank branching
+- Added Auto-tank branches
+# Update
+- Added 4 new tanks
+
+- Heavy Twin - Branches off Twin
+
+- Kraken - Branches off Octo Tank and Cyclone
+
+- Stomper - Branches off Hexa Tank
+
+- Frigate - Branches off Overseer and Cruiser
+
+- Added 2 new bosses to the Testbed branch
+# Update
 - Some tanks are now unlocked at tier 4 (Lvl60)
 - Added a handful of Spawner-branch tanks
 # Update

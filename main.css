@@ -25,7 +25,7 @@ html, body {
 body {
   font-family: Ubuntu;
   font-size: 14px;
-  background-image: url("https://media.discordapp.net/attachments/372305400638472200/709192726142517279/screenshot_24.png");
+  background-image: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/background.png");
   background-color: #484848;
 }
 
@@ -223,8 +223,10 @@ a.menuTab {
   margin-right: 10px;
 }
 a.menuTab.discord {
-  padding: 6px 10px 7px 32px;
-  background: #7289DA url(/img/discord.svg) 8px 3px/22px no-repeat;
+  background: #7289DA 
+}
+a.menuTab.catto {
+  background: #1E8449
 }
 a.menuTab.stat {
   background: #f00 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAKUlEQVQoU2NkQAP/////DxJiZGRkRJZC4YAkcCpEl6C9QrgNhKweSgoBUcBf8wTAguMAAAAASUVORK5CYII=) 10px 8px no-repeat;
