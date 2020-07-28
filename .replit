@@ -1,1 +1,2 @@
-run = "node bundle.js"
+language = "html"
+run = "html index"
