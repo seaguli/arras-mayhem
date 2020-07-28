@@ -1,1 +1,1 @@
-web: bundle.js
+web: index.php
