@@ -23,3 +23,4 @@ The client currently uses arrasio5 as a server, but you can edit it!
                  -  at: p.glitch ("YOUR-ARRAS-SERVER")
                  
 - p.glitch is the name of your Arras.io server. For example, ("arrasio5")
+- code isn't important
