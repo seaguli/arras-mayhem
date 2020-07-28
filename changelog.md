@@ -1,4 +1,6 @@
 # Update
+- Map has been redesigned, did I mention the Bases have names too?!
+# Update
 - The client has been updated with a lot of new functions! Try clicking on the Arras logo to try them out!
 # Update
 - Added a ton of new tanks

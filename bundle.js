@@ -185,16 +185,15 @@
                     case 19:
                         return l.guiblack;
                     case 20:
-                        return 150 > Date.now() % 300 ? l.blue : l.red;
+                         return "#008080";
                     case 21:
-                        return 150 >
-                            Date.now() % 300 ? l.blue : l.grey;
+                        return "#8FFF00";
                     case 22:
-                        return 150 > Date.now() % 300 ? l.grey : l.blue;
+                        return "#FEFCAA";
                     case 23:
-                        return 150 > Date.now() % 300 ? l.red : l.grey;
+                        return 150 > Date.now() % 300 ? l.red : l.blue;
                     case 24:
-                        return 150 > Date.now() % 300 ? l.grey : l.red;
+                        return 150 > Date.now() % 300 ? l.red : l.red;
                     case 30:
                         return "#d21fff";
                     case 31:
@@ -1342,8 +1341,6 @@
                         KEY_OVER_RIDE: ["I", 73],
                         KEY_PING: [",", 188],
                         KEY_RECORD: ["V", 86],
-                        KEY_REVERSE_MOUSE: ["U", 85],
-                        KEY_REVERSE_TANK: ["Y", 89],
                         KEY_RIGHT: ["L", 76],
                         KEY_SCREENSHOT: ["G", 71],
                         KEY_UP: ["K", 75]
@@ -3070,7 +3067,6 @@
                 help: {
                     KEY_OVER_RIDE: "R",
                     KEY_LEVEL_UP: "N",
-                    KEY_ABILITY: "F",
                     KEY_CHOOSE_1: "Y",
                     KEY_CHOOSE_2: "U",
                     KEY_CHOOSE_3: "I",
@@ -3083,8 +3079,8 @@
                 KEY_OVER_RIDE: 82,
                 KEY_LEVEL_UP: 78,
                 KEY_ABILITY: 70,
-                KEY_REVERSE_TANK: 86,
                 KEY_REVERSE_MOUSE: 66,
+                                KEY_REVERSE_TANK: 86,
                 KEY_SCREENSHOT: 81,
                 KEY_UPGRADE_MAX: 77,
                 KEY_CLASS_TREE: 84,
@@ -3123,6 +3119,7 @@
                 KEY_MOUSE_1: 9,
                 KEY_MOUSE_2: 16,
                 KEY_FUCK_YOU: 192,
+               KEY_GOD: 80,
                 KEY_KILL_YOURSELF: 79,
                 screenWidth: window.innerWidth,
                 screenHeight: window.innerHeight,
@@ -3634,7 +3631,7 @@
                             this.emit("L");
                             break;
                         case a.KEY_ABILITY:
-                            this.emit("A")
+                            this.emit("V")
                     }
                     if (!e.ctrlKey && !e.altKey) {
                         if (a.canSkill) {
@@ -3684,11 +3681,8 @@
                                 case a.KEY_OVER_RIDE:
                                     this.talk("t", 2);
                                     break;
-                                case a.KEY_REVERSE_MOUSE:
-                                    this.talk("t", 3);
-                                    break;
                                 case a.KEY_REVERSE_TANK:
-                                    this.talk("t", 4);
+                                    this.emit("J");
                                     break;
                                 case a.KEY_UPGRADE_MAX:
                                     this.statMaxing = !0;
@@ -3698,6 +3692,9 @@
                                     break;
                                 case a.KEY_KILL_YOURSELF:
                                     this.emit("K");
+                                    break;
+                                 case a.KEY_REVERSE_MOUSE:
+                                    this.emit("O");
                                     break;
                                 case a.KEY_PING:
                                     a.showDebug = !0;

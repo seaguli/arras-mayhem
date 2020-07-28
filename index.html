@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <!-- Here is an example of the audio script used -->
                      <script>
 var bflat2 = new Audio();
 bflat2.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/syt.ogg");
@@ -43,6 +44,13 @@ function PlaySound1() {
   </div>
   <div id="mainWrapper">
     <div id="startMenuWrapper">
+                         <script>
+var bflat3 = new Audio();
+bflat3.src = ("https://cdn.glitch.com/a7477e89-8be7-424d-bc6b-e817e4757afd%2Fsysse_cancel.ogg?v=1595845766996");
+function PlaySound3() {
+    bflat3.play();
+}
+</script> <!-- Support for random audio below -->
                  <script>
 var bflat = new Audio();
                       var brandom = [
@@ -59,7 +67,7 @@ function PlaySound() {
 </script>
       <audio id ="bflat" src="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg"></audio>
       <div class="menuTabs">
-        <a class="menuTab discord" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://donatebot.io/checkout/427668515357458443" target="_blank" rel="noopener noreferrer">Donate</a>
+        <a class="menuTab discord" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://discord.gg/yTZdDPA" target="_blank" rel="noopener noreferrer">Discord</a>
         <a class="menuTab catto" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://glitch.com/~arras-mayhem" target="_blank" rel="noopener noreferrer">View Source</a>
         <a class="menuTab stat" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://arrasio5.glitch.me/" target="_blank" rel="noopener noreferrer">Starter</a>
       </div>
@@ -69,12 +77,12 @@ function PlaySound() {
             <div class="slider startMenuSlidingContent">
               <center><img src="https://i.imgur.com/OfpSbhf.png" onmouseover="PlaySound1()" onclick="PlaySound()" class="icon" alt="arras icon"></center>
               <h1>arras.io</h1>
-              <input type="text" autofocus tabindex="1" spellcheck="false" placeholder="Start the mayhem as" id="playerNameInput" maxlength="28">
-              <input type="text" tabindex="1" placeholder="Token" id="playerKeyInput" maxlength="48">
+              <input type="text" autofocus tabindex="1" onmouseover="PlaySound1()" onclick="PlaySound()" spellcheck="false" placeholder="Start the mayhem as" id="playerNameInput" maxlength="28">
+              <input type="password" tabindex="1" onmouseover="PlaySound1()" onclick="PlaySound()" placeholder="Token" id="playerKeyInput" maxlength="48">
             </div>
             <div class="slider" id="startMenuSlidingTrigger">
               <h3>
-                <span id="viewOptionText">view options</span>&nbsp;&nbsp;<i class="arrow" id="optionArrow" style="transform:rotate(-45deg);-webkit-transform:rotate(-45deg)"></i>
+                <span id="viewOptionText" onmouseover="PlaySound1()" onclick="PlaySound3()">view options</span>&nbsp;&nbsp;<i class="arrow" id="optionArrow" style="transform:rotate(-45deg);-webkit-transform:rotate(-45deg)"></i>
               </h3>
             </div>
             <div class="slider startMenuSlidingContent">
@@ -89,7 +97,7 @@ function PlaySound() {
                   <tr>
                     <td><div><b data-key="KEY_LEVEL_UP">N</b><span> - </span>level up</div></td>
                     <td><div><b data-key="KEY_KILL_YOURSELF">O</b><span> - </span>suicide</div></td>
-                    <td><div><b data-key="KEY_REVERSE_MOUSE">B</b><span> - </span>reverse mouse</div></td>
+                    <td><div><b data-key="KEY_REVERSE_MOUSE">B</b><span> - </span>god mode</div></td>
                   </tr>
                   <tr>
                     <td><div><b data-key="KEY_SCREENSHOT">Q</b><span> - </span>screenshot</div></td>
@@ -147,7 +155,7 @@ function PlaySound() {
                 <option value="dark">Dark Borders</option>
                 <option value="neon">Neon Mode</option>
                 <option value="glass">Glass Mode</option>
-              </select>
+              </select> <!-- Toggleable audio via checkbox -->
               <input id="optCustom" style="display:none" placeholder="Enter your theme code here">
                                          <audio loop id = "music">
                             <source
@@ -171,31 +179,31 @@ function PlaySound() {
               <table>
                 <tr>
                   <td><div>
-                    <label class="container"><input id="optScreenshotMode" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Screenshot Mode</label>
+                    <label class="container"><input id="optScreenshotMode" onmouseover="PlaySound1()" onclick="PlaySound()" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Screenshot Mode</label>
                   </div></td>
                   <td><div>
-                    <label class="container"><input id="optNoPointy" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Classic Traps</label>
-                  </div></td>
-                </tr><tr>
-                  <td><div>
-                    <label class="container"><input id="optFancy" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Low Graphics</label>
-                  </div></td>
-                  <td><div>
-                    <label class="container"><input id="optShield" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Separate Shield Bar</label>
+                    <label class="container"><input id="optNoPointy" onclick="PlaySound()" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Classic Traps</label>
                   </div></td>
                 </tr><tr>
                   <td><div>
-                    <label class="container"><input id="optAutoLevel" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Auto-Level Up</label>
+                    <label class="container"><input id="optFancy" onclick="PlaySound()" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Low Graphics</label>
                   </div></td>
                   <td><div>
-                    <label class="container"><input id="optPrediction" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Use New Interpolation</label>
+                    <label class="container"><input id="optShield" onclick="PlaySound()" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Separate Shield Bar</label>
                   </div></td>
                 </tr><tr>
                   <td><div>
-                    <label class="container"><input id="optPointy" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Sharp Edges</label>
+                    <label class="container"><input id="optAutoLevel" onclick="PlaySound()" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Auto-Level Up</label>
+                  </div></td>
+                  <td><div>
+                    <label class="container"><input id="optPrediction" onclick="PlaySound()" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Use New Interpolation</label>
+                  </div></td>
+                </tr><tr>
+                  <td><div>
+                    <label class="container"><input id="optPointy" onclick="PlaySound()" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Sharp Edges</label>
              </div></td>
                   <td><div>
-                    <label class="container"><input id="optSound" tabindex="-1" class="checkbox" type="checkbox" onclick="switchAudio()"><span class="checkmark"></span>Music...?</label>
+                    <label class="container"><input id="optSound" tabindex="-1" class="checkbox" type="checkbox" onclick="switchAudio()"><span class="checkmark"></span>Music</label>
                   </div></td>
                 </tr>
               </table>
