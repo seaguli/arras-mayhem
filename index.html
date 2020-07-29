@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- Here is an example of the audio script used -->
-                     <script>
-var bflat2 = new Audio();
-bflat2.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/syt.ogg");
-function PlaySound1() {
-    bflat2.play();
-}
-</script>
   <!-- Meta Properties -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -44,21 +36,6 @@ function PlaySound1() {
   </div>
   <div id="mainWrapper">
     <div id="startMenuWrapper">
-                         <script>
-var bflat3 = new Audio();
-bflat3.src = ("https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fsound%2022.wav?v=1596003626717");
-function PlaySound3() {
-    bflat3.play();
-}
-</script> <!-- Support for random audio below -->
-                 <script>
-var bflat = new Audio();
-bflat.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg");
-function PlaySound() {
-    bflat.play();
-}
-</script>
-      <audio id ="bflat" src="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg"></audio>
       <div class="menuTabs">
         <a class="menuTab discord" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://discord.gg/yTZdDPA" target="_blank" rel="noopener noreferrer">Discord</a>
         <a class="menuTab catto" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://glitch.com/~arras-mayhem" target="_blank" rel="noopener noreferrer">View Source</a>
@@ -150,25 +127,6 @@ function PlaySound() {
                 <option value="glass">Glass Mode</option>
               </select> <!-- Toggleable audio via checkbox -->
               <input id="optCustom" style="display:none" placeholder="Enter your theme code here">
-                                         <audio loop id = "music">
-                            <source
-                                      type = "audio/mpeg"
-                                      src = "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/mus"/>
-                                 oof no music for u
-                               </audio>
-                    
-                          <script>
-                            
-                          function switchAudio() {
-                              if (document.getElementById("optSound").checked === true) {
-                                  document.getElementById("music").play()
-                              } else if (document.getElementById("optSound").checked === false) {
-                                   document.getElementById("music").pause()
-                              }
-                              return;
-                          }
-
-                          </script>
               <table>
                 <tr>
                   <td><div>
@@ -244,5 +202,46 @@ function PlaySound() {
   }
   </script>
   <script src="./bundle.js"></script>
+                       <script>
+var bflat2 = new Audio();
+bflat2.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/syt.ogg");
+function PlaySound1() {
+    bflat2.play();
+}
+</script>
+                                           <audio loop id = "music">
+                            <source
+                                      type = "audio/mpeg"
+                                      src = "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/mus"/>
+                                 oof no music for u
+                               </audio>
+                    
+                          <script>
+                            
+                          function switchAudio() {
+                              if (document.getElementById("optSound").checked === true) {
+                                  document.getElementById("music").play()
+                              } else if (document.getElementById("optSound").checked === false) {
+                                   document.getElementById("music").pause()
+                              }
+                              return;
+                          }
+
+                          </script>
+                              <script>
+var bflat3 = new Audio();
+bflat3.src = ("https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fsound%2022.wav?v=1596003626717");
+function PlaySound3() {
+    bflat3.play();
+}
+</script> 
+                 <script>
+var bflat = new Audio();
+bflat.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg");
+function PlaySound() {
+    bflat.play();
+}
+</script>
+      <audio id ="bflat" src="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg"></audio>
 </body>
 </html>
