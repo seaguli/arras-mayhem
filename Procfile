@@ -1,1 +1,1 @@
-web: index.php
+web: heroku-php-apache2
