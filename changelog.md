@@ -1,4 +1,9 @@
 # Update
+- Fixed a bug where attempting to activate God Mode or suiciding would crash the server
+# Update
+- Improved Sentry AI
+- Added 2 new Sentries
+# Update
 - Added even more tanks
 - Buffed Heavy-3 Turret's firerate
 # Update
