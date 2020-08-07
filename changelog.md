@@ -1,5 +1,5 @@
 # Update
-- Fixed a bug where attempting to activate God Mode or suiciding would crash the server
+- Fixed a bug where attempting to activate God Mode or suiciding while already dead would crash the server
 # Update
 - Improved Sentry AI
 - Added 2 new Sentries
