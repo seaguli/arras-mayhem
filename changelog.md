@@ -1,4 +1,9 @@
 # Update
+- Added Hivemind branch from Inceptioner 
+- Recolored Nest Keeper
+- Fixed additional server crash bugs
+- Buffed Punt Gun and Shatterer
+# Update
 - Fixed a bug where attempting to activate God Mode or suiciding while already dead would crash the server
 # Update
 - Improved Sentry AI
