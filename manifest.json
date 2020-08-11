@@ -1,0 +1,11 @@
+{
+  "name": "arras-mayhem",
+  "short_name": "arras",
+  "description": "Play arras.io with 10x the reload",
+  "theme_color": "#b500ff",
+  "background_color": "#b500ff",
+  "display": "browser",
+  "orientation": "landscape",
+  "scope": "/",
+  "start_url": "index.html"
+}
