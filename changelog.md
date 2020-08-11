@@ -1,4 +1,7 @@
 # Update
+- Added Radar branch from Sniper
+- Added Base with Sunchip drones
+# Update
 - Added Hivemind branch from Inceptioner 
 - Recolored Nest Keeper
 - Fixed additional server crash bugs
