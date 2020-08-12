@@ -193,7 +193,7 @@
                     case 23:
                         return 150 > Date.now() % 300 ? l.red : l.blue;
                     case 24:
-                        return 150 > Date.now() % 300 ? l.red : l.red;
+                        return 150 > Date.now() % 300 ? l.blue : l.red;
                     case 30:
                         return "#d21fff";
                     case 31:
@@ -434,6 +434,12 @@
                 }
                 return btoa(b).replace(/=+/, "")
             }
+      
+      var smallaudio = new Audio();
+smallaudio.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg");
+function PlaySound210() {
+    smallaudio.play();
+}
 
             function t() {
                 if (!ua) {
@@ -1453,6 +1459,7 @@
                 }
             }
             document.getElementById("startButton").onclick = () => {
+                           PlaySound210()
                 t()
             };
             let La = WebSocket.prototype.close;
@@ -2465,7 +2472,7 @@
                                 na = O.max;
                             do {
                                 if (!b.showTree) break;
-                                let a = M.find(b => "Basic" === b.name);
+                                let a = M.find(b => "basic" === b.name);
                                 if (!a) break;
                                 let c = [],
                                     d = [],
@@ -3056,7 +3063,8 @@
             const p = {
                 openshift: (a, e) => `n-${a}-${e}.7e14.starter-us-west-2.openshiftapps.com`,
                 glitch: a => `${a}.glitch.me`,
-                heroku: a => `arras-${a}.herokuapp.com`,
+                replit: (a, e) => `${e}.${a}.repl.co`,
+                heroku: a => `${a}.herokuapp.com`,
                 arras: (a, e = 5E3) => `ip-${a}.arras.io:${e}`,
                 arrasUnknown: (a, e = 5E3) => `ipu-${a}.arras.io:${e}`
             };
@@ -3222,9 +3230,14 @@
                     at: "private",
                     untrusted: !0
                 }, {
+                    id: "c",
+                    type: "4TDM",
+                    code: "arras-mayhem-heroku",
+                    at: p.heroku ("arras-mayhem"),
+                }, {
                     id: "a",
                     type: "4TDM",
-                    code: "arrasio-mayhem",
+                    code: "arras-mayhem",
                     at: p.glitch ("arrasio5")
                 },].map((a, e) => ({
                     data: a,
