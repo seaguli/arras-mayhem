@@ -2,6 +2,9 @@
   "name": "arras-mayhem",
   "description": "Arras.io with 10x the reload",
   "version": "1.2",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "keywords": [
     "arras, game, arrasio"
   ],
