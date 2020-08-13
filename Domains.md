@@ -8,3 +8,4 @@ The client can be found at the following links:
 - <https://arras-io.netlify.app/>
 - <https://arras-mayhem.umineko.repl.co/>
 - <https://arras-mayhem.vercel.app/>
+- <http://arrasiomayhem.surge.sh/> (Does not recieve client updates)
