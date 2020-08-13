@@ -5,6 +5,10 @@
   "keywords": [
     "arras, game, arrasio"
   ],
+    "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
   "contributors": [
     {
       "name": "Seaguli"
