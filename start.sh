@@ -1,2 +1,2 @@
 #!/bin/bash
-node index.js 2>&1
+python main.py 2>&1
