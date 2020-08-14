@@ -14,13 +14,15 @@ The client is able to be hosted as either a Node.js Express, PHP or Python Flask
 
 - NodeJS Express server:
    ``node index.js``
-    - <https://repl.it/@umineko/arras-express>
+    - <https://repl.it/@umineko/arras-express> 
+    - <https://github.com/seaguli/arras-express>
 - PHP server:
    ``heroku-php-apache2`` **HEROKU ONLY, no script req'd for repl.it**
    - <https://repl.it/@umineko/arras-php>
 - Python Flask server:
    ``python main.py`` 
    - <https://repl.it/@umineko/arras-flask>
+   - <https://github.com/seaguli/arras-flask>
    
 Additonal code is availbile on my Github project's page, <https://github.com/seaguli/arras-mayhem>
 # Remixing
