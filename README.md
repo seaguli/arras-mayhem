@@ -33,7 +33,7 @@ The client is able to be hosted as either a Node.js Express, PHP, Go HTTP, Ruby 
    - <https://repl.it/@umineko/arras-ruby>
    - <https://gitlab.com/seaguli/arras-ruby>
    
-Additonal code is availbile on my Github project's page, <https://github.com/seaguli/arras-mayhem>
+Additonal code is available on my Github project's page, <https://github.com/seaguli/arras-mayhem>
 # Remixing
 Feel free to remix this project and modify it to your own liking!
 
@@ -48,3 +48,9 @@ The client currently uses arrasio5 as a server, but you can edit it!
                  
 - p.glitch is the name of your Arras.io server hosted on Glitch.com. For example, ("arrasio5")
 - code isn't important
+
+# Credits
+- Original Client by ProKameron
+<https://glitch.com/~imp-template2>
+- Seaguli
+- Various StackOverflow contributors (For webserver code)
