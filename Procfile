@@ -1,1 +1,1 @@
-web: heroku-php-apache2
+web: python main.py
