@@ -1,4 +1,7 @@
 # Update
+- Added more themes
+- Added 1 new boss to the Testbed branch
+# Update
 - Added Radar branch from Sniper
 - Added Base with Sunchip drones
 # Update
