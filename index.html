@@ -78,9 +78,9 @@ function PlaySound() {
   <div id="mainWrapper">
     <div id="startMenuWrapper">
       <div class="menuTabs">
-        <a class="menuTab discord" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://discord.gg/yTZdDPA" target="_blank" rel="noopener noreferrer">Discord</a>
-        <a class="menuTab catto" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://glitch.com/~arras-mayhem" target="_blank" rel="noopener noreferrer">View Source</a>
-        <a class="menuTab stat" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://arrasio5.glitch.me/" target="_blank" rel="noopener noreferrer">Starter</a>
+        <a class="menuTab discord" onclick="PlaySound()" onmouseover="PlaySound1()" title="Join our Discord server" href="https://discord.gg/yTZdDPA" target="_blank" rel="noopener noreferrer">Discord</a>
+        <a class="menuTab catto" onclick="PlaySound()" onmouseover="PlaySound1()" title="View the client's source code" href="https://glitch.com/~arras-mayhem" target="_blank" rel="noopener noreferrer">View Source</a>
+        <a class="menuTab stat" onclick="PlaySound()" onmouseover="PlaySound1()" title="Click me if you're stuck on connecting" href="https://arrasio5.glitch.me/" target="_blank" rel="noopener noreferrer">Starter</a>
       </div>
       <div id="startMenu">
         <div class="startMenuHolder">
@@ -97,7 +97,7 @@ function PlaySound() {
               </h3>
             </div>
             <div class="slider startMenuSlidingContent">
-              <div class="controlTable optionsHeader">Advanced Controls <i id="resetControls" class="reset resetControls" title="Reset controls"></i><i id="moreControls" class="moreControls cross" title="More controls"></i></div>
+              <div class="controlTable optionsHeader" onclick="PlaySound3()" >Advanced Controls <i id="resetControls" class="reset resetControls" title="Reset controls"></i><i id="moreControls" class="moreControls cross" title="More controls"></i></div>
               <table class="controlTable" id="controlTable">
                 <tbody>
                   <tr>
@@ -155,6 +155,12 @@ function PlaySound() {
                 <option value="ocean">Coral Reef (Fan-made)</option>
                 <option value="badlands">Badlands (Fan-made)</option>
                 <option value="bleach">Bleach (Fan-made)</option>
+                 <option value="confusion">Confusion (Fan-made)</option>
+                 <option value="nebula">Nebula (Fan-made)</option>
+                 <option value="obstar">Obstar (Fan-made)</option>
+                  <option value="space">Space (Fan-made)</option>
+                <option value="borderless">Borderless (Fan-made)</option>
+                <option value="bordered">Bordered (Fan-made)</option>
                 <option value="custom">Custom</option>
               </select>
               <select id="optMobile" tabindex="-1">
@@ -167,7 +173,7 @@ function PlaySound() {
                 <option value="neon">Neon Mode</option>
                 <option value="glass">Glass Mode</option>
               </select> <!-- Toggleable audio via checkbox -->
-              <input id="optCustom" style="display:none" placeholder="Enter your theme code here">
+              <input id="optCustom" onmouseover="PlaySound1()" onclick="PlaySound()" style="display:none" placeholder="Enter your theme code here">
               <table>
                 <tr>
                   <td><div>
