@@ -13,7 +13,7 @@ The offical client for the Arrasio5 server.
 # Webservers
 The client is able to be hosted as either a Node.js Express, PHP, Go HTTP, Ruby Webrick, C or Python Flask webserver. Details below! Examples are linked as well.
 
-- NodeJS Express server:
+- Node.JS Express server:
    ``node index.js``
     - <https://repl.it/@umineko/arras-express> 
     - <https://gitlab.com/seaguli/arras-express>
