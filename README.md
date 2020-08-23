@@ -33,7 +33,7 @@ The client is able to be hosted as either a Node.js Express, PHP, Go HTTP, Ruby 
    - <https://repl.it/@umineko/arras-ruby>
    - <https://gitlab.com/seaguli/arras-ruby>
 - C webserver:
-   ``make`` , ``./arras 8000 ./``
+   ``make`` , then ``./arras 8000 ./``
    - <https://repl.it/@umineko/http-server>
    
 Additonal code is available on my Github project's page, <https://github.com/seaguli/arras-mayhem>
