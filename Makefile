@@ -3,15 +3,15 @@
 
 CC     = gcc
 CFLAGS = -Wall -pthread -g
-OBJ    = server.o
-EXE    = server
+OBJ    = arras.o
+EXE    = arras
 
 # Rule for compilation of the main program
 $(EXE): $(OBJ)
 	$(CC) $(CFLAGS) -o $(EXE) $(OBJ)
 
 # Object file dependencies
-server.o: server.h
+arras.o: arras.h
 
 # Remove executables and object files
 clean:
