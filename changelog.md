@@ -1,4 +1,7 @@
 # Update
+- Tier 4 tanks are now Testbed only
+- Nerfed some lagmaking tanks
+# Update
 
 - The bots ate spinach and became op
 - Added Grave Digger - Branches off Drone Guard and Underseer
