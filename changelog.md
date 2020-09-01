@@ -1,4 +1,7 @@
 # Update
+- Added a Dominator to the centre of the map
+- Map is slightly bigger
+# Update
 - Tier 4 tanks are now Testbed only
 - Nerfed some lagmaking tanks
 # Update
