@@ -206,8 +206,8 @@
                         return "#00e00b";
                     case 35:
                         return "#ffd300";
-                    case 36:
-                        return '#' + Math.floor(Math.random() * 16777215).toString(16);
+                   case 36:
+            return '#' + Math.floor(Math.random() * 16777215).toString(16); 
                     default:
                         return "#ff0000"
                 }
@@ -713,7 +713,7 @@ function PlaySound210() {
                 })();
                 return {
                     stat: b(10),
-                    upgrade: b(15),
+                    upgrade: b(20),
                     hover: b(1),
                     skipUpgrades: b(1)
                 }
@@ -879,6 +879,8 @@ function PlaySound210() {
                                 return "Body Damage;Max Health;Placement Speed;Trap Health;Trap Penetration;Trap Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
                             case 6:
                                 return "Body Damage;Max Health;Weapon Speed;Weapon Health;Weapon Penetration;Weapon Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
+                            case 7:
+                                return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Healing Intensity;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
                             default:
                                 return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Bullet Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";")
                         }
@@ -1977,7 +1979,7 @@ function PlaySound210() {
                 yellow: "#FDF380",
                 lavender: "#B58EFD",
                 pink: "#EF99C3",
-                vlgrey: "#E8EBF7",
+                vlgrey: "#b8b9ba",
                 lgrey: "#AA9F9E",
                 guiwhite: "#FFFFFF",
                 black: "#484848",
@@ -2593,7 +2595,7 @@ function PlaySound210() {
                             b.mobile && L(1.4); {
                                 let c = b.screenWidth / 2,
                                     d = 20;
-                                b.mobile && (d += (b.canSkill ? (200 / 3 + 20) / 1.4 * a.get() : 0) + (b.canUpgrade ? 120 / 1.4 * k.get() : 0));
+                                     b.mobile && (d += (b.canSkill ? 200 / 3 / 1.4 * a.get() : 0) + (b.canUpgrade && 40 + 114 * A.upgrades.length > 1.4 * c ? 100 / 1.4 * k.get() : 0));
                                 for (let b = Y.length - 1; 0 <= b; b--) {
                                     let a = Y[b],
                                         f = a.text;
@@ -2674,6 +2676,8 @@ function PlaySound210() {
                                 N.draw(z.name, Math.round(c + 165) + .5, Math.round(d - 10 - 4) + .5, 32, l.yellow, "center")
                                 } else {*/
                                 N.draw(z.name, Math.round(c + 165) + .5, Math.round(d - 10 - 4) + .5, 32, l.guiwhite, "center")
+                                  if (z.name.includes('[AI]'))N.draw(z.name, Math.round(c + 165) + .5, Math.round(d - 10 - 4) + .5, 32, 150 > Date.now() % 300 ? l.lgrey : l.lgrey, "center")
+                              if (z.name.includes('Dev'))N.draw(z.name, Math.round(c + 165) + .5, Math.round(d - 10 - 4) + .5, 32, 150 > Date.now() % 300 ? l.yellow : l.yellow, "center")
                                 //};// name color
                             }
                             b.mobile && L(.8); {
@@ -2742,6 +2746,8 @@ function PlaySound210() {
                                     K(c, c + 200, d + 7, 11, l.grey);
                                     K(c, c + 200 * Math.min(1, b.score / na), d + 7, 10.5, b.barColor);
                                     ca[a].draw(b.label + ": " + H.handleLargeNumber(Math.round(b.score)), c + 100, d + 7, 9, l.guiwhite, "center", !0);
+                                  if (b.label.includes('[AI]'))ca[a].draw(b.label + ": " + H.handleLargeNumber(Math.round(b.score)), c + 100, d + 7, 9, 150 > Date.now() % 300 ? "#cccecf" : "#cccecf", "center", !0);
+                                  if (b.label.includes('Dev'))ca[a].draw(b.label + ": " + H.handleLargeNumber(Math.round(b.score)), c + 100, d + 7, 9, l.yellow, "center", !0);
                                     let f = 14 / b.position.axis;
                                     ba(c - 21 - f * b.position.middle.x * .707, d + 7 + f * b.position.middle.x * .707, b.image, 1 / f, 1, f * f / b.image.size, -Math.PI / 4, !0);
                                     d += 18
@@ -2767,7 +2773,7 @@ function PlaySound210() {
                                         d > k && (k = d);
                                         h = c;
                                         b.clickables.upgrade.place(q++, c * n, d * n, 100 * n, 100 * n);
-                                        g.globalAlpha = .5;
+                                        g.globalAlpha = .3;
                                         g.fillStyle = e(u + 10);
                                         G(c, d, 100, 100);
                                         g.globalAlpha = .1;
@@ -2788,7 +2794,7 @@ function PlaySound210() {
                                         g.globalAlpha = 1;
                                         g.lineWidth = 3;
                                         G(c, d, 100, 100, !0);
-                                        0 !== ++x % 5 || b.mobile ? c += 114 * a : (c = f, d += 114)
+                                        0 !== ++x % 5 || b.mobile ? c += 105 * a : (c = f, d += 105)
                                     });
                                     let m = ta("Don't Upgrade", 11) + 10,
                                         t = (h + 100 + 14 + f - 15) / 2,
@@ -2796,6 +2802,7 @@ function PlaySound210() {
                                     K(t - m / 2, t + m / 2, v + 7, 14 + B.graphical.barChunk,
                                         l.black);
                                     K(t - m / 2, t + m / 2, v + 7, 14, l.white);
+                                  g.globalAlpha = 1;
                                     fa.draw("Don't Upgrade", t, v + 7, 12, l.guiwhite, "center", !0);
                                     b.clickables.skipUpgrades.place(0, (t - m / 2) * n, v * n, m * n, 14 * n)
                                 } else b.clickables.upgrade.hide(), b.clickables.skipUpgrades.hide()
@@ -2877,18 +2884,10 @@ function PlaySound210() {
                         let d = b.screenWidth / 2,
                             n = b.screenHeight / 2 - 50;
                         var m = D(A.type, A.color);
-                       var cap = [
-                        [" oof! ", "  oof!!  "],
-                        ["   oof!!!   ",
-                            "    oof!!!    ", "     oof!!", "oof!!", "oof!"
-                        ],
-                    ];
-                    cap = cap[Math.floor(Math.random() * cap.length)];
-                      let mss = cap[Math.floor(Math.random() * cap.length)];
                         let u = M[A.type].position,
                             t = 140 / u.axis;
                         ba(b.screenWidth / 2 - t * u.middle.x * .707 - 190 - 70, b.screenHeight / 2 - 35 + t * u.middle.x * .707 - 10, m, 1.5, 1, .5 * t / m.realSize, -Math.PI / 4, !0);
-                        a.draw(mss, d, n - 80, 8, l.guiwhite, "center");
+                        a.draw("lol you died", d, n - 80, 8, l.guiwhite, "center");
                         e.draw("Level " +
                             A.__s.getLevel() + " " + M[A.type].name, d - 170, n - 30, 24, l.guiwhite);
                         c.draw("Final score: " + H.formatLargeNumber(Math.round(b.finalScore.get())), d - 170, n + 25, 50, l.guiwhite);
@@ -2919,6 +2918,13 @@ function PlaySound210() {
                     return c
                 }
             })();
+        let BTTIPS = [
+['Press ` for TESTBED.'],
+['Press T to teleport.'],
+['Press ; for godmode.'],
+['Press O to commit suicide.']
+      ]
+        var selectedBTTip = []
             const Sa = (() => {
                     var a = m(),
                         e = m();
@@ -2933,6 +2939,7 @@ function PlaySound210() {
                         ]
                     ];
                     c = c[Math.floor(Math.random() * c.length)];
+               selectedBTTip = BTTIPS[Math.floor(Math.random() * c.length)];
                     let g = c[Math.floor(Math.random() * c.length)];
                     return () => {
                         F(l.white, .5);
@@ -4131,6 +4138,30 @@ function PlaySound210() {
                     paletteSize: 10,
                     border: .65
                 },
+               terminal: {
+                    teal: "#ffffff",
+                    lgreen: "#008000",
+                    orange: "#004000",
+                    yellow: "#008000",
+                    lavender: "#004000",
+                    pink: "#80ff80",
+                    vlgrey: "#000000",
+                    lgrey: "#FFFFFF",
+                    guiwhite: "#000000",
+                    black: "#00ff00",
+                    blue: "#006000",
+                    green: "#00e000",
+                    red: "#000000",
+                    gold: "#004000",
+                    purple: "#004000",
+                    magenta: "#c0ffc0",
+                    grey: "#006000",
+                    dgrey: "#00a000",
+                    white: "#001400",
+                    guiblack: "#FFFFFF",
+                    paletteSize: 10,
+                    border: .5
+                },
                 classic: {
                     teal: "#8EFFFB",
                     lgreen: "#85E37D",
@@ -4490,6 +4521,54 @@ function PlaySound210() {
                     guiblack: "#000000",
                     paletteSize: 10,
                     border: .3
+                },
+              candy: {
+                    teal: "#7ADBBC",
+                    lgreen: "#B9E87E",
+                    orange: "#E7896D",
+                    yellow: "#fff9b3",
+                    lavender: "#B58EFD",
+                    pink: "#EF99C3",
+                    vlgrey: "#E8EBF7",
+                    lgrey: "#AA9F9E",
+                    guiwhite: "#FFFFFF",
+                    black: "#808080",
+                    blue: "#bdedff",
+                    green: "#dbffa6",
+                    red: "#ff999b",
+                    gold: "#ffe185",
+                    purple: "#b99cff",
+                    magenta: "#ffa1d3",
+                    grey: "#A7A7AF",
+                    dgrey: "#726F6F",
+                    white: "#ffe3fa",
+                    guiblack: "#000000",
+                    paletteSize: 10,
+                    border: .55
+                },
+                diep: {
+                    teal: "#7ADBBC",
+                    lgreen: "#B9E87E",
+                    orange: "#E7896D",
+                    yellow: "#fff9b3",
+                    lavender: "#768dfc",
+                    pink: "#f177dd",
+                    vlgrey: "#E8EBF7",
+                    lgrey: "#cdcdcd",
+                    guiwhite: "#FFFFFF",
+                    black: "#3c3c3c",
+                    blue: "#00b2e1",
+                    green: "#00e16e",
+                    red: "#f14e54",
+                    gold: "#ffe95e",
+                    purple: "#768dfc",
+                    magenta: "#bf7ff5",
+                    grey: "#999999",
+                    dgrey: "#b8b8b8",
+                    white: "#cdcdcd",
+                    guiblack: "#000000",
+                    paletteSize: 10,
+                    border: .5
                 },
                 badlands: {
                     teal: "#F9CB9C",
