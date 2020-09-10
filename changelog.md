@@ -1,4 +1,13 @@
 # Update
+- Added 6 new tanks
+- Proximity - Branches off Trapper and Creeper
+- Sorcerer - Branches off Underseer and Overseer
+- Carbine - Branches off Rifle and Drone Guard
+- Locator - Branches off Auto-Basic and Creeper
+- Twin-3 - Branches off Auto-3 and Twin
+- Vector - Branches off Pathogen
+
+# Update
 - Radar branch is now testbed only for being too out of place
 - Re-added Speeder to Tri-angle branch
 # Update
