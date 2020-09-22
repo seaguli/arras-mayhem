@@ -1,4 +1,8 @@
 # Update
+- Made bases invincible and unable to be targeted by bots
+- Smasher branch tanks now have a skill boost to make up for their lack of cannons
+- Added Pilot, branchs off Tri-angle and Spawner
+# Update
 - Added 6 new tanks
 - Proximity - Branches off Trapper and Creeper
 - Sorcerer - Branches off Underseer and Overseer
