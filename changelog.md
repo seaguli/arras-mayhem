@@ -1,4 +1,8 @@
 # Update
+- Split Grave Digger into Undergunner and Undertrapper
+- Nerfed Minishot
+- Excalibur branches from Compass rather than Creeper
+# Update
 - Hivemind branches off from Basic (Page 2) at Lvl 30 rather than from Inceptioner
 - Added Minishot - Branches off Basic at Lvl 15
 - Reworked Twin Spawner
