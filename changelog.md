@@ -1,4 +1,12 @@
 # Update
+- Added 6 tanks
+- Antibody - Branches off Underseer and Pathogen
+- Twin Sniper - Branches off Sniper and Twin
+- Twin-Angle - Branches off Tri-Angle and Double Twin
+- Autoceptioner - Branchers off Auto-3 and Flankceptioner
+- Auto-Auto-3 - Branches off Auto-3 and Auto-Basic (Page 2)
+- Supervisor - Branches off Overseer
+# Update
 - Split Grave Digger into Undergunner and Undertrapper
 - Nerfed Minishot
 - Excalibur branches from Compass rather than Creeper
