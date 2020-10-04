@@ -1461,7 +1461,9 @@ function PlaySound210() {
                 }
             }
             document.getElementById("startButton").onclick = () => {
-                           PlaySound210()
+                                            PlaySound210()
+                  var inputVal = document.getElementById("playerNameInput").value;
+               if (inputVal === "") return alert("Please enter a name!")
                 t()
             };
             let La = WebSocket.prototype.close;
