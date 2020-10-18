@@ -1052,33 +1052,40 @@ function PlaySound210() {
                     }) => !h.includes(b));
                     return c.map(b => b.to).join(" ")
                 },
-                aa = null,
-                ab = null,
-                ea;
-            for (let a of b.servers) {/*
-                if ((null ==
-                        a.visible || a.visible > Ha) && b.server !== a) continue;
-                let [d, c, h] = a.code.split("-"), u = document.createElement("tr");
-                u.appendChild(document.createElement("td")).textContent = b.codeTable[0][d];
-                u.appendChild(document.createElement("td")).textContent = b.codeTable[1][c][0];
-                u.appendChild(document.createElement("td")).textContent = $a(h);
-                a.featured && u.classList.add("featured");
-                u.onclick = () => {
-                    ea.classList.remove("selected");
-                    ea = u;
-                    ea.classList.add("selected");*/
-                    b.server = a;
-                    /*b.partyLink = 0;
-                    N.gameMode = a.id;
-                    location.hash = "#" +
-                        a.id;
-                    aa.scrollTop < u.offsetTop - 50 ? aa.scrollTop = u.offsetTop - 50 : aa.scrollTop > u.offsetTop - 10 && (aa.scrollTop = u.offsetTop - 10)
-                };
-                ab.appendChild(u);
-                b.server === a && (ea = u, ea.classList.add("selected"), setTimeout(() => {
-                    aa.scrollTop = u.offsetTop - 30;
-                }))*/
-            }
+              aa = document.getElementById("serverSelector").parentNode.parentNode,
+        ab = document.getElementById("serverSelector"),
+        ea;
+      for (let a of b.servers) {
+        if ((null == a.visible || a.visible > Ha) && b.server !== a) continue;
+        let [d, c, h] = a.code.split("-"),
+          u = document.createElement("tr");
+        u.appendChild(document.createElement("td")).textContent =
+          b.codeTable[0][d];
+        u.appendChild(document.createElement("td")).textContent =
+          b.codeTable[1][c][0];
+        u.appendChild(document.createElement("td")).textContent = $a(h);
+        a.featured && u.classList.add("featured");
+        u.onclick = () => {
+          ea.classList.remove("selected");
+          ea = u;
+          ea.classList.add("selected");
+          b.server = a;
+          b.partyLink = 0;
+          N.gameMode = a.id;
+          location.hash = "#" + a.id;
+          aa.scrollTop < u.offsetTop - 50
+            ? (aa.scrollTop = u.offsetTop - 50)
+            : aa.scrollTop > u.offsetTop - 10 &&
+              (aa.scrollTop = u.offsetTop - 10);
+        };
+        ab.appendChild(u);
+        b.server === a &&
+          ((ea = u),
+          ea.classList.add("selected"),
+          setTimeout(() => {
+            aa.scrollTop = u.offsetTop - 30;
+          }));
+      }
             let bb = (() => {
                     let b = !1,
                         a = document.getElementById("startMenuSlidingTrigger"),
@@ -1461,7 +1468,7 @@ function PlaySound210() {
                 }
             }
             document.getElementById("startButton").onclick = () => {
-                                            PlaySound210()
+                                        PlaySound210()
                   var inputVal = document.getElementById("playerNameInput").value;
                if (inputVal === "") return alert("Please enter a name!")
                 t()
@@ -2934,7 +2941,7 @@ function PlaySound210() {
                     var c = [
                         ["Stuck on connecting? Click the Starter tab on the client page!", "Stuck on connecting? Press the Starter tab on the client page!"],
                         ["Stuck on connecting? Push the Starter tab on the client page!",
-                            "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.", "Want access to TESTBED? Join the Discord Server!", "The server resets every 10 minutes to clear lag, be wary of this!", "All tanks have up to 10x reload!"
+                            "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.", "Want access to TESTBED? Join the Discord Server!", "Have you tried Diep.io yet?", "All tanks have up to 10x reload!"
                         ],
                         ["Avoid upgrading the reload stat if you wish for a smooth game", "Have Fun!",
                             "Good Luck!"
@@ -3147,117 +3154,98 @@ function PlaySound210() {
                 died: !1,
                 showDebug: !1,
                 showTree: !1,
-                server: null,
-                codeTable: [{
-                        z: "Private",
-                        local: "Local",
-                        dvi: "DVI",
-                        glitch: "Glitch",
-                        os: "OpenShift",
-                        heroku: "Heroku",
-                        your: "------",
-                        linode: "Linode",
-                        vultr: "Vultr",
-                        buyvm: "BuyVM",
-                        extravm: "ExtraVM",
-                        hetzner: "Hetzner",
-                        ovh: "OVH"
-                    }, {
-                        unknown: ["Unknown", null],
-                        local: ["Local", null],
-                        server: ["------", null],
-                        virginia: ["US East",
-                            -4
-                        ],
-                        montreal: ["US East", -4],
-                        oregon: ["US West", -7],
-                        frankfurt: ["Europe", 2],
-                        sv: ["US West", -7],
-                        la: ["US West", -7],
-                        germany: ["Europe", 2],
-                        london: ["Europe", 1],
-                        singapore: ["Asia", 8]
-                    },
-                    [
-                        [{
-                            id: "p",
-                            to: "Private"
-                        }],
-                        [{
-                            id: "e",
-                            dynamic: "word"
-                        }],
-                        [{
-                            id: "w",
-                            dynamic: "words"
-                        }],
-                        [{
-                            id: "o",
-                            to: "Open"
-                        }],
-                        [{
-                            id: "m",
-                            to: "Maze",
-                            delay: !0,
-                            remove: "f"
-                        }],
-                        [{
-                            id: "f",
-                            to: "FFA"
-                        }, {
-                            id: "2",
-                            to: "2 Team",
-                            end: "2TDM"
-                        }, {
-                            id: "3",
-                            to: "3 Team",
-                            end: "3TDM"
-                        }, {
-                            id: "4",
-                            to: "4 Team",
-                            end: "4TDM"
-                        }],
-                        [{
-                            id: "d",
-                            to: "Domination"
-                        }, {
-                            id: "m",
-                            to: "Mothership",
-                            remove: "2"
-                        }, {
-                            id: "a",
-                            to: "Assault",
-                            remove: "2"
-                        }]
-                    ]
-                ],
+  server: null,
+        codeTable: [
+          {
+            z: "Private",
+            local: "Local",
+            dvi: "DVI",
+        
+            os: "OpenShift",
+            heroku: "Heroku",
+                glitch: "Glitch",
+            linode: "Linode",
+            vultr: "Vultr",
+            buyvm: "BuyVM",
+            extravm: "ExtraVM",
+            hetzner: "Hetzner",
+            ovh: "OVH"
+          },
+          {
+            unknown: ["Unknown", null],
+            local: ["Local", null],
+            worldwide: ["Worldwide", null],
+            virginia: ["US East", -4],
+            montreal: ["US East", -4],
+            oregon: ["US West", -7],
+            frankfurt: ["Europe", 2],
+            sv: ["US West", -7],
+            la: ["US West", -7],
+            germany: ["Europe", 2],
+            london: ["Europe", 1],
+            singapore: ["Asia", 8]
+          },
+          [
+            [{ id: "p", to: "Private" }],
+            [{ id: "e", dynamic: "word" }],
+            [{ id: "w", dynamic: "words" }],
+            [{ id: "o", to: "Open" }],
+            [{ id: "m", to: "Maze", delay: !0, remove: "f" }],
+            [
+              { id: "f", to: "FFA" },
+              { id: "2", to: "2 Team", end: "2TDM" },
+              { id: "3", to: "3 Team", end: "3TDM" },
+              { id: "4", to: "4 Team", end: "4TDM" }
+            ],
+            [
+              { id: "d", to: "Domination" },
+              { id: "m", to: "Mothership", remove: "2" },
+              { id: "a", to: "Assault", remove: "2" }
+            ]
+          ]
+        ],
                 timezone: (new Date).getTimezoneOffset() / -60,
-                servers: [{
-                    id: "x",
-                    type: "0unk",
-                    code: "z-unknown-pe6server",
-                    at: "private",
-                    untrusted: !0
-                }, {
-                    id: "c",
-                    type: "4TDM",
-                    code: "arras-mayhem-heroku",
-                    at: p.heroku ("arras-mayhem"),
-                }, {
-                    id: "a",
-                    type: "4TDM",
-                    code: "arras-mayhem",
-                    at: p.heroku ("arras-mayhem")
-                },].map((a, e) => ({
-                    data: a,
-                    i: e
-                })).sort((a, e) => a.data.type < e.data.type ? -1 : e.data.type > a.data.type ? 1 : a.i - e.i).map(({
-                    data: a
-                }) => a),
-                partyLink: 0,
-                mobile: /android|mobi/i.test(navigator.userAgent),
-                showInvisible: !1
-            };
+               servers: [
+          {
+            visible: 0,
+            id: "Heroku-Beta",
+            type: "beta",
+            code: "heroku-frankfurt-4",
+            at: p.heroku('arrasdotio'),
+            prefer: !0,
+            featured: 1, // For Featured Status.
+          },
+          {
+            visible: 0,
+            id: "Glitch-Developer",
+            type: "dev",
+            code: "glitch-virginia-f",
+            at: p.glitch('arrasio5'),
+           // featured: 1, // For Featured Status.
+          },
+                 {
+                             visible: 0,
+            id: "Heroku-Main",
+            type: "main",
+            code: "heroku-virginia-4",
+            at: p.heroku('arras-mayhem'),
+           // featured: 1, // For Featured Status.
+          },
+          
+        ]
+          .map((a, e) => ({ data: a, i: e }))
+          .sort((a, e) =>
+            a.data.type < e.data.type
+              ? -1
+              : e.data.type > a.data.type
+              ? 1
+              : a.i - e.i
+          )
+          .map(({ data: a }) => a),
+        partyLink: 0,
+        mobile: /android|mobi/i.test(navigator.userAgent),
+        showInvisible: !1
+      };
             window.Arras = (a = !0) => a || e;
             r.exports = e
         }, function(r, p) {
