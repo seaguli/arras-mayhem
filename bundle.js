@@ -207,7 +207,26 @@
                     case 35:
                         return "#ffd300";
                    case 36:
-            return '#' + Math.floor(Math.random() * 16777215).toString(16); 
+               return T(
+              [
+                "#ff1000",
+                "#ff9000",
+                "#ffd300",
+                "#00e00b",
+                "#226ef6",
+                "#a913cf"
+              ][Math.floor((Date.now() / 200) % 6)],
+              [
+                "#ff9000",
+                "#ffd300",
+                "#00e00b",
+                "#226ef6",
+                "#a913cf",
+                "#ff1000"
+              ][Math.floor((Date.now() / 200) % 6)],
+              (Date.now() / 200) % 1
+            );
+          //["#ff1600","#ff2b00","#ff4100","#ff5700","#ff6c00","#ff8200","#ff9700","#ffad00","#ffc300","#ffd800"]
                     default:
                         return "#ff0000"
                 }
@@ -2896,7 +2915,8 @@ function PlaySound210() {
                         let u = M[A.type].position,
                             t = 140 / u.axis;
                         ba(b.screenWidth / 2 - t * u.middle.x * .707 - 190 - 70, b.screenHeight / 2 - 35 + t * u.middle.x * .707 - 10, m, 1.5, 1, .5 * t / m.realSize, -Math.PI / 4, !0);
-                        a.draw("lol you died", d, n - 80, 8, l.guiwhite, "center");
+       var inputVal = document.getElementById("playerNameInput").value;
+                        a.draw(inputVal + " was not The Impostor", d, n - 80, 8, l.guiwhite, "center");
                         e.draw("Level " +
                             A.__s.getLevel() + " " + M[A.type].name, d - 170, n - 30, 24, l.guiwhite);
                         c.draw("Final score: " + H.formatLargeNumber(Math.round(b.finalScore.get())), d - 170, n + 25, 50, l.guiwhite);
@@ -2908,6 +2928,7 @@ function PlaySound210() {
                             d, n + 125, 16, l.guiwhite, "center")
                     }
                 })();
+              
             window.onbeforeunload = () => b.isInGame && !b.died ? !0 : null;
             window.$createProfile = (() => {
                 var b = m();
@@ -2927,13 +2948,7 @@ function PlaySound210() {
                     return c
                 }
             })();
-        let BTTIPS = [
-['Press ` for TESTBED.'],
-['Press T to teleport.'],
-['Press ; for godmode.'],
-['Press O to commit suicide.']
-      ]
-        var selectedBTTip = []
+      
             const Sa = (() => {
                     var a = m(),
                         e = m();
@@ -2948,7 +2963,6 @@ function PlaySound210() {
                         ]
                     ];
                     c = c[Math.floor(Math.random() * c.length)];
-               selectedBTTip = BTTIPS[Math.floor(Math.random() * c.length)];
                     let g = c[Math.floor(Math.random() * c.length)];
                     return () => {
                         F(l.white, .5);
@@ -3079,7 +3093,7 @@ function PlaySound210() {
             const p = {
                 openshift: (a, e) => `n-${a}-${e}.7e14.starter-us-west-2.openshiftapps.com`,
                 glitch: a => `${a}.glitch.me`,
-                replit: (a, e) => `${e}.${a}.repl.co`,
+                replit: a => `${a}.repl.co`,
                 heroku: a => `${a}.herokuapp.com`,
                 arras: (a, e = 5E3) => `ip-${a}.arras.io:${e}`,
                 arrasUnknown: (a, e = 5E3) => `ipu-${a}.arras.io:${e}`
@@ -3163,6 +3177,7 @@ function PlaySound210() {
         
             os: "OpenShift",
             heroku: "Heroku",
+               replit: "Repl.it",
                 glitch: "Glitch",
             linode: "Linode",
             vultr: "Vultr",
@@ -3216,6 +3231,15 @@ function PlaySound210() {
             featured: 1, // For Featured Status.
           },
           {
+              visible: 0,
+            id: "Heroku-FFA",
+            type: "ffa",
+            code: "heroku-frankfurt-f",
+            at: p.heroku('arras-moe'),
+            prefer: !0,
+            featured: 1, // For Featured Status.
+          },
+          {
             visible: 0,
             id: "Glitch-Developer",
             type: "dev",
@@ -3229,6 +3253,14 @@ function PlaySound210() {
             type: "main",
             code: "heroku-virginia-4",
             at: p.heroku('arras-mayhem'),
+           // featured: 1, // For Featured Status.
+          },
+     {     
+                              visible: 0,
+            id: "Repl.it-Legacy",
+            type: "legacy",
+            code: "replit-virginia-2",
+            at: p.replit('arras-mayhem-legacy.seaguli'),
            // featured: 1, // For Featured Status.
           },
           
@@ -3641,7 +3673,7 @@ function PlaySound210() {
                             this.emit("L");
                             break;
                         case a.KEY_ABILITY:
-                            this.emit("V")
+                           this.emit("ChangeTankOne");
                     }
                     if (!e.ctrlKey && !e.altKey) {
                         if (a.canSkill) {
