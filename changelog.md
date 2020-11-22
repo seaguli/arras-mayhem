@@ -1,4 +1,26 @@
 # Update
+- Perfomed some fixes on death screen messages
+- Added 2 New Tanks
+- Katana - Branches off Akafuji
+- Cutlass - Branches off Akafuji
+# Update
+- Reworked Exploder branch mechanics -
+Bullets will create an explosion upon death, rather than after a delay
+- Added Fragmenter - Branches off Mega-Trapper and Exploder
+- Added Shrapnel - Branches off Exploder
+- Buffed Giga-Trapper
+- Nerfed the entire Tri-Angle branch
+# Update
+- Added Heroku Europe FFA server with non-public token
+# Update
+- Added animated tanks Akafuji and Switcheroo
+- Akafuji branches off Lancer at lvl 45
+- Switcheroo branches off Basic (Page 2) at lvl 45
+- Added experimental IP blacklisting system for Heroku servers to stop lagbots
+# Update
+- Discord bot has been updated
+- The server will kick players without a name now
+# Update
 - Added 6 tanks
 - Antibody - Branches off Underseer and Pathogen
 - Twin Sniper - Branches off Sniper and Twin
