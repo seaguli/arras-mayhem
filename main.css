@@ -10,11 +10,15 @@
   border-radius: 3px;
   background: rgba(0, 0, 0, 0.3);
 }
-
+@font-face {
+    font-family: "freude-regular";
+      src: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/Freude.otf") format("opentype");
+    font-style: normal;
+}
 html, body {
   overflow: hidden;
   height: 100%;
-
+  cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_normal.cur"), default;
   position: fixed;
   -webkit-overflow-scrolling: touch;
   -webkit-user-select: none;
@@ -23,10 +27,15 @@ html, body {
 }
 
 body {
-  font-family: Ubuntu;
+  font-family: Caveat;
   font-size: 14px;
-  background-image: url("https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbackground.png?v=1595838170164");
-  background-color: #484848;
+  background-image: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/tilebg.png");
+  background-color: #fab6ee;
+     -webkit-animation: slide 300s infinite;
+}
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: 20000px 3300px; }
 }
 
 hr {
@@ -40,18 +49,30 @@ html, body, canvas {
   margin: 0;
   padding: 0;
 }
-
+canvas {
+  image-rendering: optimizeSpeed;
+  image-rendering: pixelated;
+}
 h1 {
   padding: 0;
   margin: 0;
   text-align: center;
-  font: bold 40px/1.1 Ubuntu;
+  font: bold 40px/1.1 Caveat;
 }
-
+body.mobile h1 {
+  font-size: 32px;
+}
+h4 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+    background-color: yellow;
+  color: red;
+}
 div.optionsHeader {
   display: block;
   margin: 10px 0 4px;
-  font: bold 13px/1 Ubuntu;
+  font: bold 13px/1 Caveat;
   color: #000000;
   text-align: center;
 }
@@ -60,12 +81,27 @@ h3 {
   font-size: 14px;
   color: #484848;
   text-align: center;
+  border-radius: 3px;
   padding: 0;
   margin: 4px 0;
+  width: 100%;
+  height: 20px;
+  box-sizing: border-box;
+  background: #b1d5fc;
+    border-bottom: 2px solid #70b5ff;
+  box-shadow: inset 0 -2px #70b5ff;
+  border: 0;
+  opacity: 1
 }
 #startMenuSlidingTrigger:hover > h3 {
   color: #323232;
+  opacity: 0.8
 }
+#startMenuSlidingTrigger:active > h3 {
+  color: #323232;
+     animation:pfpDefault 800ms linear both;
+}
+
 #startMenuSlidingTrigger:hover > h3 > i.arrow {
   border-color: #323232;
 }
@@ -87,32 +123,38 @@ h3 {
 }
 .serverSelector tr.featured {
   color: #e8ae00;
-  text-shadow: /*#ffe500 0 0 4px,*/ #fff27e 0 0 6px;
+  text-shadow: #ffe500 0 0 4px, #fff27e 0 0 6px;
+}
+.serverSelector tr:hover {   cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.cur"), auto;
 }
 .serverSelector tr.selected {
   color: #8ABC3F;
   cursor: default;
+    cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.cur"), auto;
 }
 
 .shadowScroll {
   overflow-y: scroll;
   background:
     /* Shadow covers */
-    linear-gradient(#dde6eb 30%, rgba(255, 255, 255, 0)),
-    linear-gradient(rgba(255, 255, 255, 0), #dde6eb 70%) 0 100%,
+    linear-gradient(#ffd1f7 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(rgba(255, 255, 255, 0), #ffd1f7 70%) 0 100%,
     /* Shadows */
     radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
     radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
   background-repeat: no-repeat;
-  background-color: #dde6eb;
+  background-color: #ffd1f7;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
   background-attachment: local, local, scroll, scroll;
+}
+.shadowScroll:hover {   cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.png"), auto;
 }
 a:link, a:visited {
   color: #484848;
 }
 a:link:hover, a:visited:hover {
   color: #909090;
+    cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.png"), auto;
 }
 
 input {
@@ -125,7 +167,7 @@ input {
   margin-top: 5px;
   margin-bottom: 5px;
   outline: none;
-  font-family: Ubuntu;
+  font-family: Caveat;
   transition: border 0.3s, background 0.3s, color 0.3s;
 }
 
@@ -158,7 +200,7 @@ input.error {
   max-height: 415px;
   padding: 10px;
   border-radius: 5px;
-  background-color: #DDE6EB;
+  background-color: #ffd1f7;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -215,36 +257,36 @@ body.mobile .startMenuHolder.shrinkable {
 a.menuTab {
   float: right;
   height: 13px;
-  font: 13px Ubuntu;
+  font: 13px Caveat;
   padding: 6px 10px 7px 10px;
   border-radius: 5px 5px 0 0;
-  color: #ffffff !important;
+  color: #ffd1fc !important;
   text-decoration: none;
   margin-right: 10px;
 }
 a.menuTab.discord {
    padding: 6px 10px 7px 28px;
-      animation:pfpDefault 800ms linear both;
-  background: #7289DA url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/svg0.svg") 4px 3px/21px no-repeat;
+  background: #b0c1ff url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/svg0.svg") 4px 3px/21px no-repeat;
+    animation:pfpDefault 800ms linear both;
 }
   a.menuTab.catto {
-      background: #f00 url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/coder.png") 8px 6px no-repeat;
-  padding: 6px 10px 7px 28px;
-        animation:pfpDefault 800ms linear both;
-}
-a.menuTab.stat {
-  background: #1E8449  url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/play.png") 3px 2px/23px no-repeat;
+      background: #ff8787 url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/coder.png") 8px 6px no-repeat;
   padding: 6px 10px 7px 28px;
       animation:pfpDefault 800ms linear both;
+}
+a.menuTab.stat {
+  background: #4cba7b  url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/play.png") 3px 2px/23px no-repeat;
+  padding: 6px 10px 7px 28px;
+    animation:pfpDefault 800ms linear both;
 }
 a.menuTab:link:hover, a.menuTab:visited:hover {
   text-decoration: underline;
-      animation:pfpHoverOn 800ms linear both;
+  cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.png"), auto;
+    animation:pfpHoverOn 800ms linear both;
 }
-
 .changelogSelectorContainer {
   height: 25px;
-  font: bold 20px Ubuntu;
+  font: bold 20px Caveat;
   text-align: center;
   padding: 0 15px 5px 0;
   overflow: auto hidden;
@@ -260,12 +302,12 @@ a.menuTab:link:hover, a.menuTab:visited:hover {
   pointer-events: none;
 }
 .changelogSelectorContainer::before {
-  background: linear-gradient(to right, rgba(221, 230, 235, 1) 0%, rgba(221, 230, 235, 0.3) 100%);
+
 }
 .changelogSelectorContainer::after {
   top: 10px;
   right: 10px;
-  background: linear-gradient(to left, rgba(221, 230, 235, 1) 0%, rgba(221, 230, 235, 0.3) 100%);
+ 
 }
 .changelogSelector {
   width: 340px;
@@ -286,12 +328,12 @@ a.menuTab:link:hover, a.menuTab:visited:hover {
 
 .changelogSelector span:not(:first-child)::before {
   content: ' ';
-  color: #aaa;
+  color: #ffd1f7;
   margin: 0 3px 0 0;
 }
 .changelogSelector span:not(:last-child)::after {
   content: ' |';
-  color: #aaa;
+  color: #ffd1f7;
   margin: 0 0 0 3px;
 }
 
@@ -366,6 +408,7 @@ body.mobile .controlTable {
 }
 .controlTable td b:hover {
   color: #777;
+    cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.png"), auto;
 }
 .controlTable td.editing b {
   background: #fff;
@@ -409,7 +452,9 @@ body.mobile #optMobile, body.mobile #optBorders {
   top: 0px;
   opacity: 1;
   width: 100%;
-  transition: top 500ms, opacity 500ms;
+    transition: top 700ms, opacity 600ms;
+  animation:pfpDefault 800ms linear both;
+  	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
 }
 .slided .slider {
   top: -275px;
@@ -429,25 +474,29 @@ body.mobile .startMenuSlidingContent {
   cursor: pointer;
   height: 15px;
 }
-
+#viewOptionText:hover { 
+  cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.cur"), default;}
+#optionArrow:hover { 
+  cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.cur"), default;}
+#bottomHolder { 
+  cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_normal.cur"), default;}
+#bottomHolder:hover { 
+  cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.cur"), default;}
 .icon {
   display: block;
   width: 96px;
   padding-top: 4px;
   height: 96px;
   border-radius: 50%;
-   animation:pfpDefault 800ms linear both;
+     animation:pfpDefault 800ms linear both;
 }
-
 .icon:hover {
      animation:pfpHoverOn 800ms linear both;
+    cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.cur"), auto;
 }
-
 .icon:active {
      animation:pfpDefault 400ms linear both;
 }
-
-
 body.mobile .icon {
   width: 55px;
   height: 55px;
@@ -459,7 +508,7 @@ body.mobile .icon {
   padding: 5px 10px 10px;
   overflow: hidden auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.15);
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.15);
 }
 
 #patchNotes ul {
@@ -531,21 +580,20 @@ body.mobile .icon {
   height: 40px;
   box-sizing: border-box;
   color: white;
-    animation:pfpDefault 800ms linear both;
   text-align: center;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
-  background: #A9D86D;
+  background: #71ff4a;
   border: 0;
   border-bottom: 2px solid #8ABC3F;
   cursor: pointer;
   box-shadow: inset 0 -2px #8ABC3F;
   border-radius: 5px;
-  font: 16px Ubuntu;
+  font: 16px Caveat;
 }
 #startButton:hover {
   margin-top: 1px;
   height: 39px;
-    animation: pfpHoverOn 1s linear both;
+    cursor: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cur_over.png"), auto;
   border-bottom: 1px solid #8ABC3F;
 }
 
@@ -612,7 +660,7 @@ body.mobile #startMenuWrapper { max-width: 750px; }
 .count {
   display: inline-block;
   width: 20px;
-  font: bold 12px Ubuntu;
+  font: bold 12px Caveat;
 }
 .count span {
   font-size: 10px;
@@ -739,7 +787,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font: 13px/1 Ubuntu;
+  font: 13px/1 Caveat;
   padding: 2px 28px 2px 8px;
   height: 21px;
   margin-left: 3px;
@@ -781,7 +829,7 @@ select:active {
   border-radius: 50%;
   text-align: center;
   background: rgb(0, 0, 0, 0.6);
-  font: bold 10px/15px Ubuntu;
+  font: bold 10px/15px Caveat;
   color: #fff;
   margin: 0 4px;
 }
@@ -794,7 +842,7 @@ select:active {
   width: 160px;
   background-color: #444444;
   color: #fff;
-  font: bold 11px Ubuntu;
+  font: bold 11px Caveat;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -896,6 +944,7 @@ i.flag::before {
 i.flag.down::before {
   margin-bottom: 2px;
 }
+
 @keyframes pfpHoverOn { 
   0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   3.4% { transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
