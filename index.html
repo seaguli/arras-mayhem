@@ -6,24 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <meta name="description" content="Don't ask why. Ask why not?">
   <meta name="robots" content="index, follow">
-  <meta property="og:image" content="https://i.imgur.com/OfpSbhf.png">
+  <meta property="og:image" content="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arraslogo.png">
   <meta property="og:image:width" content="80">
   <meta property="og:image:height" content="80">
   <title>arras.io</title>
   <!-- JS -->
- <!-- <script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-120544149-1"></script>
-  <script async src="//api.adinplay.com/libs/aiptag/pub/ACX/arras.io/tag.min.js"></script> -->
   <!-- CSS -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
   <link rel="stylesheet" href="/main.css">
-  <script>
-  var aiptag = aiptag || {};
-  aiptag.cmd = aiptag.cmd || [];
-  aiptag.cmd.display = aiptag.cmd.display || [];  aiptag.cmd.player = aiptag.cmd.player || [];
-  aiptag.gdprShowConsentTool = true;
-  </script>
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="256x256" href="https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2FLogo.png?v=1595837913869">
+  <link rel="icon" type="image/png" sizes="256x256" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arras.png">
   <meta name="theme-color" content="#8abc3f">
 </head>
 <!https://discordapp.com/oauth2/authorize?client_id=427927499071160320&redirect_uri=http%3A%2F%2Farras.io%2Fcallback&response_type=code&scope=identify%20email -->
@@ -36,20 +28,31 @@ function PlaySound1() {
     bflat2.play();
 }
 </script>
-                                           <audio loop id = "music">
-                            <source
-                                      type = "audio/mpeg"
-                                      src = "https://vgmsite.com/soundtracks/nekopara-op-ed-singles/haqatbuskv/03%20Taiyou%20Paradise%20%28inst%20ver.%29.mp3"/>
-                                 Your browser doesn't support music, but can it support arras?
-                               </audio>
-                    
+  
+
+                            <script>
+var music2 = new Audio();
+                                  const months = ["https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_14.ogg?v=1608943257454", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_01.ogg?v=1608943264101", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_02.ogg?v=1608943270065", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_10.ogg?v=1608943280133"];
+
+var rand = months[~~(Math.random() * months.length)];
+music2.src = (rand);
+function PlayMusic() {
+  music2.load();   
+    music2.play();
+}
+</script>
+
                           <script>
                             
                           function switchAudio() {
                               if (document.getElementById("optSound").checked === true) {
-                                  document.getElementById("music").play()
+                                   music2.play()
+                                  music2.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
                               } else if (document.getElementById("optSound").checked === false) {
-                                   document.getElementById("music").pause()
+                                   music2.pause()
                               }
                               return;
                           }
@@ -88,19 +91,22 @@ function PlaySound() {
         <div class="startMenuHolder">
           <div class="sliderHolder">
             <div class="slider startMenuSlidingContent">
-              <center><img src="https://i.imgur.com/OfpSbhf.png" onmouseover="PlaySound1()" onclick="PlaySound()" title="arras.io" class="icon" alt="arras icon"></center>
+              <center><img src="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arras.png" onmouseover="PlaySound1()" onclick="PlaySound()" title="arras.io" class="icon" alt="arras icon"></center>
               <h1>arras.io</h1>
+                                                      <noscript>
+    <h4>Please enable JavaScript to play!</h4>
+  </noscript>
                          <div class="serverSelector shadowScroll"><table><tbody id="serverSelector"></tbody></table></div>
-              <input type="text" autofocus tabindex="1" title="Your name" onclick="PlaySound()" spellcheck="false" placeholder="Start the mayhem as" id="playerNameInput" maxlength="28">
-              <input type="password" tabindex="1" onclick="PlaySound()" title="Use this field if you have a Token for Testbed access" placeholder="Token" id="playerKeyInput" maxlength="48">
+              <input type="text" autofocus tabindex="1" title="Your name"  spellcheck="false" placeholder="Start the mayhem as" id="playerNameInput" maxlength="28">
+              <input type="password" tabindex="1"  title="Use this field if you have a Token for Testbed access" placeholder="Token" id="playerKeyInput" maxlength="48">
             </div>
-            <div class="slider" id="startMenuSlidingTrigger">
+            <div class="slider" id="startMenuSlidingTrigger" onmouseover="PlaySound1()" title="Options, controls and more links">
               <h3>
-                <span id="viewOptionText" onclick="PlaySound3()">view options</span>&nbsp;&nbsp;<i class="arrow" id="optionArrow" style="transform:rotate(-45deg);-webkit-transform:rotate(-45deg)"></i>
+                <span id="viewOptionText" >view options</span>&nbsp;&nbsp;<i class="arrow" id="optionArrow" style="transform:rotate(-45deg);-webkit-transform:rotate(-45deg)"></i>
               </h3>
             </div>
             <div class="slider startMenuSlidingContent">
-              <div class="controlTable optionsHeader" onclick="PlaySound3()" >Advanced Controls <i id="resetControls" class="reset resetControls" title="Reset controls"></i><i id="moreControls" class="moreControls cross" title="More controls"></i></div>
+              <div class="controlTable optionsHeader" title="More Controls" onclick="PlaySound3()" >Advanced Controls <i id="resetControls" class="reset resetControls" title="Reset controls"></i><i id="moreControls" class="moreControls cross" title="More controls"></i></div>
               <table class="controlTable" id="controlTable">
                 <tbody>
                   <tr>
@@ -178,8 +184,8 @@ function PlaySound() {
                 <option value="dark">Dark Borders</option>
                 <option value="neon">Neon Mode</option>
                 <option value="glass">Glass Mode</option>
-              </select> <!-- Toggleable audio via checkbox -->
-              <input id="optCustom" onmouseover="PlaySound1()" onclick="PlaySound()" style="display:none" placeholder="Enter your theme code here">
+              </select> 
+              <input id="optCustom"  style="display:none" placeholder="Enter your theme code here">
               <table>
                 <tr>
                   <td><div>
@@ -208,7 +214,7 @@ function PlaySound() {
              </div></td>
                   <td><div>
                     <label class="container"><input id="optSound" tabindex="-1" class="checkbox" type="checkbox" onclick="switchAudio()"><span class="checkmark"></span>Music</label>
-                  </div></td>
+                  </div></td> <!-- Toggleable audio via checkbox -->
                 </tr>
               </table>
         
@@ -242,7 +248,7 @@ function PlaySound() {
   window.onerror = function(message, source, lineno, colno, error) {
     window.onerror = null
     if (error) error = error.toString()
-    console.warn('The game crashed, refreshing page to recover from error')
+    console.warn('The game crashed :(, refreshing page to recover from error')
     if (error == null && lineno == 0 && colno == 0) return
     var e = JSON.stringify({
       message: message,
@@ -251,7 +257,7 @@ function PlaySound() {
       colno: colno,
       error: error
     })
-    prompt('The game may have crashed, refresh the page to recover from error. If this is a private server, make sure to check the changelog for any server updates. Error information:', e)
+    prompt('The game may have crashed, refresh the page to recover from the error. Error information:', e)
   }
   </script>
   <script src="./bundle.js"></script>
