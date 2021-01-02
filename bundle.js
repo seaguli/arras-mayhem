@@ -191,13 +191,13 @@
                     case 22:
                         return "#FEFCAA";
                     case 23:
-                        return 150 > Date.now() % 300 ? l.red : l.blue;
+                           return "#d21fff";
                     case 24:
-                        return 150 > Date.now() % 300 ? l.red : l.red;
+                       return "#226ef6";
                     case 30:
-                        return "#d21fff";
+                          return 150 > Date.now() % 300 ? l.red : l.blue;
                     case 31:
-                        return "#226ef6";
+                       return 150 > Date.now() % 300 ? l.blue : l.red;
                     case 32:
                         return "#ff1000";
                     case 33:
@@ -206,8 +206,27 @@
                         return "#00e00b";
                     case 35:
                         return "#ffd300";
-                    case 36:
-                        return '#' + Math.floor(Math.random() * 16777215).toString(16);
+                   case 36:
+               return T(
+              [
+                "#ff1000",
+                "#ff9000",
+                "#ffd300",
+                "#00e00b",
+                "#226ef6",
+                "#a913cf"
+              ][Math.floor((Date.now() / 200) % 6)],
+              [
+                "#ff9000",
+                "#ffd300",
+                "#00e00b",
+                "#226ef6",
+                "#a913cf",
+                "#ff1000"
+              ][Math.floor((Date.now() / 200) % 6)],
+              (Date.now() / 200) % 1
+            );
+          //["#ff1600","#ff2b00","#ff4100","#ff5700","#ff6c00","#ff8200","#ff9700","#ffad00","#ffc300","#ffd800"]
                     default:
                         return "#ff0000"
                 }
@@ -434,6 +453,37 @@
                 }
                 return btoa(b).replace(/=+/, "")
             }
+      
+      var smallaudio = new Audio();
+smallaudio.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg");
+function PlaySound210() {
+    smallaudio.play();
+}
+    var clicked = false;
+
+    function doSomething()
+   {
+      if(clicked)
+     {
+    var bflat25 = new Audio();
+bflat25.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cancel.wav");
+  bflat25.load();   
+    bflat25.play();
+     }
+    else
+    {
+var bflat33 = new Audio();
+bflat33.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg");
+        bflat33.load();   
+    bflat33.play();
+    }
+   clicked = !clicked;
+}
+         var smallaudio2 = new Audio();
+smallaudio2.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/error.ogg");
+function PlaySound211() { 
+  smallaudio2.play();
+}
 
             function t() {
                 if (!ua) {
@@ -553,7 +603,7 @@
                 g.strokeStyle = u;
                 g.stroke()
             }
-            var somethinglolcuzimlazy = ""
+            var somethinglolcuzimlazy = "" //no token here keep looking
             function Qa(b, a, c, h, u) {
                 if (!(.05 > u)) {
                     var d = c.render.status.getFade();
@@ -707,7 +757,7 @@
                 })();
                 return {
                     stat: b(10),
-                    upgrade: b(15),
+                    upgrade: b(20),
                     hover: b(1),
                     skipUpgrades: b(1)
                 }
@@ -873,6 +923,8 @@
                                 return "Body Damage;Max Health;Placement Speed;Trap Health;Trap Penetration;Trap Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
                             case 6:
                                 return "Body Damage;Max Health;Weapon Speed;Weapon Health;Weapon Penetration;Weapon Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
+                            case 7:
+                                return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Healing Intensity;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";");
                             default:
                                 return "Body Damage;Max Health;Bullet Speed;Bullet Health;Bullet Penetration;Bullet Damage;Reload;Movement Speed;Shield Regeneration;Shield Capacity".split(";")
                         }
@@ -1044,33 +1096,40 @@
                     }) => !h.includes(b));
                     return c.map(b => b.to).join(" ")
                 },
-                aa = null,
-                ab = null,
-                ea;
-            for (let a of b.servers) {/*
-                if ((null ==
-                        a.visible || a.visible > Ha) && b.server !== a) continue;
-                let [d, c, h] = a.code.split("-"), u = document.createElement("tr");
-                u.appendChild(document.createElement("td")).textContent = b.codeTable[0][d];
-                u.appendChild(document.createElement("td")).textContent = b.codeTable[1][c][0];
-                u.appendChild(document.createElement("td")).textContent = $a(h);
-                a.featured && u.classList.add("featured");
-                u.onclick = () => {
-                    ea.classList.remove("selected");
-                    ea = u;
-                    ea.classList.add("selected");*/
-                    b.server = a;
-                    /*b.partyLink = 0;
-                    N.gameMode = a.id;
-                    location.hash = "#" +
-                        a.id;
-                    aa.scrollTop < u.offsetTop - 50 ? aa.scrollTop = u.offsetTop - 50 : aa.scrollTop > u.offsetTop - 10 && (aa.scrollTop = u.offsetTop - 10)
-                };
-                ab.appendChild(u);
-                b.server === a && (ea = u, ea.classList.add("selected"), setTimeout(() => {
-                    aa.scrollTop = u.offsetTop - 30;
-                }))*/
-            }
+              aa = document.getElementById("serverSelector").parentNode.parentNode,
+        ab = document.getElementById("serverSelector"),
+        ea;
+      for (let a of b.servers) {
+        if ((null == a.visible || a.visible > Ha) && b.server !== a) continue;
+        let [d, c, h] = a.code.split("-"),
+          u = document.createElement("tr");
+        u.appendChild(document.createElement("td")).textContent =
+          b.codeTable[0][d];
+        u.appendChild(document.createElement("td")).textContent =
+          b.codeTable[1][c][0];
+        u.appendChild(document.createElement("td")).textContent = $a(h);
+        a.featured && u.classList.add("featured");
+        u.onclick = () => {
+          ea.classList.remove("selected");
+          ea = u;
+          ea.classList.add("selected");
+          b.server = a;
+          b.partyLink = 0;
+          N.gameMode = a.id;
+          location.hash = "#" + a.id;
+          aa.scrollTop < u.offsetTop - 50
+            ? (aa.scrollTop = u.offsetTop - 50)
+            : aa.scrollTop > u.offsetTop - 10 &&
+              (aa.scrollTop = u.offsetTop - 10);
+        };
+        ab.appendChild(u);
+        b.server === a &&
+          ((ea = u),
+          ea.classList.add("selected"),
+          setTimeout(() => {
+            aa.scrollTop = u.offsetTop - 30;
+          }));
+      }
             let bb = (() => {
                     let b = !1,
                         a = document.getElementById("startMenuSlidingTrigger"),
@@ -1082,6 +1141,7 @@
                             c.style.transform =
                                 c.style.webkitTransform = b ? "translate(2px, -2px) rotate(45deg)" : "rotate(-45deg)";
                             h.innerText = b ? "close options" : "view options";
+                          doSomething()
                             b ? u.classList.add("slided") : u.classList.remove("slided");
                             y[0].style.opacity = b ? 0 : 1;
                             y[2].style.opacity = b ? 1 : 0
@@ -1453,6 +1513,9 @@
                 }
             }
             document.getElementById("startButton").onclick = () => {
+                                        PlaySound210()
+                  var inputVal = document.getElementById("playerNameInput").value;
+               if (inputVal === "") return PlaySound211(), setTimeout(alert("Please enter a name!"), 30000)
                 t()
             };
             let La = WebSocket.prototype.close;
@@ -1970,7 +2033,7 @@
                 yellow: "#FDF380",
                 lavender: "#B58EFD",
                 pink: "#EF99C3",
-                vlgrey: "#E8EBF7",
+                vlgrey: "#b8b9ba",
                 lgrey: "#AA9F9E",
                 guiwhite: "#FFFFFF",
                 black: "#484848",
@@ -2465,7 +2528,7 @@
                                 na = O.max;
                             do {
                                 if (!b.showTree) break;
-                                let a = M.find(b => "Basic" === b.name);
+                                let a = M.find(b => "basic" === b.name);
                                 if (!a) break;
                                 let c = [],
                                     d = [],
@@ -2586,7 +2649,7 @@
                             b.mobile && L(1.4); {
                                 let c = b.screenWidth / 2,
                                     d = 20;
-                                b.mobile && (d += (b.canSkill ? (200 / 3 + 20) / 1.4 * a.get() : 0) + (b.canUpgrade ? 120 / 1.4 * k.get() : 0));
+                                     b.mobile && (d += (b.canSkill ? 200 / 3 / 1.4 * a.get() : 0) + (b.canUpgrade && 40 + 114 * A.upgrades.length > 1.4 * c ? 100 / 1.4 * k.get() : 0));
                                 for (let b = Y.length - 1; 0 <= b; b--) {
                                     let a = Y[b],
                                         f = a.text;
@@ -2667,6 +2730,8 @@
                                 N.draw(z.name, Math.round(c + 165) + .5, Math.round(d - 10 - 4) + .5, 32, l.yellow, "center")
                                 } else {*/
                                 N.draw(z.name, Math.round(c + 165) + .5, Math.round(d - 10 - 4) + .5, 32, l.guiwhite, "center")
+                                  if (z.name.includes('[AI]'))N.draw(z.name, Math.round(c + 165) + .5, Math.round(d - 10 - 4) + .5, 32, 150 > Date.now() % 300 ? l.lgrey : l.lgrey, "center")
+                              if (z.name.includes('Dev'))N.draw(z.name, Math.round(c + 165) + .5, Math.round(d - 10 - 4) + .5, 32, 150 > Date.now() % 300 ? l.yellow : l.yellow, "center")
                                 //};// name color
                             }
                             b.mobile && L(.8); {
@@ -2735,6 +2800,8 @@
                                     K(c, c + 200, d + 7, 11, l.grey);
                                     K(c, c + 200 * Math.min(1, b.score / na), d + 7, 10.5, b.barColor);
                                     ca[a].draw(b.label + ": " + H.handleLargeNumber(Math.round(b.score)), c + 100, d + 7, 9, l.guiwhite, "center", !0);
+                                  if (b.label.includes('[AI]'))ca[a].draw(b.label + ": " + H.handleLargeNumber(Math.round(b.score)), c + 100, d + 7, 9, 150 > Date.now() % 300 ? "#cccecf" : "#cccecf", "center", !0);
+                                  if (b.label.includes('Dev'))ca[a].draw(b.label + ": " + H.handleLargeNumber(Math.round(b.score)), c + 100, d + 7, 9, l.yellow, "center", !0);
                                     let f = 14 / b.position.axis;
                                     ba(c - 21 - f * b.position.middle.x * .707, d + 7 + f * b.position.middle.x * .707, b.image, 1 / f, 1, f * f / b.image.size, -Math.PI / 4, !0);
                                     d += 18
@@ -2760,7 +2827,7 @@
                                         d > k && (k = d);
                                         h = c;
                                         b.clickables.upgrade.place(q++, c * n, d * n, 100 * n, 100 * n);
-                                        g.globalAlpha = .5;
+                                        g.globalAlpha = .3;
                                         g.fillStyle = e(u + 10);
                                         G(c, d, 100, 100);
                                         g.globalAlpha = .1;
@@ -2781,7 +2848,7 @@
                                         g.globalAlpha = 1;
                                         g.lineWidth = 3;
                                         G(c, d, 100, 100, !0);
-                                        0 !== ++x % 5 || b.mobile ? c += 114 * a : (c = f, d += 114)
+                                        0 !== ++x % 5 || b.mobile ? c += 105 * a : (c = f, d += 105)
                                     });
                                     let m = ta("Don't Upgrade", 11) + 10,
                                         t = (h + 100 + 14 + f - 15) / 2,
@@ -2789,10 +2856,12 @@
                                     K(t - m / 2, t + m / 2, v + 7, 14 + B.graphical.barChunk,
                                         l.black);
                                     K(t - m / 2, t + m / 2, v + 7, 14, l.white);
+                                  g.globalAlpha = 1;
                                     fa.draw("Don't Upgrade", t, v + 7, 12, l.guiwhite, "center", !0);
                                     b.clickables.skipUpgrades.place(0, (t - m / 2) * n, v * n, m * n, 14 * n)
                                 } else b.clickables.upgrade.hide(), b.clickables.skipUpgrades.hide()
                             }
+                     
                             if (b.mobile) {
                                 b.canSkill = 0 < A.points && A.skills.some(b => b.amount < b.cap) && !b.canUpgrade;
                                 a.set(0 + (b.canSkill || b.died));
@@ -2870,18 +2939,11 @@
                         let d = b.screenWidth / 2,
                             n = b.screenHeight / 2 - 50;
                         var m = D(A.type, A.color);
-                       var cap = [
-                        [" oof! ", "  oof!!  "],
-                        ["   oof!!!   ",
-                            "    oof!!!    ", "     oof!!", "oof!!", "oof!"
-                        ],
-                    ];
-                    cap = cap[Math.floor(Math.random() * cap.length)];
-                      let mss = cap[Math.floor(Math.random() * cap.length)];
                         let u = M[A.type].position,
                             t = 140 / u.axis;
                         ba(b.screenWidth / 2 - t * u.middle.x * .707 - 190 - 70, b.screenHeight / 2 - 35 + t * u.middle.x * .707 - 10, m, 1.5, 1, .5 * t / m.realSize, -Math.PI / 4, !0);
-                        a.draw(mss, d, n - 80, 8, l.guiwhite, "center");
+       var inputVal = document.getElementById("playerNameInput").value;
+                        a.draw(inputVal + " was not The Impostor", d, n - 80, 8, l.guiwhite, "center");
                         e.draw("Level " +
                             A.__s.getLevel() + " " + M[A.type].name, d - 170, n - 30, 24, l.guiwhite);
                         c.draw("Final score: " + H.formatLargeNumber(Math.round(b.finalScore.get())), d - 170, n + 25, 50, l.guiwhite);
@@ -2893,6 +2955,7 @@
                             d, n + 125, 16, l.guiwhite, "center")
                     }
                 })();
+              
             window.onbeforeunload = () => b.isInGame && !b.died ? !0 : null;
             window.$createProfile = (() => {
                 var b = m();
@@ -2912,6 +2975,7 @@
                     return c
                 }
             })();
+      
             const Sa = (() => {
                     var a = m(),
                         e = m();
@@ -2919,7 +2983,7 @@
                     var c = [
                         ["Stuck on connecting? Click the Starter tab on the client page!", "Stuck on connecting? Press the Starter tab on the client page!"],
                         ["Stuck on connecting? Push the Starter tab on the client page!",
-                            "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.", "Want access to TESTBED? Join the Discord Server!", "The server resets every 10 minutes to clear lag, be wary of this!", "All tanks have up to 10x reload!"
+                            "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.", "Want access to TESTBED? Join the Discord Server!", "Have you tried Diep.io yet?", "All tanks have up to 10x reload!"
                         ],
                         ["Avoid upgrading the reload stat if you wish for a smooth game", "Have Fun!",
                             "Good Luck!"
@@ -3056,10 +3120,11 @@
             const p = {
                 openshift: (a, e) => `n-${a}-${e}.7e14.starter-us-west-2.openshiftapps.com`,
                 glitch: a => `${a}.glitch.me`,
-                heroku: a => `arras-${a}.herokuapp.com`,
+                replit: a => `${a}.repl.co`,
+                heroku: a => `${a}.herokuapp.com`,
                 arras: (a, e = 5E3) => `ip-${a}.arras.io:${e}`,
                 arrasUnknown: (a, e = 5E3) => `ipu-${a}.arras.io:${e}`
-            };
+            }
             var w = (new Date).getDate();
             const a = 25 <= w ? 3 : 0;
             w = 25 <= w ? 0 : 3;
@@ -3130,112 +3195,124 @@
                 died: !1,
                 showDebug: !1,
                 showTree: !1,
-                server: null,
-                codeTable: [{
-                        z: "Private",
-                        local: "Local",
-                        dvi: "DVI",
-                        glitch: "Glitch",
-                        os: "OpenShift",
-                        heroku: "Heroku",
-                        your: "------",
-                        linode: "Linode",
-                        vultr: "Vultr",
-                        buyvm: "BuyVM",
-                        extravm: "ExtraVM",
-                        hetzner: "Hetzner",
-                        ovh: "OVH"
-                    }, {
-                        unknown: ["Unknown", null],
-                        local: ["Local", null],
-                        server: ["------", null],
-                        virginia: ["US East",
-                            -4
-                        ],
-                        montreal: ["US East", -4],
-                        oregon: ["US West", -7],
-                        frankfurt: ["Europe", 2],
-                        sv: ["US West", -7],
-                        la: ["US West", -7],
-                        germany: ["Europe", 2],
-                        london: ["Europe", 1],
-                        singapore: ["Asia", 8]
-                    },
-                    [
-                        [{
-                            id: "p",
-                            to: "Private"
-                        }],
-                        [{
-                            id: "e",
-                            dynamic: "word"
-                        }],
-                        [{
-                            id: "w",
-                            dynamic: "words"
-                        }],
-                        [{
-                            id: "o",
-                            to: "Open"
-                        }],
-                        [{
-                            id: "m",
-                            to: "Maze",
-                            delay: !0,
-                            remove: "f"
-                        }],
-                        [{
-                            id: "f",
-                            to: "FFA"
-                        }, {
-                            id: "2",
-                            to: "2 Team",
-                            end: "2TDM"
-                        }, {
-                            id: "3",
-                            to: "3 Team",
-                            end: "3TDM"
-                        }, {
-                            id: "4",
-                            to: "4 Team",
-                            end: "4TDM"
-                        }],
-                        [{
-                            id: "d",
-                            to: "Domination"
-                        }, {
-                            id: "m",
-                            to: "Mothership",
-                            remove: "2"
-                        }, {
-                            id: "a",
-                            to: "Assault",
-                            remove: "2"
-                        }]
-                    ]
-                ],
+  server: null,
+        codeTable: [
+          {
+            z: "Private",
+            local: "Local",
+            dvi: "DVI",
+        
+            os: "OpenShift",
+            heroku: "Heroku",
+               replit: "Repl.it",
+                glitch: "Glitch",
+            linode: "Linode",
+            vultr: "Vultr",
+            buyvm: "BuyVM",
+            extravm: "ExtraVM",
+            hetzner: "Hetzner",
+            ovh: "OVH"
+          },
+          {
+            unknown: ["Unknown", null],
+            local: ["Local", null],
+            worldwide: ["Worldwide", null],
+            virginia: ["US East", -4],
+            montreal: ["US East", -4],
+            oregon: ["US West", -7],
+            frankfurt: ["Europe", 2],
+            sv: ["US West", -7],
+            la: ["US West", -7],
+            germany: ["Europe", 2],
+            london: ["Europe", 1],
+            singapore: ["Asia", 8]
+          },
+          [
+            [{ id: "p", to: "Private" }],
+            [{ id: "e", dynamic: "word" }],
+            [{ id: "w", dynamic: "words" }],
+            [{ id: "o", to: "Open" }],
+            [{ id: "m", to: "Maze", delay: !0, remove: "f" }],
+            [
+              { id: "f", to: "FFA" },
+              { id: "2", to: "2 Team", end: "2TDM" },
+              { id: "3", to: "3 Team", end: "3TDM" },
+              { id: "4", to: "4 Team", end: "4TDM" }
+            ],
+            [
+              { id: "d", to: "4DOM" },
+              { id: "m", to: "Mothership", remove: "2" },
+              { id: "a", to: "Assault", remove: "2" }
+            ]
+          ]
+        ],
                 timezone: (new Date).getTimezoneOffset() / -60,
-                servers: [{
-                    id: "x",
-                    type: "0unk",
-                    code: "z-unknown-pe6server",
-                    at: "private",
-                    untrusted: !0
-                }, {
-                    id: "a",
-                    type: "4TDM",
-                    code: "arrasio-mayhem",
-                    at: p.glitch ("arrasio5")
-                },].map((a, e) => ({
-                    data: a,
-                    i: e
-                })).sort((a, e) => a.data.type < e.data.type ? -1 : e.data.type > a.data.type ? 1 : a.i - e.i).map(({
-                    data: a
-                }) => a),
-                partyLink: 0,
-                mobile: /android|mobi/i.test(navigator.userAgent),
-                showInvisible: !1
-            };
+               servers: [
+          {
+            visible: 0,
+            id: "Heroku-Beta",
+            type: "beta",
+            code: "heroku-frankfurt-4",
+            at: p.heroku('arrasdotio'),
+            prefer: !0,
+            featured: 1, // For Featured Status.
+          },
+          {
+              visible: 0,
+            id: "Heroku-FFA",
+            type: "ffa",
+            code: "heroku-frankfurt-f",
+            at: p.heroku('arras-moe'),
+            prefer: !0,
+            featured: 1, // For Featured Status.
+          },
+          {
+            visible: 0,
+            id: "Glitch-Developer",
+            type: "dev",
+            code: "glitch-virginia-f",
+            at: p.glitch('arrasio5'),
+           // featured: 1, // For Featured Status.
+          },
+                        {
+            visible: 0,
+            id: "Glitch-Domination",
+            type: "dominaton",
+            code: "glitch-virginia-d",
+            at: p.glitch('arras-mayhem-webserver'),
+           // featured: 1, // For Featured Status.
+          },
+                 {
+                             visible: 0,
+            id: "Heroku-Main",
+            type: "main",
+            code: "heroku-virginia-4",
+            at: p.heroku('arras-mayhem'),
+           // featured: 1, // For Featured Status.
+          },
+     {     
+                              visible: 0,
+            id: "Repl.it-Legacy",
+            type: "legacy",
+            code: "replit-virginia-2",
+            at: p.replit('arras-mayhem-legacy.seaguli'),
+           // featured: 1, // For Featured Status.
+          },
+          
+        ]
+          .map((a, e) => ({ data: a, i: e }))
+          .sort((a, e) =>
+            a.data.type < e.data.type
+              ? -1
+              : e.data.type > a.data.type
+              ? 1
+              : a.i - e.i
+          )
+          .map(({ data: a }) => a),
+        partyLink: 0,
+        mobile: /android|mobi/i.test(navigator.userAgent),
+        showInvisible: !1
+      };
             window.Arras = (a = !0) => a || e;
             r.exports = e
         }, function(r, p) {
@@ -3631,7 +3708,7 @@
                             this.emit("L");
                             break;
                         case a.KEY_ABILITY:
-                            this.emit("V")
+                           this.emit("ChangeTankOne");
                     }
                     if (!e.ctrlKey && !e.altKey) {
                         if (a.canSkill) {
@@ -3758,6 +3835,12 @@
                                         });
                                     break;
                                 case a.KEY_SCREENSHOT:
+                                                         a.messages.push({
+                                                    text: "Saving screenshot...",
+                                                    status: 2,
+                                                    alpha: 0,
+                                                    time: Date.now()
+                                                });
                                     var x = this.cv.toDataURL();
                                     k = atob(x.split(",")[1]);
                                     x = x.split(",")[0].split(":")[1].split(";")[0];
@@ -3767,9 +3850,10 @@
                                     let q = URL.createObjectURL(new Blob([p], {
                                             type: x
                                         })),
+                
                                         w = document.createElement("a");
                                     w.style.display = "none";
-                                    w.setAttribute("download", "screenshot.png");
+                                    w.setAttribute("download", "arras.png");
                                     w.setAttribute("href", q);
                                     document.body.appendChild(w);
                                     setTimeout(() => {
@@ -4118,6 +4202,30 @@
                     paletteSize: 10,
                     border: .65
                 },
+               terminal: {
+                    teal: "#ffffff",
+                    lgreen: "#008000",
+                    orange: "#004000",
+                    yellow: "#008000",
+                    lavender: "#004000",
+                    pink: "#80ff80",
+                    vlgrey: "#000000",
+                    lgrey: "#FFFFFF",
+                    guiwhite: "#000000",
+                    black: "#00ff00",
+                    blue: "#006000",
+                    green: "#00e000",
+                    red: "#000000",
+                    gold: "#004000",
+                    purple: "#004000",
+                    magenta: "#c0ffc0",
+                    grey: "#006000",
+                    dgrey: "#00a000",
+                    white: "#001400",
+                    guiblack: "#FFFFFF",
+                    paletteSize: 10,
+                    border: .5
+                },
                 classic: {
                     teal: "#8EFFFB",
                     lgreen: "#85E37D",
@@ -4262,6 +4370,30 @@
                     paletteSize: 10,
                     border: .6
                 },
+                 confusion: {
+                    teal: "#3ca4cb",
+                    lgreen: "#3ca4cb",
+                    orange: "#3ca4cb",
+                    yellow: "#3ca4cb",
+                    lavender: "#3ca4cb",
+                    pink: "#3ca4cb",
+                    vlgrey: "#3ca4cb",
+                    lgrey: "#3ca4cb",
+                    guiwhite: "#ffffff",
+                    black: "#484848",
+                    blue: "#3ca4cb",
+                    green: "#3ca4cb",
+                    red: "#3ca4cb",
+                    gold: "#3ca4cb",
+                    purple: "#3ca4cb",
+                    magenta: "#3ca4cb",
+                    grey: "#a7a7af",
+                    dgrey: "#dbdbdb",
+                    white: "#dbdbdb",
+                    guiblack: "#000000",
+                    paletteSize: 10,
+                    border: .5
+                },
                 pastel: {
                     teal: "#89BFBA",
                     lgreen: "#B5D17D",
@@ -4309,6 +4441,30 @@
                     guiblack: "#FFFFFF",
                     paletteSize: 10,
                     border: .25
+                },
+                obstar: {
+                    teal: "#7ADBBC",
+                    lgreen: "#3ee081",
+                    orange: "#d1adb2",
+                    yellow: "#eeda70",
+                    lavender: "#B58EFD",
+                    pink: "#EF99C3",
+                    vlgrey: "#E8EBF7",
+                    lgrey: "#AA9F9E",
+                    guiwhite: "#ecebeb",
+                    black: "#565555",
+                    blue: "#3CA4CB",
+                    green: "#19e56e",
+                    red: "#e6584b",
+                    gold: "#cfcf9f",
+                    purple: "#b2b2cc",
+                    magenta: "#CC669C",
+                    grey: "#8e8ca5",
+                    dgrey: "#c1bebe",
+                    white: "#DBDBDB",
+                    guiblack: "#000000",
+                    paletteSize: 10,
+                    border: .5
                 },
                 nebula: {
                     teal: "#38B06E",
@@ -4358,6 +4514,54 @@
                     paletteSize: 10,
                     border: .4
                 },
+                borderless: {
+                    teal: "#7ADBBC",
+                    lgreen: "#B9E87E",
+                    orange: "#E7896D",
+                    yellow: "#FDF380",
+                    lavender: "#B58EFD",
+                    pink: "#EF99C3",
+                    vlgrey: "#E8EBF7",
+                    lgrey: "#AA9F9E",
+                    guiwhite: "#FFFFFF",
+                    black: "#484848",
+                    blue: "#3CA4CB",
+                    green: "#8ABC3F",
+                    red: "#E03E41",
+                    gold: "#EFC74B",
+                    purple: "#8D6ADF",
+                    magenta: "#CC669C",
+                    grey: "#A7A7AF",
+                    dgrey: "#726F6F",
+                    white: "#DBDBDB",
+                    guiblack: "#000000",
+                    paletteSize: 10,
+                    border: .001
+                },
+                bordered: {
+                    teal: "#7ADBBC",
+                    lgreen: "#B9E87E",
+                    orange: "#E7896D",
+                    yellow: "#FDF380",
+                    lavender: "#B58EFD",
+                    pink: "#EF99C3",
+                    vlgrey: "#E8EBF7",
+                    lgrey: "#AA9F9E",
+                    guiwhite: "#FFFFFF",
+                    black: "#484848",
+                    blue: "#3CA4CB",
+                    green: "#8ABC3F",
+                    red: "#E03E41",
+                    gold: "#EFC74B",
+                    purple: "#8D6ADF",
+                    magenta: "#CC669C",
+                    grey: "#A7A7AF",
+                    dgrey: "#726F6F",
+                    white: "#DBDBDB",
+                    guiblack: "#000000",
+                    paletteSize: 10,
+                    border: 1.2
+                },
                 ocean: {
                     teal: "#76EEC6",
                     lgreen: "#41AA78",
@@ -4381,6 +4585,54 @@
                     guiblack: "#000000",
                     paletteSize: 10,
                     border: .3
+                },
+              candy: {
+                    teal: "#7ADBBC",
+                    lgreen: "#B9E87E",
+                    orange: "#E7896D",
+                    yellow: "#fff9b3",
+                    lavender: "#B58EFD",
+                    pink: "#EF99C3",
+                    vlgrey: "#E8EBF7",
+                    lgrey: "#AA9F9E",
+                    guiwhite: "#FFFFFF",
+                    black: "#808080",
+                    blue: "#bdedff",
+                    green: "#dbffa6",
+                    red: "#ff999b",
+                    gold: "#ffe185",
+                    purple: "#b99cff",
+                    magenta: "#ffa1d3",
+                    grey: "#A7A7AF",
+                    dgrey: "#726F6F",
+                    white: "#ffe3fa",
+                    guiblack: "#000000",
+                    paletteSize: 10,
+                    border: .55
+                },
+                diep: {
+                    teal: "#7ADBBC",
+                    lgreen: "#B9E87E",
+                    orange: "#E7896D",
+                    yellow: "#fff9b3",
+                    lavender: "#768dfc",
+                    pink: "#f177dd",
+                    vlgrey: "#E8EBF7",
+                    lgrey: "#cdcdcd",
+                    guiwhite: "#FFFFFF",
+                    black: "#3c3c3c",
+                    blue: "#00b2e1",
+                    green: "#00e16e",
+                    red: "#f14e54",
+                    gold: "#ffe95e",
+                    purple: "#768dfc",
+                    magenta: "#bf7ff5",
+                    grey: "#999999",
+                    dgrey: "#b8b8b8",
+                    white: "#cdcdcd",
+                    guiblack: "#000000",
+                    paletteSize: 10,
+                    border: .5
                 },
                 badlands: {
                     teal: "#F9CB9C",

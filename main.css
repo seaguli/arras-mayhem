@@ -25,10 +25,9 @@ html, body {
 body {
   font-family: Ubuntu;
   font-size: 14px;
-  background-image: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/background.png");
+  background-image: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/bg.png");
   background-color: #484848;
 }
-
 hr {
   border: 0.5px solid rgba(0, 0, 0, 0.15);
   margin: 18px 0 18px;
@@ -40,14 +39,27 @@ html, body, canvas {
   margin: 0;
   padding: 0;
 }
-
+canvas {
+  image-rendering: optimizeSpeed;
+  image-rendering: pixelated;
+}
 h1 {
   padding: 0;
   margin: 0;
+  color: black;
   text-align: center;
   font: bold 40px/1.1 Ubuntu;
 }
-
+body.mobile h1 {
+  font-size: 32px;
+}
+h4 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+    background-color: yellow;
+  color: red;
+}
 div.optionsHeader {
   display: block;
   margin: 10px 0 4px;
@@ -60,18 +72,33 @@ h3 {
   font-size: 14px;
   color: #484848;
   text-align: center;
+  border-radius: 3px;
   padding: 0;
   margin: 4px 0;
+  width: 100%;
+  height: 20px;
+  box-sizing: border-box;
+  background: #b1d5fc;
+    border-bottom: 2px solid #70b5ff;
+  box-shadow: inset 0 -2px #70b5ff;
+  border: 0;
+  opacity: 1
 }
 #startMenuSlidingTrigger:hover > h3 {
   color: #323232;
+  opacity: 0.8
 }
+#startMenuSlidingTrigger:active > h3 {
+  color: #323232;
+     animation:pfpDefault 800ms linear both;
+}
+
 #startMenuSlidingTrigger:hover > h3 > i.arrow {
   border-color: #323232;
 }
 
 .serverSelector {
-  height: 85px;
+  height: 40px;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
@@ -223,29 +250,23 @@ a.menuTab {
   margin-right: 10px;
 }
 a.menuTab.discord {
-   background: #7289DA url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTVwdCIgaGVpZ2h0PSIxNHB0IiB2aWV3Qm94PSIwIDAgMTUgMTQiIHZlcnNpb249IjEuMSI+CjxnIGlkPSJzdXJmYWNlMSI+CjxwYXRoIHN0eWxlPSIgc3Ryb2tlOm5vbmU7ZmlsbC1ydWxlOm5vbnplcm87ZmlsbDpyZ2IoNDQuNzA1ODgyJSw1My43MjU0OSUsODUuNDkwMTk2JSk7ZmlsbC1vcGFjaXR5OjE7IiBkPSJNIDYuMzkwNjI1IDYuMDYyNSBDIDYuMDQyOTY5IDYuMDYyNSA1Ljc2NTYyNSA2LjM1MTU2MiA1Ljc2NTYyNSA2LjcwNzAzMSBDIDUuNzY1NjI1IDcuMDYyNSA2LjA1MDc4MSA3LjM1NTQ2OSA2LjM5MDYyNSA3LjM1NTQ2OSBDIDYuNzQyMTg4IDcuMzU1NDY5IDcuMDE1NjI1IDcuMDYyNSA3LjAxNTYyNSA2LjcwNzAzMSBDIDcuMDIzNDM4IDYuMzUxNTYyIDYuNzQyMTg4IDYuMDYyNSA2LjM5MDYyNSA2LjA2MjUgWiBNIDguNjI1IDYuMDYyNSBDIDguMjc3MzQ0IDYuMDYyNSA4LjAwMzkwNiA2LjM1MTU2MiA4LjAwMzkwNiA2LjcwNzAzMSBDIDguMDAzOTA2IDcuMDYyNSA4LjI4NTE1NiA3LjM1NTQ2OSA4LjYyNSA3LjM1NTQ2OSBDIDguOTc2NTYyIDcuMzU1NDY5IDkuMjUgNy4wNjI1IDkuMjUgNi43MDcwMzEgQyA5LjI1IDYuMzUxNTYyIDguOTc2NTYyIDYuMDYyNSA4LjYyNSA2LjA2MjUgWiBNIDguNjI1IDYuMDYyNSAiLz4KPHBhdGggc3R5bGU9IiBzdHJva2U6bm9uZTtmaWxsLXJ1bGU6bm9uemVybztmaWxsOnJnYig0NC43MDU4ODIlLDUzLjcyNTQ5JSw4NS40OTAxOTYlKTtmaWxsLW9wYWNpdHk6MTsiIGQ9Ik0gMTEuNjAxNTYyIDEuMTY3OTY5IEwgMy4zOTg0MzggMS4xNjc5NjkgQyAyLjcwNzAzMSAxLjE2Nzk2OSAyLjE0NDUzMSAxLjcwMzEyNSAyLjE0NDUzMSAyLjM2NzE4OCBMIDIuMTQ0NTMxIDEwLjI1MzkwNiBDIDIuMTQ0NTMxIDEwLjkyMTg3NSAyLjcwNzAzMSAxMS40NTcwMzEgMy4zOTg0MzggMTEuNDU3MDMxIEwgMTAuMzM5ODQ0IDExLjQ1NzAzMSBMIDEwLjAxNTYyNSAxMC4zNzg5MDYgTCAxMC44MDA3ODEgMTEuMDcwMzEyIEwgMTEuNTM5MDYyIDExLjcyNjU2MiBMIDEyLjg1NTQ2OSAxMi44MzIwMzEgTCAxMi44NTU0NjkgMi4zNjcxODggQyAxMi44NTU0NjkgMS43MDMxMjUgMTIuMjkyOTY5IDEuMTY3OTY5IDExLjYwMTU2MiAxLjE2Nzk2OSBaIE0gOS4yMzgyODEgOC43ODUxNTYgQyA5LjIzODI4MSA4Ljc4NTE1NiA5LjAxOTUzMSA4LjUzNTE1NiA4LjgzNTkzOCA4LjMxMjUgQyA5LjYzNjcxOSA4LjA5NzY1NiA5Ljk0MTQwNiA3LjYxNzE4OCA5Ljk0MTQwNiA3LjYxNzE4OCBDIDkuNjkxNDA2IDcuNzc3MzQ0IDkuNDUzMTI1IDcuODg2NzE5IDkuMjM4MjgxIDcuOTYwOTM4IEMgOC45MzM1OTQgOC4wODU5MzggOC42NDA2MjUgOC4xNjc5NjkgOC4zNTE1NjIgOC4yMTQ4NDQgQyA3Ljc2MTcxOSA4LjMxNjQwNiA3LjIyMjY1NiA4LjI4OTA2MiA2Ljc2NTYyNSA4LjIwNzAzMSBDIDYuNDE3OTY5IDguMTQ0NTMxIDYuMTE3MTg4IDguMDUwNzgxIDUuODY3MTg4IDcuOTU3MDMxIEMgNS43MjI2NTYgNy45MDIzNDQgNS41NzAzMTIgNy44Mzk4NDQgNS40MTc5NjkgNy43NTc4MTIgQyA1LjM5ODQzOCA3Ljc0NjA5NCA1LjM4MjgxMiA3Ljc0MjE4OCA1LjM2MzI4MSA3LjczMDQ2OSBDIDUuMzUxNTYyIDcuNzIyNjU2IDUuMzQzNzUgNy43MTg3NSA1LjMzOTg0NCA3LjcxMDkzOCBDIDUuMjMwNDY5IDcuNjUyMzQ0IDUuMTY3OTY5IDcuNjEzMjgxIDUuMTY3OTY5IDcuNjEzMjgxIEMgNS4xNjc5NjkgNy42MTMyODEgNS40NjA5MzggOC4wNzgxMjUgNi4yMzgyODEgOC4zMDA3ODEgQyA2LjA1NDY4OCA4LjUyMzQzOCA1LjgyODEyNSA4Ljc4NTE1NiA1LjgyODEyNSA4Ljc4NTE1NiBDIDQuNDc2NTYyIDguNzQ2MDk0IDMuOTYwOTM4IDcuODk4NDM4IDMuOTYwOTM4IDcuODk4NDM4IEMgMy45NjA5MzggNi4wMTk1MzEgNC44NDM3NSA0LjQ5NjA5NCA0Ljg0Mzc1IDQuNDk2MDk0IEMgNS43MjI2NTYgMy44NjcxODggNi41NjI1IDMuODg2NzE5IDYuNTYyNSAzLjg4NjcxOSBMIDYuNjI1IDMuOTUzMTI1IEMgNS41MjM0MzggNC4yNTc4MTIgNS4wMTU2MjUgNC43MTg3NSA1LjAxNTYyNSA0LjcxODc1IEMgNS4wMTU2MjUgNC43MTg3NSA1LjE0ODQzOCA0LjY0ODQzOCA1LjM3NSA0LjU1MDc4MSBDIDYuMDMxMjUgNC4yNzczNDQgNi41NTA3ODEgNC4xOTkyMTkgNi43NjU2MjUgNC4xODM1OTQgQyA2LjgwMDc4MSA0LjE3NTc4MSA2LjgzMjAzMSA0LjE3MTg3NSA2Ljg3MTA5NCA0LjE3MTg3NSBDIDcuMjQyMTg4IDQuMTI1IDcuNjY0MDYyIDQuMTEzMjgxIDguMTA1NDY5IDQuMTYwMTU2IEMgOC42ODc1IDQuMjIyNjU2IDkuMzEyNSA0LjM4NjcxOSA5Ljk0OTIxOSA0LjcxODc1IEMgOS45NDkyMTkgNC43MTg3NSA5LjQ2NDg0NCA0LjI4MTI1IDguNDI1NzgxIDMuOTc2NTYyIEwgOC41MTE3MTkgMy44ODY3MTkgQyA4LjUxMTcxOSAzLjg4NjcxOSA5LjM0NzY1NiAzLjg2NzE4OCAxMC4yMzA0NjkgNC40OTYwOTQgQyAxMC4yMzA0NjkgNC40OTYwOTQgMTEuMTEzMjgxIDYuMDE5NTMxIDExLjExMzI4MSA3Ljg5ODQzOCBDIDExLjExMzI4MSA3Ljg5ODQzOCAxMC41OTM3NSA4Ljc0NjA5NCA5LjIzODI4MSA4Ljc4NTE1NiBaIE0gOS4yMzgyODEgOC43ODUxNTYgIi8+CjwvZz4KPC9zdmc+Cg==') 10px 8px no-repeat;
+   padding: 6px 10px 7px 28px;
+      animation:pfpDefault 800ms linear both;
+  background: #7289DA url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/svg0.svg") 4px 3px/21px no-repeat;
 }
   a.menuTab.catto {
-  background: #1E8449 
+      background: #f00 url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/coder.png") 8px 6px no-repeat;
+  padding: 6px 10px 7px 28px;
+        animation:pfpDefault 800ms linear both;
 }
 a.menuTab.stat {
-  background: #f00 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAKUlEQVQoU2NkQAP/////DxJiZGRkRJZC4YAkcCpEl6C9QrgNhKweSgoBUcBf8wTAguMAAAAASUVORK5CYII=) 10px 8px no-repeat;
-  /*
-  let canvas = document.body.appendChild(document.createElement('canvas'))
-  canvas.width = 10
-  canvas.height = 10
-  canvas.style.background = '#f00'
-  let ctx = canvas.getContext('2d')
-  ctx.fillStyle = '#fff'
-  ctx.fillRect(0, 2, 2, 8)
-  ctx.fillRect(4, 0, 2, 10)
-  ctx.fillRect(8, 4, 2, 6)
-  copy(canvas.toDataURL())
-  */
+  background: #1E8449  url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/play.png") 3px 2px/23px no-repeat;
   padding: 6px 10px 7px 28px;
+      animation:pfpDefault 800ms linear both;
 }
 a.menuTab:link:hover, a.menuTab:visited:hover {
   text-decoration: underline;
+      animation:pfpHoverOn 800ms linear both;
 }
 
 .changelogSelectorContainer {
@@ -415,8 +436,11 @@ body.mobile #optMobile, body.mobile #optBorders {
   top: 0px;
   opacity: 1;
   width: 100%;
-  transition: top 500ms, opacity 500ms;
+    transition: top 700ms, opacity 600ms;
+  animation:pfpDefault 800ms linear both;
+  	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
 }
+
 .slided .slider {
   top: -275px;
 }
@@ -439,12 +463,24 @@ body.mobile .startMenuSlidingContent {
 .icon {
   display: block;
   width: 96px;
+  padding-top: 4px;
   height: 96px;
   border-radius: 50%;
+   animation:pfpDefault 800ms linear both;
 }
+
+.icon:hover {
+     animation:pfpHoverOn 800ms linear both;
+}
+
+.icon:active {
+     animation:pfpDefault 400ms linear both;
+}
+
+
 body.mobile .icon {
-  width: 90px;
-  height: 90px;
+  width: 55px;
+  height: 55px;
 }
 
 #patchNotes {
@@ -525,6 +561,7 @@ body.mobile .icon {
   height: 40px;
   box-sizing: border-box;
   color: white;
+    animation:pfpDefault 800ms linear both;
   text-align: center;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
   background: #A9D86D;
@@ -735,7 +772,7 @@ select {
   padding: 2px 28px 2px 8px;
   height: 21px;
   margin-left: 3px;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAICAYAAAD0g6+qAAAAwklEQVQoU42QMQrCQBBFZxeGgJ7BI1jYa2GzTTY3sRUECy1yA0svEQhhEHIHLdRrqF2a5EuCkbgmmin/zLz5f5QxZsTMK2ZeR1F0p5ay1i7zPD+LiLT1S01Za7dEtCGiY5Zl8zRNH81h3/d3SqkFgFOSJJNOUBAEAwAHIpq6sAbkprWexXF86QSVjTaY53nhy8lfSBWtvuDAKhlAL8gHyHUGAFrr8a84zZhvR7VojBkyc1gUxV5Erl0/cfUvUN9Fd+4JA1JkCdbmVf8AAAAASUVORK5CYII=) 100% no-repeat #eee;
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAICAYAAAD0g6+qAAAAwklEQVQoU42QMQrCQBBFZxeGgJ7BI1jYa2GzTTY3sRUECy1yA0svEQhhEHIHLdRrqF2a5EuCkbgmmin/zLz5f5QxZsTMK2ZeR1F0p5ay1i7zPD+LiLT1S01Za7dEtCGiY5Zl8zRNH81h3/d3SqkFgFOSJJNOUBAEAwAHIpq6sAbkprWexXF86QSVjTaY53nhy8lfSBWtvuDAKhlAL8gHyHUGAFrr8a84zZhvR7VojBkyc1gUxV5Erl0/cfUvUN9Fd+4JA1JkCdbmVf8AAAAASUVORK5CYII=) 100% no-repeat #eee;
   /*
   let canvas = document.body.appendChild(document.createElement('canvas'))
   canvas.width = Math.ceil(8 * Math.sqrt(2)) + 6
@@ -777,6 +814,7 @@ select:active {
   color: #fff;
   margin: 0 4px;
 }
+
 .tooltip::before {
   content: '?';
 }
@@ -887,4 +925,61 @@ i.flag::before {
 }
 i.flag.down::before {
   margin-bottom: 2px;
+}
+@keyframes pfpHoverOn { 
+  0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  3.4% { transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  4.7% { transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.81% { transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  9.41% { transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  10.21% { transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.61% { transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  14.11% { transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  17.52% { transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  18.72% { transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  21.32% { transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  24.32% { transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  25.23% { transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  29.03% { transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  29.93% { transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  35.54% { transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  36.74% { transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  41.04% { transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  44.44% { transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  52.15% { transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  59.86% { transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.26% { transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  75.28% { transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  85.49% { transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  90.69% { transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% { transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+@keyframes pfpDefault { 
+  0% { transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  3.4% { transform: matrix3d(1.068, 0, 0, 0, 0, 1.059, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  4.7% { transform: matrix3d(1.055, 0, 0, 0, 0, 1.04, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.81% { transform: matrix3d(1.034, 0, 0, 0, 0, 1.011, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  9.41% { transform: matrix3d(1.012, 0, 0, 0, 0, 0.983, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  10.21% { transform: matrix3d(1.006, 0, 0, 0, 0, 0.977, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.61% { transform: matrix3d(0.988, 0, 0, 0, 0, 0.967, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  14.11% { transform: matrix3d(0.986, 0, 0, 0, 0, 0.967, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  17.52% { transform: matrix3d(0.979, 0, 0, 0, 0, 0.976, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  18.72% { transform: matrix3d(0.979, 0, 0, 0, 0, 0.981, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  21.32% { transform: matrix3d(0.98, 0, 0, 0, 0, 0.993, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  24.32% { transform: matrix3d(0.985, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  25.23% { transform: matrix3d(0.987, 0, 0, 0, 0, 1.006, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  29.03% { transform: matrix3d(0.994, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  29.93% { transform: matrix3d(0.995, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  35.54% { transform: matrix3d(1.002, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  36.74% { transform: matrix3d(1.003, 0, 0, 0, 0, 1.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  41.04% { transform: matrix3d(1.004, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  44.44% { transform: matrix3d(1.003, 0, 0, 0, 0, 0.997, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  52.15% { transform: matrix3d(1.001, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  59.86% { transform: matrix3d(0.999, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.26% { transform: matrix3d(0.999, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  75.28% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  85.49% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  90.69% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
