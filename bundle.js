@@ -459,6 +459,31 @@ smallaudio.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse
 function PlaySound210() {
     smallaudio.play();
 }
+    var clicked = false;
+
+    function doSomething()
+   {
+      if(clicked)
+     {
+    var bflat25 = new Audio();
+bflat25.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cancel.wav");
+  bflat25.load();   
+    bflat25.play();
+     }
+    else
+    {
+var bflat33 = new Audio();
+bflat33.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg");
+        bflat33.load();   
+    bflat33.play();
+    }
+   clicked = !clicked;
+}
+         var smallaudio2 = new Audio();
+smallaudio2.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/error.ogg");
+function PlaySound211() { 
+  smallaudio2.play();
+}
 
             function t() {
                 if (!ua) {
@@ -1116,6 +1141,7 @@ function PlaySound210() {
                             c.style.transform =
                                 c.style.webkitTransform = b ? "translate(2px, -2px) rotate(45deg)" : "rotate(-45deg)";
                             h.innerText = b ? "close options" : "view options";
+                          doSomething()
                             b ? u.classList.add("slided") : u.classList.remove("slided");
                             y[0].style.opacity = b ? 0 : 1;
                             y[2].style.opacity = b ? 1 : 0
@@ -1489,7 +1515,7 @@ function PlaySound210() {
             document.getElementById("startButton").onclick = () => {
                                         PlaySound210()
                   var inputVal = document.getElementById("playerNameInput").value;
-               if (inputVal === "") return alert("Please enter a name!")
+               if (inputVal === "") return PlaySound211(), setTimeout(alert("Please enter a name!"), 30000)
                 t()
             };
             let La = WebSocket.prototype.close;
@@ -2835,6 +2861,7 @@ function PlaySound210() {
                                     b.clickables.skipUpgrades.place(0, (t - m / 2) * n, v * n, m * n, 14 * n)
                                 } else b.clickables.upgrade.hide(), b.clickables.skipUpgrades.hide()
                             }
+                     
                             if (b.mobile) {
                                 b.canSkill = 0 < A.points && A.skills.some(b => b.amount < b.cap) && !b.canUpgrade;
                                 a.set(0 + (b.canSkill || b.died));
@@ -3213,7 +3240,7 @@ function PlaySound210() {
               { id: "4", to: "4 Team", end: "4TDM" }
             ],
             [
-              { id: "d", to: "Domination" },
+              { id: "d", to: "4DOM" },
               { id: "m", to: "Mothership", remove: "2" },
               { id: "a", to: "Assault", remove: "2" }
             ]
@@ -3245,6 +3272,14 @@ function PlaySound210() {
             type: "dev",
             code: "glitch-virginia-f",
             at: p.glitch('arrasio5'),
+           // featured: 1, // For Featured Status.
+          },
+                        {
+            visible: 0,
+            id: "Glitch-Domination",
+            type: "dominaton",
+            code: "glitch-virginia-d",
+            at: p.glitch('arras-mayhem-webserver'),
            // featured: 1, // For Featured Status.
           },
                  {
@@ -3800,6 +3835,12 @@ function PlaySound210() {
                                         });
                                     break;
                                 case a.KEY_SCREENSHOT:
+                                                         a.messages.push({
+                                                    text: "Saving screenshot...",
+                                                    status: 2,
+                                                    alpha: 0,
+                                                    time: Date.now()
+                                                });
                                     var x = this.cv.toDataURL();
                                     k = atob(x.split(",")[1]);
                                     x = x.split(",")[0].split(":")[1].split(";")[0];
@@ -3809,9 +3850,10 @@ function PlaySound210() {
                                     let q = URL.createObjectURL(new Blob([p], {
                                             type: x
                                         })),
+                
                                         w = document.createElement("a");
                                     w.style.display = "none";
-                                    w.setAttribute("download", "screenshot.png");
+                                    w.setAttribute("download", "arras.png");
                                     w.setAttribute("href", q);
                                     document.body.appendChild(w);
                                     setTimeout(() => {
