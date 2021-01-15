@@ -46,7 +46,7 @@ Feel free to remix this project and modify it to your own liking!
 </sub></sup>
 # Setting it up
 Thanks to [MG] Octo#9071 for the server selector and guide!
-# How to add your server(s)
+## How to add your server(s)
 - Go to line 3339 in bundle.js
 - You'll see there are multiple things that look like this:
 ```
