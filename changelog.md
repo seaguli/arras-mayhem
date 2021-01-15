@@ -1,4 +1,55 @@
 # Update
+- Eggs, Squares and Triangles will now spawn naturally and will no longer despawn.
+- And with that brings 3 new tanks, all branching off Underseer:
+- Pentaseer 
+- Triseer
+- Eggseer
+# Update
+- Added 5 New Tanks
+- Twin Trapper - Branches off Twin and Trapper
+- Bent Trapper - Branches off Twin Trapper and Triple Shot
+- Twin Mega-Trapper - Branches off Twin Trapper and Mega Trapper
+- Blowtorch - Branches off Pummeller and Minigun
+- Tracer - Branches off Shotgun and Creeper
+- Selected Discord Users can now place the server into lockdown - No players can spawn during a lockdown, and any trying to spawn will be kicked. Abusers beware!
+# Update
+- Nerfed the entire Hivemind branch
+- Buffed the entire Smasher branch
+- Nerfed Sidewinder 
+- Nerfed Engineer's pillbox turret
+- Nerfed Manufacturer's drone count and drone health
+- Nerfed Factory's drone count
+- Slightly buffed most focused "bullet spammer" tanks
+- Buffed Shadow Tank - AI controlled tanks won't be able to see it without it attacking first
+- Renamed some tanks
+- Added 6 new tanks
+- Osprey - Branches off Hunter and Tri-Angle
+- Armsman - Branches off Trap Guard and Artillery
+- Commander - Branches off Overseer
+- Pelletmind - Branches off Hivemind and Pelleter
+- Submind - Branches off Hivemind and Subduer
+- Twinmind - Branches off Hivemind and Twin
+# Update
+- Music is now randomized
+- Overhauled the Discord controller
+- Added Fallen Booster as a Testbed and Boss tank
+# Update
+- Added 8 new tanks
+- Stiletto - Branches off Lancer and Minishot
+- Bent Sniper - Branches off Twin Sniper and Triple Shot
+- Governor - Branches off Overseer
+- Coroner - Branches off Underseer and Smasher
+- Thrasher - Branches off Smasher
+- Silencer - Branches off Cloaker and Rifle
+- Recon - Branches off Gunner and Cloaker
+- Shadow Tank - Branches off Cloaker
+- Fixed bug with Akafuji
+- Buffed Shrapnel's secondary bullets 
+- Updated Beta Client's font
+# Update
+- Made some minor client updates
+- Pssst, try clicking on the icon!
+# Update
 - Perfomed some fixes on death screen messages
 - Added 2 New Tanks
 - Katana - Branches off Akafuji
