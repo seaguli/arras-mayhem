@@ -1,0 +1,13 @@
+name: 'Neocities'
+on: [push]
+
+jobs:
+  deploy:
+    name: 'Deploy to Neocities'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: kognise/neocities-deploy-action@v1
+        with:
+          neocities_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          directory: '.'
