@@ -1,4 +1,18 @@
 # Update
+- Eggs, Squares and Triangles will now spawn naturally and will no longer despawn.
+- And with that brings 3 new tanks, all branching off Underseer:
+- Pentaseer 
+- Triseer
+- Eggseer
+# Update
+- Added 5 New Tanks
+- Twin Trapper - Branches off Twin and Trapper
+- Bent Trapper - Branches off Twin Trapper and Triple Shot
+- Twin Mega-Trapper - Branches off Twin Trapper and Mega Trapper
+- Blowtorch - Branches off Pummeller and Minigun
+- Tracer - Branches off Shotgun and Creeper
+- Selected Discord Users can now place the server into lockdown - No players can spawn during a lockdown, and any trying to spawn will be kicked. Abusers beware!
+# Update
 - Nerfed the entire Hivemind branch
 - Buffed the entire Smasher branch
 - Nerfed Sidewinder 
