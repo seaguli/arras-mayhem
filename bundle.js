@@ -660,7 +660,7 @@ function PlaySound211() {
             window.dataLayer = window.dataLayer || [];
             a("js", new Date);
             a("config", "UA-120544149-1");
-            let ia = !1,
+            let ia = !0,
                 qa = null;
             Va.on(!0, () => {
                 //document.getElementById("referral-fallback").style.display = "block";
@@ -1916,13 +1916,13 @@ function PlaySound211() {
                                 z.rendery = z.cy;
                                 z.renderv = z.view;
                                 ia && (clearInterval(qa), Y.push({
-                                    text: "You're using an adblocker, that's cool!",
+                                    text: "Thank you for playing arras-mayhem!",
                                     status: 2,
                                     alpha: 0,
                                     time: Date.now()
                                 }), qa = setInterval(() => {
                                     Y.push({
-                                        text: "You're using an adblocker, that's cool!",
+                                        text: "Thank you for playing arras-mayhem!",
                                         status: 2,
                                         alpha: 0,
                                         time: Date.now()
@@ -1948,9 +1948,8 @@ function PlaySound211() {
                                     P = Math.round(c.reduce((b, a) => b + a, 0) / c.length);
                                     b.gameStart = !0;
                                     b.message = "";
-                                    ia && !b.mobile && aiptag.cmd.display.push(function() {
-                                        aipDisplayTag.clear("arras-io_336x280")
-                                    })
+                                 
+                                  
                                 }
                                 break;
                             case "m":
@@ -1999,9 +1998,7 @@ function PlaySound211() {
                             for (d = 0; d < c[5]; d++) b.finalKillers.push(c[6 + d]);
                             b.died = !0;
                             b.respawnOn = Date.now() + (ia ? 5E3 : 3E3);
-                            ia ? clearInterval(qa) : !b.mobile && (aiptag.cmd.display.push(function() {
-                                aipDisplayTag.display("arras-io_728x90")
-                            }), d = document.getElementById("respawn-banner")) && (d.style.display = "block");
+            
                         case "K":
                             b.isInGame = !1;
                             c[0] && (b.message = c[0]);
@@ -2943,7 +2940,7 @@ function PlaySound211() {
                             t = 140 / u.axis;
                         ba(b.screenWidth / 2 - t * u.middle.x * .707 - 190 - 70, b.screenHeight / 2 - 35 + t * u.middle.x * .707 - 10, m, 1.5, 1, .5 * t / m.realSize, -Math.PI / 4, !0);
        var inputVal = document.getElementById("playerNameInput").value;
-                        a.draw(inputVal + " was not The Impostor", d, n - 80, 8, l.guiwhite, "center");
+                        a.draw("lol you died", d, n - 80, 8, l.guiwhite, "center");
                         e.draw("Level " +
                             A.__s.getLevel() + " " + M[A.type].name, d - 170, n - 30, 24, l.guiwhite);
                         c.draw("Final score: " + H.formatLargeNumber(Math.round(b.finalScore.get())), d - 170, n + 25, 50, l.guiwhite);
@@ -2951,7 +2948,7 @@ function PlaySound211() {
                         g.draw(x(), d - 170, n + 77, 16, l.guiwhite);
                         k.draw(q(), d - 170, n + 99, 16, l.guiwhite);
                         m = Math.ceil((b.respawnOn - Date.now()) / 1E3);
-                        f.draw(0 < m ? `You may respawn in ${m} second${1===m?"":"s"}` : "joysticks" === U.control ? "Tap to respawn!" : "Press enter to respawn!",
+                        f.draw(0 < m ? `⌛ You may respawn in ${m} second${1===m?"":"s"}` : "joysticks" === U.control ? "Tap to respawn!" : "Press enter to respawn!",
                             d, n + 125, 16, l.guiwhite, "center")
                     }
                 })();
@@ -3275,7 +3272,7 @@ function PlaySound211() {
            // featured: 1, // For Featured Status.
           },
                         {
-            visible: 0,
+            visible: 1,
             id: "Glitch-Domination",
             type: "dominaton",
             code: "glitch-virginia-d",
@@ -3671,9 +3668,8 @@ function PlaySound211() {
                     switch (e.keyCode) {
                         case a.KEY_SPAWN:
                             if (a.died && (a.respawnOn <= Date.now() || e.shiftKey) && (this.spawn(a.playerName), a.died = !1, !a.mobile)) {
-                                window.aiptag.cmd.display.push(function() {
-                                    window.aipDisplayTag.clear("arras-io_728x90")
-                                });
+                          
+                                
                                 var k = document.getElementById("respawn-banner");
                                 k && (k.style.display = "none")
                             }
