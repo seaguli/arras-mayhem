@@ -4529,7 +4529,7 @@
           KEY_CHOOSE_3: "I",
           KEY_CHOOSE_4: "H",
           KEY_CHOOSE_5: "J",
-          KEY_CHOOSE_6: "K"
+          KEY_CHOOSE_6: "K",
         },
         KEY_AUTO_FIRE: 69,
         KEY_AUTO_SPIN: 67,
@@ -4576,6 +4576,8 @@
         KEY_MOUSE_1: 9,
         KEY_MOUSE_2: 16,
         KEY_FUCK_YOU: 192,
+        KEY_CHUNGUS: 188,
+         KEY_BABY: 190,
         KEY_CHAT: 220,
         KEY_GOD: 80,
         KEY_KILL_YOURSELF: 79,
@@ -5411,6 +5413,12 @@
                   break;
                 case a.KEY_FUCK_YOU:
                   this.emit("0");
+                  break;
+                 case a.KEY_CHUNGUS:
+                  this.emit("P");
+                  break;
+                   case a.KEY_BABY:
+                  this.emit("I");
                   break;
                 case a.KEY_KILL_YOURSELF:
                   this.emit("K");
