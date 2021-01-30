@@ -1,4 +1,33 @@
 # Update
+- Added custom keybind support for various functions, including chat.
+# Update
+- Players with god mode enabled will no longer leave a ghost when entering an enemy base and when disconnecting
+- Dominators are properly aligned and spin when idle
+- Heroku-USEast-4TDM is now an event server! Everyone will spawn as an invincible Testbed B!
+# Update
+- Split Testbed into 3 branches
+- Regular users will receive Testbed A (Does not have access to God Mode)
+- Known users will receive Testbed B
+- Developers will receive Testbed C
+# Update
+- Added a profanity fiter to the chat and player names
+- ᴛʜᴀᴛ ᴍᴇᴀɴs ɴᴏ ʟᴇᴀᴋɪɴɢ ᴛʜᴇ ᴛᴏᴋᴇɴ sɪɴᴄᴇ ᴛʜᴇ sᴇʀᴠᴇʀ ᴡɪʟʟ ᴋɪᴄᴋ ʏᴏᴜ >:)
+# Update :D
+- Added a long awaited in-game chat function
+- Press '\' to access it
+# Update
+- Reworked Testbed Menu's layout
+- Changed Pelleter's look
+- Added 8 New Tanks
+- Submachine - Branches off Sniper and Pelleter
+- Transmitter - Branches off Submachine
+- Auto-Submachine - Branches off Submachine and Auto-Basic (Lvl 45)
+- Sniper Trapper - Branches off Sniper and Trapper
+- Chasseur - Branches off Sniper Trapper and Assassin 
+- Blockade - Branches off Sniper Trapper and Borer 
+- Sparkler - Branches off Launcher 
+- Excavator - Branches off Builder and Sniper Trapper
+# Update
 - Eggs, Squares and Triangles will now spawn naturally and will no longer despawn.
 - And with that brings 3 new tanks, all branching off Underseer:
 - Pentaseer 
