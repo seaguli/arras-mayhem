@@ -4,11 +4,12 @@
   <!-- Meta Properties -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Don't ask why. Ask why not?">
+    <meta name="description" content="arras.io, but the tanks drank milk.">
   <meta name="robots" content="index, follow">
    <meta name="author" content="seaguli">
     <meta name="keywords" content="arras.io, arras, game, arras mayhem, arras moe">
     <meta property="og:image" content="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arraslogo.png">
+  <meta property="og:site_name" content="arras-mayhem">
   <meta property="og:image:width" content="80">
   <meta property="og:image:height" content="80">
   <title>arras.io</title>
@@ -16,7 +17,6 @@
   <link rel="apple-touch-icon" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/app.png" />
   <link rel="apple-touch-startup-image" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/splash.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <link rel="apple-touch-startup-image" media="(device-width: 768px)" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/splashtablet.png">
    <link rel="apple-touch-startup-image" media="(device-width: 1536px)" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/splashtablet.png">
@@ -47,7 +47,7 @@ function PlaySound1() {
 
                             <script>
 var music2 = new Audio();
-                                  const months = ["https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_14.ogg?v=1608943257454", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_01.ogg?v=1608943264101", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_02.ogg?v=1608943270065", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_10.ogg?v=1608943280133", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_13.ogg?v=1610089512424"];
+                                  const months = ["https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_14.ogg?v=1608943257454", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_01.ogg?v=1608943264101", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_02.ogg?v=1608943270065", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_10.ogg?v=1608943280133", "https://vgmsite.com/soundtracks/watashi-ga-suki-nara-suki-tte-itte-ost/hyhwuyecbs/04.%E3%81%8A%E8%8C%B6%E3%81%AB%E3%81%97%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B-.mp3"];
 
 var rand = months[~~(Math.random() * months.length)];
 music2.src = (rand);
@@ -146,7 +146,7 @@ function PlaySound() {
                     <td><div><b data-key="KEY_LEFT">A</b><span> - </span>move left</div></td>
                     <td><div><b data-key="KEY_DOWN">S</b><span> - </span>move down</div></td>
                     <td><div><b data-key="KEY_RIGHT">D</b><span> - </span>move right</div></td>
-                  </tr>
+                               </tr>
                   <tr class="hidden">
                     <td><div><b data-key="KEY_CHOOSE_1" data-help="KEY_CHOOSE_1">Y</b><span> - </span>upgrade 1</div></td>
                     <td><div><b data-key="KEY_CHOOSE_2" data-help="KEY_CHOOSE_2">U</b><span> - </span>upgrade 2</div></td>
@@ -161,6 +161,16 @@ function PlaySound() {
                     <td><div><b data-key="KEY_CHOOSE_7" data-help="KEY_CHOOSE_7"></b><span> - </span>upgrade 7</div></td>
                     <td><div><b data-key="KEY_CHOOSE_8" data-help="KEY_CHOOSE_8"></b><span> - </span>upgrade 8</div></td>
                     <td><div><b data-key="KEY_CHOOSE_9" data-help="KEY_CHOOSE_9"></b><span> - </span>upgrade 9</div></td>
+                  </tr>
+                     <tr class="hidden">
+                    <td><div><b data-key="KEY_CHAT" data-help="KEY_CHAT">\</b><span> - </span>chat</div></td>
+                    <td><div><b data-key="KEY_ABILITY" data-help="KEY_ABILITY">F</b><span> - </span>ability</div></td>
+                    <td><div><b data-key="KEY_FUCK_YOU" data-help="KEY_FUCK_YOU">`</b><span> - </span>testbed</div></td>
+                  </tr>
+                       <tr class="hidden">
+                    <td><div><b data-key="KEY_CHUNGUS" data-help="KEY_CHUNGUS">&gt;</b><span> - </span>grow</div></td>
+                    <td><div><b data-key="KEY_BABY" data-help="KEY_BABY">&lt;</b><span> - </span>shrink</div></td>
+                    <td><div><b data-key="KEY_REVERSE_TANK" data-help="KEY_REVERSE_TANK">V</b><span> - </span>vanish</div></td>
                   </tr>
                 </tbody>
               </table>
