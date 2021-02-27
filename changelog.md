@@ -1,4 +1,7 @@
 # Update
+- Added Auto-Trapper, branches off Trapper and Auto-Basic
+- Added more sound effects to the client 
+# Update
 - Added custom keybind support for various functions, including chat.
 # Update
 - Players with god mode enabled will no longer leave a ghost when entering an enemy base and when disconnecting
