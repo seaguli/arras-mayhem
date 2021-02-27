@@ -201,7 +201,7 @@
       function a() {
         window.dataLayer.push(arguments);
       }
-
+//here are the color codes
       function e(b) {
         switch (b) {
           case 0:
@@ -296,7 +296,7 @@
         let d = B.graphical.neon ? l.white : l.black;
         return B.graphical.darkBorders ? d : T(b, d, l.border);
       }
-
+//here are the map colors
       function x(b) {
         switch (b) {
           case "bas1":
@@ -556,7 +556,7 @@
         }
         return btoa(b).replace(/=+/, "");
       }
-
+//just some code to make the sound work 
       var smallaudio = new Audio();
       smallaudio.src =
         "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
@@ -587,7 +587,13 @@
       function PlaySound211() {
         smallaudio2.play();
       }
+     var smallaudio3 = new Audio("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/socket.wav");
 
+      smallaudio3.loop = false;
+      function PlaySound212() {
+          smallaudio3.loop = false;
+        smallaudio3.play();
+      }
       function t() {
         if (!ua) {
           ua = !0;
@@ -853,9 +859,7 @@
           non_interaction: !0
         });
       });
-      /*(window.localStorage && window.localStorage.adForce ? "aip" === window.localStorage.adForce : .1 <= Math.random()) ? (aiptag.cmd.display.push(function() {
-                aipDisplayTag.display("arras-io_336x280")
-            }), window.adServiceMode = "aip") : ((adsbygoogle = window.adsbygoogle || []).push({}), window.adServiceMode = "google");*/
+
       var B = {
         graphical: {
           screenshotMode: !1,
@@ -2457,6 +2461,7 @@
               b.died ||
                 b.message ||
                 (b.message = "Socket closed. Refresh to continue playing!"));
+            PlaySound212()
             console.warn("WebSocket closed: ", a);
           };
           g.onerror = function(a) {
@@ -3642,7 +3647,7 @@
                     150 > Date.now() % 300 ? l.lgrey : l.lgrey,
                     "center"
                   );
-                if (z.name.includes("Dev"))
+                if (z.name.includes("Dev⠀"))
                   N.draw(
                     z.name,
                     Math.round(c + 165) + 0.5,
@@ -3872,7 +3877,7 @@
                       "center",
                       !0
                     );
-                  if (b.label.includes("Dev"))
+                  if (b.label.includes("Dev⠀"))
                     ca[a].draw(
                       b.label + ": " + H.handleLargeNumber(Math.round(b.score)),
                       c + 100,
