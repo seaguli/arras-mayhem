@@ -1,4 +1,8 @@
 # Update
+- Nerfed Sparkler
+- Buffed Bosses
+- Added Arsenal, branches off Artillery and Triple Shot
+# Update
 - Added Auto-Trapper, branches off Trapper and Auto-Basic
 - Added more sound effects to the client 
 # Update
