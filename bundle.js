@@ -4311,7 +4311,7 @@
           m();
           var c = [
             [
-              "Be mindful of others! Refrain from using laggy tanks or god mode while others are present!",
+              "Be mindful of others! Refrain from using laggy tanks while others are present!",
               "Stuck on connecting? Refresh the page, or try another server."
             ],
             [
@@ -4319,7 +4319,9 @@
               "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.",
               "Want access to TESTBED? Join the Discord Server!",
               "Have you tried Diep.io yet?",
-              "All tanks have up to 10x reload!"
+              "All tanks have up to 10x reload!",
+              'Use the name "Tester" to spawn as Testbed!',
+              "Press 'N' to level up."
             ],
             [
               "Avoid upgrading the reload stat if you wish for a smooth game!",
@@ -4602,7 +4604,7 @@
         KEY_FUCK_YOU: 192,
         KEY_CHUNGUS: 188,
          KEY_BABY: 190,
-        KEY_CHAT: 220,
+        KEY_CHAT: 191,
         KEY_GOD: 80,
         KEY_KILL_YOURSELF: 79,
         screenWidth: window.innerWidth,
@@ -4661,6 +4663,7 @@
             ],
             [
               { id: "d", to: "4DOM" },
+              { id: "x", to: "Event" },
               { id: "m", to: "Mothership", remove: "2" },
               { id: "a", to: "Assault", remove: "2" }
             ]
@@ -4704,9 +4707,9 @@
           },
           {
             visible: 0,
-            id: "Heroku-Main",
+            id: "Heroku-Event",
             type: "main",
-            code: "heroku-virginia-4",
+            code: "heroku-virginia-x",
             at: p.heroku("arras-mayhem")
             // featured: 1, // For Featured Status.
           },
@@ -5288,7 +5291,7 @@
               this.emit("L");
               break;
             case a.KEY_CHAT:
-            case 72:
+            case 191:
               if (!a.died) {
                 if (a.isChatMode === false) {
                   // Chat input textbox.
@@ -5298,7 +5301,7 @@
                   chatInput.style.font = "bold 18px Ubuntu";
                   chatInput.maxlength = "100";
                   chatInput.placeholder =
-                    "Press Enter to send. Press Esc to cancel.";
+                    "Press Enter to send. Press Esc to cancel. Type /help for a list of commands.";
 
                   // Chat input wrapper div.
                   let chatInputWrapper = document.createElement("div");
