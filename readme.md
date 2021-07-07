@@ -10,7 +10,10 @@ The offical client for the arras-mayhem server.
 - Fixed hotkeys! (Be sure your server project has them binded)
 - Deployment to Repl.it or Heroku! Still works with Glitch!
 - Webserver compatibility with 6 different languages!
-
+- In-game Chat! 
+> :warning: **Chat system requires server modification!!!**<br/> It won't work out of the box with standard servers, minor code additions are needed!
+# Trailer
+[![kute trailer](http://img.youtube.com/vi/P3cuHSb8Ols/0.jpg)](https://www.youtube.com/watch?v=P3cuHSb8Ols "arras mayhem")
 # Webservers
 The client is able to be hosted as either a Node.js Express, PHP, Go HTTP, Ruby Webrick, C or Python Flask webserver. Details below! Examples are linked as well.
 

@@ -1,4 +1,126 @@
 # Update
+- Made turrets smoother
+- Buffed some Hivemind-branch tanks
+- Nerfed Heavy Hunter
+- Added some MAX_CHILDREN: caps to bosses to prevent lag
+- Bots now spawn in FFA
+- Changed the way bots spawn, they'll avoid spawning next to other entities
+- You can now see your tank's color if it has changed in any way (Previously only others could see the color change)
+# Update
+- Added a color command
+- /color: Changes your tank's color (Testbed A and up)
+# Update
+- Nerfed some BT Tanks
+- Added 4 new tanks
+- Apiary - Branches off Smasher, Cruiser and Turret-2
+- Redistributor - Branches off Destroyer and Cannon
+- Mauser - Branches off Gatling Gun and Destroyer 
+- Duplet - Branches off Shotgun and Bruiser
+# Update
+- Loosened IP connection limits, the game will allow multiple connections per IP.
+- Added a player counter to the join and leave messages
+- Added chat commands
+- Some tanks will automatically have their bullet speed maxed out to prevent lag
+- Added a TON of new tanks, mostly to Potato Chip and Bosses branch.
+# Update
+- To combat multiboxing/bots and subsequent server lag, there will be a player limit of 1 per IP address. VPNs are still unblocked.
+- Removed Dominator from the testbed menu due to their tendency to leave ghosts and cause lag 
+# Update
+- Added 5 new tanks
+- Storm - Branches off Flank Guard and Pelleter
+- Auto-Storm - Branches off Auto-Basic and Storm
+- Arbalest - Branches off Launcher and Artillery
+- Trojan - Branches off Overseer and Pathogen
+- Fog - Branches off Storm and Cloaker
+- Nerfed Backer
+# Update
+- Added 3 new tanks
+- Moth - Branches off Hexa Tank and Pelleter at lvl45
+- Gatling Gun - Branches off Sniper and Machine Gun
+- Chain Gun - Branches off Gatling Gun
+- Nerfed Wasp
+- Buffed Bosses
+- Buffed Stiletto-branch animated tanks
+# Update
+- Added 7 new tanks
+- Bumper - Branches off Launcher and Destroyer
+- Contractor - Branches off Builder, Bruiser and Twin Trapper
+- Whirlwind - Branches off Hexa Tank
+- Spinner - Branches off Hexa Tank
+- Fort - Branches off Contagion and Builder
+- Amoeba - Branches off Spawner and Pathogen
+- Assasinator - Branches off Drone Guard and Assassin
+# Update
+- Added 5 new tanks
+- Bodyguard - Branches off Pounder and Flank Guard
+- Bouncer - Branches off Destroyer and Bodyguard
+- Auto-Bodyguard - Branches off Bodyguard and Auto-Basic at Lvl45
+- Trailblazer - Branches off Tri-Angle and Lancer at Lvl45
+- Bastion - Branches off Bayonet and Gunner
+# Update
+- Fixed a bug where sentries and crashers would not spawn on FFA
+- Nerfed Penetrator, all shotgun-branch tanks
+- Added a new tank:
+- Swivel-3 - Branches off Auto-3
+# Update
+- Removed all healing tanks due to them being very buggy
+- The Shotgun Dominator will no longer spawn
+- Added a MAX_CHILDREN: cap for certain laggy tanks
+- Added a new tank:
+- Rimfire - Branches off Gunner
+# Update
+- Changed Minigun and Streamliner's looks
+- Added 2 new tanks
+- Firestarter - Branches off Minigun and Cruiser
+- Sprinkler - Branches off Machine Gun at Lvl 45
+# Update
+- Added a status page
+- Buffed all Smashers
+# Update
+- Nerfed Twin-3
+- Removed Blaster, as it was too unique compared to other tanks of it's class
+- The Trapper Dominator will no longer spawn
+- Removed Sentries from the Testbed A menu due to a bug involving AI
+# Update
+- Revamped the Discord Controller
+- Testers using the invisibility keybind will no longer be permanently invisible
+# Update
+- Nerfed Sparkler
+- Buffed Bosses
+- Added Arsenal, branches off Artillery and Triple Shot
+# Update
+- Added Auto-Trapper, branches off Trapper and Auto-Basic
+- Added more sound effects to the client 
+# Update
+- Added custom keybind support for various functions, including chat.
+# Update
+- Players with god mode enabled will no longer leave a ghost when entering an enemy base and when disconnecting
+- Dominators are properly aligned and spin when idle
+- Heroku-USEast-4TDM is now an event server! Everyone will spawn as an invincible Testbed B!
+# Update
+- Split Testbed into 3 branches
+- Regular users will receive Testbed A (Does not have access to God Mode)
+- Known users will receive Testbed B
+- Developers will receive Testbed C
+# Update
+- Added a profanity fiter to the chat and player names
+- ᴛʜᴀᴛ ᴍᴇᴀɴs ɴᴏ ʟᴇᴀᴋɪɴɢ ᴛʜᴇ ᴛᴏᴋᴇɴ sɪɴᴄᴇ ᴛʜᴇ sᴇʀᴠᴇʀ ᴡɪʟʟ ᴋɪᴄᴋ ʏᴏᴜ >:)
+# Update :D
+- Added a long awaited in-game chat function
+- Press '\' to access it
+# Update
+- Reworked Testbed Menu's layout
+- Changed Pelleter's look
+- Added 8 New Tanks
+- Submachine - Branches off Sniper and Pelleter
+- Transmitter - Branches off Submachine
+- Auto-Submachine - Branches off Submachine and Auto-Basic (Lvl 45)
+- Sniper Trapper - Branches off Sniper and Trapper
+- Chasseur - Branches off Sniper Trapper and Assassin 
+- Blockade - Branches off Sniper Trapper and Borer 
+- Sparkler - Branches off Launcher 
+- Excavator - Branches off Builder and Sniper Trapper
+# Update
 - Eggs, Squares and Triangles will now spawn naturally and will no longer despawn.
 - And with that brings 3 new tanks, all branching off Underseer:
 - Pentaseer 

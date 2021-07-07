@@ -51,6 +51,12 @@ h1 {
   text-align: center;
   font: bold 40px/1.1 Ubuntu;
 }
+
+h1:active {
+     animation:pfpDefault 800ms linear both;
+}
+
+
 body.mobile h1 {
   font-size: 32px;
 }
@@ -466,6 +472,7 @@ body.mobile .startMenuSlidingContent {
   width: 96px;
   padding-top: 4px;
   height: 96px;
+  padding-bottom: -3px;
   border-radius: 50%;
    animation:pfpDefault 800ms linear both;
 }

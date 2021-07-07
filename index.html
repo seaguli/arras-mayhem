@@ -4,19 +4,20 @@
   <!-- Meta Properties -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Don't ask why. Ask why not?">
+    <meta name="description" content="arras.io, but the tanks drank milk.">
   <meta name="robots" content="index, follow">
    <meta name="author" content="seaguli">
     <meta name="keywords" content="arras.io, arras, game, arras mayhem, arras moe">
     <meta property="og:image" content="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arraslogo.png">
+  <meta property="og:site_name" content="arras-mayhem">
   <meta property="og:image:width" content="80">
   <meta property="og:image:height" content="80">
+    <meta name="theme-color" content="#8abc3f">
   <title>arras.io</title>
     <!-- Apple Web App stuff -->
   <link rel="apple-touch-icon" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/app.png" />
   <link rel="apple-touch-startup-image" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/splash.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <link rel="apple-touch-startup-image" media="(device-width: 768px)" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/splashtablet.png">
    <link rel="apple-touch-startup-image" media="(device-width: 1536px)" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/splashtablet.png">
@@ -24,14 +25,12 @@
     <!-- Windows App Pin -->
    <meta name="msapplication-TileColor" content="#b493d3">
     <meta name="msapplication-TileImage" content="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arraslogo.png">
-  <!-- JS -->
   <!-- CSS -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
   <link rel="stylesheet" href="/main.css">
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="256x256" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arras.png">
     <link rel="shortcut icon" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arraslogo.png" type="image/x-icon">
-  <meta name="theme-color" content="#8abc3f">
 </head>
 <!https://discordapp.com/oauth2/authorize?client_id=427927499071160320&redirect_uri=http%3A%2F%2Farras.io%2Fcallback&response_type=code&scope=identify%20email -->
 <body oncontextmenu="return event.target.tagName === 'A'">
@@ -43,11 +42,19 @@ function PlaySound1() {
     bflat2.play();
 }
 </script>
-  
+                          <script>
+var bflat5 = new Audio();
+bflat5.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arras-mayhem.wav");
+function PlaySound5() {
+  bflat5.load();   
+    bflat5.play();
+}
+</script>
+    
 
                             <script>
 var music2 = new Audio();
-                                  const months = ["https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_14.ogg?v=1608943257454", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_01.ogg?v=1608943264101", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_02.ogg?v=1608943270065", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_10.ogg?v=1608943280133", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_13.ogg?v=1610089512424"];
+                                  const months = ["https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_02.ogg?v=1608943270065", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_10.ogg?v=1608943280133", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm05.ogg?v=1622665020987", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_39.ogg?v=1612744179994", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm01.ogg?v=1624907150795"];
 
 var rand = months[~~(Math.random() * months.length)];
 music2.src = (rand);
@@ -98,14 +105,15 @@ function PlaySound() {
       <div class="menuTabs">
         <a class="menuTab discord" onclick="PlaySound()" onmouseover="PlaySound1()" title="Join our Discord server" href="https://discord.gg/yTZdDPA" target="_blank" rel="noopener noreferrer">Discord</a>
         <a class="menuTab catto" onclick="PlaySound()" onmouseover="PlaySound1()" title="View the client's source code" href="https://glitch.com/~arras-mayhem" target="_blank" rel="noopener noreferrer">View Source</a>
-        <a class="menuTab stat" onclick="PlaySound()" onmouseover="PlaySound1()" title="Click me if you're stuck on connecting" href="https://arras-mayhem.herokuapp.com/" target="_blank" rel="noopener noreferrer">Starter</a>
+        <a class="menuTab stat" onclick="PlaySound()" onmouseover="PlaySound1()" title="Check the status of the servers" href="https://arras-moe.herokuapp.com/status" target="_blank" rel="noopener noreferrer">Status</a>
       </div>
       <div id="startMenu">
         <div class="startMenuHolder">
           <div class="sliderHolder">
             <div class="slider startMenuSlidingContent">
               <center><img src="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arras.png" onmouseover="PlaySound1()" onclick="PlaySound()" title="arras.io" class="icon" alt="arras icon"></center>
-              <h1>arras.io</h1>
+               <h1 onclick="PlaySound5()">arras.io</h1>
+    
                                                       <noscript>
     <h4>Please enable JavaScript to play!</h4>
   </noscript>
@@ -146,7 +154,7 @@ function PlaySound() {
                     <td><div><b data-key="KEY_LEFT">A</b><span> - </span>move left</div></td>
                     <td><div><b data-key="KEY_DOWN">S</b><span> - </span>move down</div></td>
                     <td><div><b data-key="KEY_RIGHT">D</b><span> - </span>move right</div></td>
-                  </tr>
+                               </tr>
                   <tr class="hidden">
                     <td><div><b data-key="KEY_CHOOSE_1" data-help="KEY_CHOOSE_1">Y</b><span> - </span>upgrade 1</div></td>
                     <td><div><b data-key="KEY_CHOOSE_2" data-help="KEY_CHOOSE_2">U</b><span> - </span>upgrade 2</div></td>
@@ -162,6 +170,16 @@ function PlaySound() {
                     <td><div><b data-key="KEY_CHOOSE_8" data-help="KEY_CHOOSE_8"></b><span> - </span>upgrade 8</div></td>
                     <td><div><b data-key="KEY_CHOOSE_9" data-help="KEY_CHOOSE_9"></b><span> - </span>upgrade 9</div></td>
                   </tr>
+                     <tr class="hidden">
+                    <td><div><b data-key="KEY_CHAT" data-help="KEY_CHAT">/</b><span> - </span>chat</div></td>
+                    <td><div><b data-key="KEY_ABILITY" data-help="KEY_ABILITY">F</b><span> - </span>ability</div></td>
+                    <td><div><b data-key="KEY_FUCK_YOU" data-help="KEY_FUCK_YOU">`</b><span> - </span>testbed</div></td>
+                  </tr>
+                       <tr class="hidden">
+                    <td><div><b data-key="KEY_CHUNGUS" data-help="KEY_CHUNGUS">&gt;</b><span> - </span>grow</div></td>
+                    <td><div><b data-key="KEY_BABY" data-help="KEY_BABY">&lt;</b><span> - </span>shrink</div></td>
+                    <td><div><b data-key="KEY_REVERSE_TANK" data-help="KEY_REVERSE_TANK">V</b><span> - </span>vanish</div></td>
+                  </tr>
                 </tbody>
               </table>
               <div class="optionsHeader">Themes & Graphics</div>
@@ -170,6 +188,8 @@ function PlaySound() {
                 <option value="dark">Dark Colors</option>
                 <option value="natural">Natural</option>
                 <option value="classic">Classic</option>
+                                 <option value="obstar">Obstar</option>
+                                                <option value="diep">Diep.io</option>
                 <option value="pumpkin">Pumpkin Skeleton (Fan-made)</option>
                 <option value="forest">Forest (Fan-made)</option>
                 <option value="midnight">Midnight (Fan-made)</option>
@@ -179,10 +199,10 @@ function PlaySound() {
                 <option value="bleach">Bleach (Fan-made)</option>
                  <option value="confusion">Confusion (Fan-made)</option>
                  <option value="nebula">Nebula (Fan-made)</option>
-                 <option value="obstar">Obstar (Fan-made)</option>
                   <option value="space">Space (Fan-made)</option>
                 <option value="candy">Cotton Candy (Fan-made)</option>
-                <option value="diep">Diep.io</option>
+                              <option value="nightmare">Nightmare (Fan-made)</option>
+                    <option value="bubblegum">Bubblegum (Fan-made)</option>
                  <option value="terminal">Terminal (Fan-made)</option>
                 <option value="borderless">Borderless (Fan-made)</option>
                 <option value="bordered">Bordered (Fan-made)</option>
