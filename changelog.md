@@ -1,4 +1,23 @@
 # Update
+- Nerfed all spawner-branch tank's reload speed
+- Nerfed Boomer
+- Nerfed Carpenter
+- If you have a valid token, you can now include the word "Tester" (No quotation marks) to spawn as the respective Testbed tank
+- Pssst, have you clicked on the title?
+# Update
+- Reworked Railgun, Exploder and Bombardier's looks
+- Added 3 new tanks
+- Culverin - Branches off Exploder and Cannon
+- Twin Assassin - Branches off Assassin and Twin Sniper
+- Bazooka - Branches off Launcher and Exploder
+# Update
+- Replaced the grow and shrink keybinds with a /size command
+- The /size command allows you to change your tank's size, anywhere from 6-20.
+# Update
+- Re-added Sentries to Testbed A
+- FFA map size is bigger
+- Added a new type of Dominator and Base Protector
+# Update
 - Made turrets smoother
 - Buffed some Hivemind-branch tanks
 - Nerfed Heavy Hunter
@@ -6,7 +25,6 @@
 - Bots now spawn in FFA
 - Changed the way bots spawn, they'll avoid spawning next to other entities
 - You can now see your tank's color if it has changed in any way (Previously only others could see the color change)
-- Psst, click on the word "arras.io" :D
 # Update
 - Added a color command
 - /color: Changes your tank's color (Testbed A and up)

@@ -1,17 +1,25 @@
+
 # Arras Mayhem
 The offical client for the arras-mayhem server.
+
 ![Purple Arras.io logo](https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2FLogo.png?v=1595837913869) 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ee4ba925-dbe8-40fd-9faf-83e3dabe4b5b/deploy-status)](https://app.netlify.com/sites/arras-moe/deploys) [![Official Discord server](https://discordapp.com/api/guilds/427668515357458443/embed.png)](https://discord.gg/yTZdDPA)
+
 # Features
 - Sound effects!
 - Music!
 - Lightweight, separate client! 
 - More colours!
 - Server Selector!
+- More themes!
 - Fixed hotkeys! (Be sure your server project has them binded)
 - Deployment to Repl.it or Heroku! Still works with Glitch!
 - Webserver compatibility with 6 different languages!
 - In-game Chat! 
-> :warning: **Chat system requires server modification!!!**<br/> It won't work out of the box with standard servers, minor code additions are needed!
+- *boing boing*
+> :warning: **Chat system requires server modification!!!**<br/> It won't work out of the box with standard servers, minor code additions are needed, scroll down for the tutorial!
+
+
 # Trailer
 [![kute trailer](http://img.youtube.com/vi/P3cuHSb8Ols/0.jpg)](https://www.youtube.com/watch?v=P3cuHSb8Ols "arras mayhem")
 # Webservers
@@ -42,7 +50,7 @@ The client is able to be hosted as either a Node.js Express, PHP, Go HTTP, Ruby 
    
 Additonal code is available on my Github project's page, <https://github.com/seaguli/arras-mayhem>
 # Remixing
-Feel free to remix this project and modify it to your own liking!
+Feel free to remix this project and modify it to your own liking! You aren't required to credit me, but I would like it :D
 
 <sub><sup>
     ask me if you want any aspect of the server's code at (SF) Seagull#2224
@@ -121,6 +129,186 @@ The client can be found at the following links:
 - <https://seaguli.github.io/arras-mayhem/> (Styleless version)
 - <https://arras-mayhem.umineko.repl.co/> (Does not recieve client updates)
 
+# Chat System Tutorial
+
+**Add the code below to your server for the chat system to function!**
+
+ First, you should find this code block:
+   
+     case "S":
+            {
+              // clock syncing
+              if (m.length !== 1) {
+                socket.kick("Ill-sized sync packet.");
+                return 1;
+              }
+              // Get data
+              let synctick = m[0];
+              // Verify it
+              if (typeof synctick !== "number") {
+                socket.kick("Weird sync packet.");
+                return 1;
+              }
+              // Bounce it back
+              socket.talk("S", synctick, util.time());
+            }
+            break;
+Copy this code, which contains the main chat system and commands, paste it above the aforementioned code snippet         
+```
+///////////////////////COPY CODE BELOW!!!///////////////
+          case "h":
+            if (!socket.status.deceased) {
+              // Chat system!!.
+
+              let message = m[0];
+              let maxLen = 100;
+              let args = message.split(" ");
+              if (message.startsWith("/")) {
+                //help command
+                if (message.startsWith("/help")) {
+                  player.body.sendMessage(
+                  player.body.sendMessage("/km ~ Destroys your tank");
+                  return 1;
+                }
+                // suicide command
+                if (message.startsWith("/km")) {
+                  {
+                    player.body.destroy();
+                    return 1;
+                  }
+                } else
+                  return player.body.sendMessage(
+                    "Invalid command. Run /help for a list of commands."
+                  );
+              }
+              if (util.time() - socket.status.lastChatTime >= 2200) {
+                // Verify it
+                if (typeof message != "string") {
+                  player.body.sendMessage("Invalid chat message.");
+                  return 1;
+                }
+ 
+                if (encodeURI(message).split(/%..|./).length > maxLen) {
+                  player.body.sendMessage(
+                    "Your message is too long. (<100 Characters)"
+                  );
+                  return 1;
+                }
+  
+                let playerName = socket.player.name
+                  ? socket.player.name
+                  : "Unnamed";
+                let chatMessage = playerName + " says: " + message;
+                sockets.broadcast(chatMessage);
+                util.log("[CHAT] " + chatMessage);
+                // Basic chat spam control.
+                socket.status.lastChatTime = util.time();
+              } else
+                player.body.sendMessage("You're sending messages too quickly!");
+            }
+            break;
+```
+your code should be looking like this now
+
+      
+               case "h":
+            if (!socket.status.deceased) {
+              // Chat system!!.
+
+              let message = m[0];
+              let maxLen = 100;
+              let args = message.split(" ");
+              if (message.startsWith("/")) {
+                //help command
+                if (message.startsWith("/help")) {
+                  player.body.sendMessage("/km ~ Destroys your tank");
+                  return 1;
+                }
+                // suicide command
+                if (message.startsWith("/km")) {
+                  {
+                    player.body.destroy();
+                    return 1;
+                  }
+                } else
+                  return player.body.sendMessage(
+                    "Invalid command. Run /help for a list of commands."
+                  );
+              }
+              if (util.time() - socket.status.lastChatTime >= 2200) {
+                // Verify it
+                if (typeof message != "string") {
+                  player.body.sendMessage("Invalid chat message.");
+                  return 1;
+                }
+ 
+                if (encodeURI(message).split(/%..|./).length > maxLen) {
+                  player.body.sendMessage(
+                    "Your message is too long. (<100 Characters)"
+                  );
+                  return 1;
+                }
+  
+                let playerName = socket.player.name
+                  ? socket.player.name
+                  : "Unnamed";
+                let chatMessage = playerName + " says: " + message;
+                sockets.broadcast(chatMessage);
+                util.log("[CHAT] " + chatMessage);
+                // Basic chat spam control.
+                socket.status.lastChatTime = util.time();
+              } else
+                player.body.sendMessage("You're sending messages too quickly!");
+            }
+            break;
+          case "S":
+            {
+              // clock syncing
+              if (m.length !== 1) {
+                socket.kick("Ill-sized sync packet.");
+                return 1;
+              }
+              // Get data
+              let synctick = m[0];
+              // Verify it
+              if (typeof synctick !== "number") {
+                socket.kick("Weird sync packet.");
+                return 1;
+              }
+              // Bounce it back
+              socket.talk("S", synctick, util.time());
+            }
+            break;
+
+then you should find this 
+
+     socket.status = {
+          verified: false,
+          receiving: 0,
+          deceased: true,
+          requests: 0,
+          hasSpawned: false,
+          needsFullMap: true,
+          needsNewBroadcast: true,
+          lastHeartbeat: util.time(),
+        };      
+add this below *lastHeartbeat: util.time(),*
+
+`        lastChatTime: util.time()`
+  
+  Then you should find this code block
+
+     // Free the old view
+              if (views.indexOf(socket.view) != -1) {
+                util.remove(views, views.indexOf(socket.view));
+                socket.makeView();
+              }
+              socket.player = socket.spawn(name);
+
+add this below *socket.player = socket.spawn(name);*
+` socket.player.name = name;`
+
+**And voila! Your chat system is working! This assumes you are remixing my client, which already has all the client-side code needed for the chat to function!**
 
 # Credits
 - Original Client by ProKameron
@@ -128,5 +316,5 @@ The client can be found at the following links:
 - Seaguli
 - Powfu [MG] Octo#9071
 - Various StackOverflow contributors (For webserver code)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ee4ba925-dbe8-40fd-9faf-83e3dabe4b5b/deploy-status)](https://app.netlify.com/sites/arras-moe/deploys)
-[![Official Discord server](https://discordapp.com/api/guilds/427668515357458443/embed.png)](https://discord.gg/yTZdDPA)
+- CX and the various developers of arras.io
+

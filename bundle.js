@@ -4643,8 +4643,6 @@
         KEY_MOUSE_1: 9,
         KEY_MOUSE_2: 16,
         KEY_FUCK_YOU: 192,
-        KEY_CHUNGUS: 188,
-        KEY_BABY: 190,
         KEY_CHAT: 191,
         KEY_GOD: 80,
         KEY_KILL_YOURSELF: 79,
@@ -4744,6 +4742,14 @@
             type: "dominaton",
             code: "glitch-virginia-d",
             at: p.glitch("jagged-petal-parenthesis")
+            // featured: 1, // For Featured Status.
+          },
+          {
+                   visible: 1,
+            id: "Glitch-Staging",
+            type: "ffa",
+            code: "glitch-virginia-a",
+            at: p.glitch("debonair-pushy-beam")
             // featured: 1, // For Featured Status.
           },
           {
@@ -5481,12 +5487,6 @@
                   break;
                 case a.KEY_FUCK_YOU:
                   this.emit("0");
-                  break;
-                case a.KEY_CHUNGUS:
-                  this.emit("P");
-                  break;
-                case a.KEY_BABY:
-                  this.emit("I");
                   break;
                 case a.KEY_KILL_YOURSELF:
                   this.emit("K");
