@@ -2,7 +2,7 @@ name: 'Neocities'
 on:
  push:
     branches:
-      - glitch
+      - master
 
 jobs:
   deploy:
