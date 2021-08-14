@@ -1,3 +1,63 @@
+     //just some code to make the sound work
+      var smallaudio = new Audio();
+      smallaudio.src =
+        "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
+      function PlaySound210() {
+        smallaudio.play();
+      }
+      var clicked = false;
+
+      function doSomething() {
+        if (clicked) {
+          var bflat25 = new Audio();
+          bflat25.src =
+            "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cancel.wav";
+          bflat25.load();
+          bflat25.play();
+        } else {
+          var bflat33 = new Audio();
+          bflat33.src =
+            "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
+          bflat33.load();
+          bflat33.play();
+        }
+        clicked = !clicked;
+      }
+      var smallaudio2 = new Audio();
+      smallaudio2.src =
+        "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/error.ogg";
+      function PlaySound211() {
+        smallaudio2.play();
+      }
+      var smallaudio3 = new Audio(
+        "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/socket.wav"
+      );
+
+      smallaudio3.loop = false;
+      function PlaySound212() {
+        smallaudio3.loop = false;
+        smallaudio3.play();
+      }
+  var smallaudio5 = new Audio();
+  smallaudio5.src =
+    "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/poka.wav";
+  function PlaySound214() {
+    smallaudio5.play();
+  }
+  var smallaudio6 = new Audio();
+  smallaudio6.src =
+    "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/finish.wav";
+  function PlaySound215() {
+    smallaudio6.play();
+  }
+  var smallaudio4 = new Audio();
+  smallaudio4.src =
+    "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/camera.wav";
+  function PlaySound213() {
+    smallaudio4.play();
+  }
+
+
 ~function() {
   "use strict";
   var I = I || {};
@@ -17,24 +77,6 @@
       );
     return r + "";
   };
-  var smallaudio5 = new Audio();
-  smallaudio5.src =
-    "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/poka.wav";
-  function PlaySound214() {
-    smallaudio5.play();
-  }
-  var smallaudio6 = new Audio();
-  smallaudio6.src =
-    "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/finish.wav";
-  function PlaySound215() {
-    smallaudio6.play();
-  }
-  var smallaudio4 = new Audio();
-  smallaudio4.src =
-    "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/camera.wav";
-  function PlaySound213() {
-    smallaudio4.play();
-  }
 
   I.ASSUME_ES5 = !1;
   I.ASSUME_NO_NATIVE_MAP = !1;
@@ -264,17 +306,17 @@
           case 19:
             return l.guiblack;
           case 20:
-            return "#008080";
+            return "#a913cf";
           case 21:
-            return "#8FFF00";
+            return "#226ef6";
           case 22:
-            return "#FEFCAA";
+            return "#ff1000";
           case 23:
-            return "#d21fff";
+            return "#ff9000";
           case 24:
-            return "#B35ED8";
+            return "#00e00b";
           case 25:
-            return "#0531CB";
+            return "#ffd300";
           case 26:
             return "#226ef6";
           case 27:
@@ -356,6 +398,18 @@
             return "#b493d3";
               case 46:
             return "#ffe6f4";
+              case 47:
+            return "#008080";
+          case 48:
+            return "#8FFF00";
+          case 49:
+            return "#FEFCAA";
+          case 50:
+            return "#d21fff";
+          case 51:
+            return "#B35ED8";
+          case 52:
+            return "#0531CB";
           default:
             return "#ff0000";
         }
@@ -625,46 +679,7 @@
         }
         return btoa(b).replace(/=+/, "");
       }
-      //just some code to make the sound work
-      var smallaudio = new Audio();
-      smallaudio.src =
-        "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
-      function PlaySound210() {
-        smallaudio.play();
-      }
-      var clicked = false;
-
-      function doSomething() {
-        if (clicked) {
-          var bflat25 = new Audio();
-          bflat25.src =
-            "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cancel.wav";
-          bflat25.load();
-          bflat25.play();
-        } else {
-          var bflat33 = new Audio();
-          bflat33.src =
-            "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
-          bflat33.load();
-          bflat33.play();
-        }
-        clicked = !clicked;
-      }
-      var smallaudio2 = new Audio();
-      smallaudio2.src =
-        "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/error.ogg";
-      function PlaySound211() {
-        smallaudio2.play();
-      }
-      var smallaudio3 = new Audio(
-        "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/socket.wav"
-      );
-
-      smallaudio3.loop = false;
-      function PlaySound212() {
-        smallaudio3.loop = false;
-        smallaudio3.play();
-      }
+   
       function t() {
         if (!ua) {
           ua = !0;
@@ -3798,7 +3813,7 @@
                   (m -= 40));
                 if (B.graphical.screenshotMode)
                   W[6].draw(
-                    "Arras.io",
+                    "arras.io",
                     h + 200,
                     m - 2,
                     15,
@@ -3808,7 +3823,7 @@
                 else {
                   if (b.showDebug) {
                     W[6].draw(
-                      "Arras.io",
+                      "arras.io",
                       h + 200,
                       m - 84 - 2,
                       15,
@@ -3845,7 +3860,7 @@
                     );
                   } else
                     W[6].draw(
-                      "Arras.io",
+                      "arras.io",
                       h + 200,
                       m - 42 - 2,
                       15,
@@ -4602,6 +4617,7 @@
         KEY_AUTO_SPIN: 67,
         KEY_OVER_RIDE: 82,
         KEY_LEVEL_UP: 78,
+        KEY_TELEPORT: 84,
         KEY_ABILITY: 70,
         KEY_REVERSE_MOUSE: 66,
         KEY_REVERSE_TANK: 86,
@@ -5334,6 +5350,9 @@
             case a.KEY_MOUSE_2:
               this.set(6, !0);
               break;
+              case a.KEY_TELEPORT:
+                  this.emit("F");
+                  break;
             case a.KEY_LEVEL_UP:
               this.emit("L");
               break;
