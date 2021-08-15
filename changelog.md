@@ -1,4 +1,24 @@
 # Update
+- Fixed a bug with Potato Chip and Spectator A
+- Added a new chat command: /info
+- Changed the DAMAGE_CONSTANT: config setting to 0.8, all tanks should have more health now
+# Update
+- Buffed Healer
+- Buffed all Underseer branch tanks
+- Changed the look of some Inceptioner-branch tanks
+- Added 3 new tanks
+- Double Gunner - Branches off Gunner and Double Twin
+- Producer - Branches off Trapper and Inceptioner
+- Auto-Hivemind - Branches off Hivemind and Auto-Basic
+# Update
+- Removed all tanks with freezing effects as they were slowing down the server
+- Added some bosses
+# Update
+- Nerfed Railgun
+- Added a teleportation keybind for Testbed B and the Event Server, press T to teleport!
+- Fixed a bug with Healer
+- The define command is now available to Testbed B and the event server!
+# Update
 - Nerfed all spawner-branch tank's reload speed
 - Nerfed Boomer
 - Nerfed Carpenter
