@@ -1,5 +1,7 @@
 # Update
 - Fixed a bug with Potato Chip and Spectator A
+- Added a new chat command: /info
+- Changed the DAMAGE_CONSTANT: config setting to 0.8, all tanks should have more health now
 # Update
 - Buffed Healer
 - Buffed all Underseer branch tanks
