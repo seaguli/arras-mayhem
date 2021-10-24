@@ -1586,14 +1586,7 @@
                       }
                     });
                   })
-                    .then(() =>
-                      fetch("http://ip-p.arras.io:2020/poll/" + a + "/status")
-                    )
-                    .then(b => b.json())
-                    .then(b => {
-                      if (!b.ok) throw Error("Poll does not exist!");
-                      c = b.options;
-                    });
+     
                 L.onclick = () => {
                   L.remove();
                   let a = b
@@ -3813,7 +3806,7 @@
                   (m -= 40));
                 if (B.graphical.screenshotMode)
                   W[6].draw(
-                    "arras.io",
+                    "Arras.io",
                     h + 200,
                     m - 2,
                     15,
@@ -3823,7 +3816,7 @@
                 else {
                   if (b.showDebug) {
                     W[6].draw(
-                      "arras.io",
+                      "Arras.io",
                       h + 200,
                       m - 84 - 2,
                       15,
@@ -3860,7 +3853,7 @@
                     );
                   } else
                     W[6].draw(
-                      "arras.io",
+                      "Arras.io",
                       h + 200,
                       m - 42 - 2,
                       15,
@@ -4367,11 +4360,11 @@
           m();
           var c = [
             [
-              "Be mindful of others! Refrain from using laggy tanks while others are present!",
+              "Want a taste of Testbed B without a token? Join the Event server!",
               "Stuck on connecting? Refresh the page, or try another server."
             ],
             [
-              "Press the Backslash key to chat!",
+              "Press the Backslash '/' key to chat!",
               "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.",
               "Want access to TESTBED? Join the Discord Server!",
               "Have you tried Diep.io yet?",
@@ -4595,6 +4588,7 @@
           `n-${a}-${e}.7e14.starter-us-west-2.openshiftapps.com`,
         glitch: a => `${a}.glitch.me`,
         replit: a => `${a}.repl.co`,
+        render: a => `${a}.onrender.com`,
         heroku: a => `${a}.herokuapp.com`,
         arras: (a, e = 5e3) => `ip-${a}.arras.io:${e}`,
         arrasUnknown: (a, e = 5e3) => `ipu-${a}.arras.io:${e}`
@@ -4685,6 +4679,7 @@
             glitch: "Glitch",
             linode: "Linode",
             vultr: "Vultr",
+            render: "Render",
             buyvm: "BuyVM",
             extravm: "ExtraVM",
             hetzner: "Hetzner",
@@ -4777,6 +4772,7 @@
             // featured: 1, // For Featured Status.
           },
           {
+
             visible: 0,
             id: "Repl.it-Legacy",
             type: "legacy",
