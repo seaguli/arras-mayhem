@@ -1,25 +1,22 @@
      //just some code to make the sound work
-      var smallaudio = new Audio();
-      smallaudio.src =
+      var clicksound = new Audio();
+      clicksound.src =
         "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
       function PlaySound210() {
-        smallaudio.play();
+        clicksound.play();
       }
       var clicked = false;
 
       function doSomething() {
         if (clicked) {
-          var bflat25 = new Audio();
-          bflat25.src =
+          var optionclicksound = new Audio();
+           optionclicksound.src =
             "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cancel.wav";
-          bflat25.load();
-          bflat25.play();
+          optionclicksound.load();
+           optionclicksound.play();
         } else {
-          var bflat33 = new Audio();
-          bflat33.src =
-            "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
-          bflat33.load();
-          bflat33.play();
+           clicksound.load();
+           clicksound.play();
         }
         clicked = !clicked;
       }
@@ -50,11 +47,11 @@
   function PlaySound215() {
     smallaudio6.play();
   }
-  var smallaudio4 = new Audio();
-  smallaudio4.src =
+  var camerasound = new Audio();
+  camerasound.src =
     "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/camera.wav";
   function PlaySound213() {
-    smallaudio4.play();
+    camerasound.play();
   }
 
 
@@ -4728,7 +4725,7 @@
             code: "heroku-frankfurt-4",
             at: p.heroku("arrasdotio"),
             prefer: !0,
-            featured: 1 // For Featured Status.
+            featured: 0 // For Featured Status.
           },
           {
             visible: 0,
@@ -4737,7 +4734,7 @@
             code: "heroku-frankfurt-f",
             at: p.heroku("arras-moe"),
             prefer: !0,
-            featured: 1 // For Featured Status.
+            featured: 0 // For Featured Status.
           },
           {
             visible: 0,
@@ -4768,8 +4765,8 @@
             id: "Heroku-Event",
             type: "main",
             code: "heroku-virginia-x",
-            at: p.heroku("arras-mayhem")
-            // featured: 1, // For Featured Status.
+            at: p.heroku("arras-mayhem"),
+             featured: 1, // For Featured Status.
           },
           {
 
