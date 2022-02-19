@@ -1,65 +1,67 @@
+# Arras.io reimagined
 
-# Arras Mayhem
-The offical client for the arras-mayhem server.
+The offical client for the arras.io siege remake
 
-![Purple Arras.io logo](https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2FLogo.png?v=1595837913869) 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ee4ba925-dbe8-40fd-9faf-83e3dabe4b5b/deploy-status)](https://app.netlify.com/sites/arras-moe/deploys) [![Official Discord server](https://discordapp.com/api/guilds/427668515357458443/embed.png)](https://discord.gg/yTZdDPA)
+![Purple Arras.io logo](https://cdn.glitch.global/98153732-992a-4d57-b71f-86128add9d7f/download.png?v=1645171185622)
 
 # Features
+
 - Sound effects!
 - Music!
-- Lightweight, separate client! 
+- Lightweight, separate client!
 - More colours!
 - Server Selector!
 - More themes!
 - Fixed hotkeys! (Be sure your server project has them binded)
 - Deployment to Repl.it or Heroku! Still works with Glitch!
 - Webserver compatibility with 6 different languages!
-- In-game Chat! 
-- *boing boing*
-> :warning: **Chat system requires server modification!!!**<br/> It won't work out of the box with standard servers, minor code additions are needed, scroll down for the tutorial!
+- In-game Chat!
+- _boing boing_
 
-
-# Trailer
-[![kute trailer](http://img.youtube.com/vi/P3cuHSb8Ols/0.jpg)](https://www.youtube.com/watch?v=P3cuHSb8Ols "arras mayhem")
-# Webservers
 The client is able to be hosted as either a Node.js Express, PHP, Go HTTP, Ruby Webrick, C or Python Flask webserver. Details below! Examples are linked as well.
 
 - Node.JS Express server:
-   ``node index.js``
-    - <https://repl.it/@umineko/arras-express> 
-    - <https://gitlab.com/seaguli/arras-express>
-- PHP webserver: 
-   ``php -S 0.0.0.0:8000 -t`` 
-   - <https://repl.it/@umineko/arras-php>
+  `node index.js`
+  - <https://repl.it/@umineko/arras-express>
+  - <https://gitlab.com/seaguli/arras-express>
+- PHP webserver:
+  `php -S 0.0.0.0:8000 -t`
+  - <https://repl.it/@umineko/arras-php>
 - Python Flask server:
-   ``python main.py`` 
-   - <https://repl.it/@umineko/arras-flask>
-   - <https://gitlab.com/seaguli/arras-flask>
-- Go HTTP server: 
-   ``go build`` , then ``./main``
-   - <https://repl.it/@umineko/arras-go>
-   - <https://gitlab.com/seaguli/arras-go>
+  `python main.py`
+  - <https://repl.it/@umineko/arras-flask>
+  - <https://gitlab.com/seaguli/arras-flask>
+- Go HTTP server:
+  `go build` , then `./main`
+  - <https://repl.it/@umineko/arras-go>
+  - <https://gitlab.com/seaguli/arras-go>
 - Ruby Webrick server:
-   ``ruby main.rb`` 
-   - <https://repl.it/@umineko/arras-ruby>
-   - <https://gitlab.com/seaguli/arras-ruby>
-- C webserver: 
-   ``make`` , then ``./arras 8000 ./``
-   - <https://repl.it/@umineko/arras-C>
-   
+  `ruby main.rb`
+  - <https://repl.it/@umineko/arras-ruby>
+  - <https://gitlab.com/seaguli/arras-ruby>
+- C webserver:
+  `make` , then `./arras 8000 ./`
+  - <https://repl.it/@umineko/arras-C>
+
 Additonal code is available on my Github project's page, <https://github.com/seaguli/arras-mayhem>
+
 # Remixing
+
 Feel free to remix this project and modify it to your own liking! You aren't required to credit me, but I would like it :D
 
 <sub><sup>
-    ask me if you want any aspect of the server's code at (SF) Seagull#2224
+ask me if you want any aspect of the server's code at (SF) Seagull#2224
 </sub></sup>
+
 # Setting it up
+
 Thanks to [MG] Octo#9071 for the server selector and guide!
+
 ## How to add your server(s)
+
 - Go to line 3339 in bundle.js
 - You'll see there are multiple things that look like this:
+
 ```
           {
             visible: 0,
@@ -71,6 +73,7 @@ Thanks to [MG] Octo#9071 for the server selector and guide!
            // featured: 1, // For Featured Status.
           },
 ```
+
 - Now, lets break it down. The first thing you'll see is `visable 0,`. Don't worry, it is.
 - The next thing is id. This is what will appear in the web address. I like to have them start at 1 and numarically have them go up
 - The thing after that is "type". This is used for indentifying the gamemode but it doesnt really matter what you put in cuase it wont effect the game, only the server does that
@@ -79,6 +82,7 @@ Thanks to [MG] Octo#9071 for the server selector and guide!
 - After that it sais "worldwide". This is the region. Just keep it at worldwide unless your really gonna set up servers in different locations
 - at the end, it sais "f". This is the gamemode that displays in the server selector. Here is a list of gamemodes you can choose from
 - (note; This is just what it displays, if you want it to actally be say domination, you gotta do that in your server code.)
+
 ```
 p=private
 e=word
@@ -93,14 +97,16 @@ d=domination
 m=mothership
 a=assault
 ```
-- Next we got ``at: p.glitch('your-server'),``. This is where you'll put in to connect to your server.
+
+- Next we got `at: p.glitch('your-server'),`. This is where you'll put in to connect to your server.
 - The p.glitch is what server hoster its gonna attempt to connect to. If we want heroku, we would put in p.heroku instead of p.glitch.
-- Afterwards, theres ``prefer: !0,``. I wouldnt mess with it but it makes you automaiticly connect to that server by default
+- Afterwards, theres `prefer: !0,`. I wouldnt mess with it but it makes you automaiticly connect to that server by default
 - Horray! You are now done doing the informational reading. Lets put this knowledge into use.
 - What were gonna try to do;
 - Have a server that connects to my glitch server that is 2TDM.
 - The first thing were gonna do is find the server selector code in bundle.js on line 3339.
 - Next, where gonna look at the code and figure out what to do.
+
 ```
           {
             visible: 0,
@@ -112,13 +118,16 @@ a=assault
            // featured: 1, // For Featured Status.
           },
 ```
-- Now that you are there, lets edit some things. 
+
+- Now that you are there, lets edit some things.
 - We want to connect to our glitch project, "swift-checkered-wildebeest".
 - What where gonna do is replace the "your-server" with "swift-checkered-wildebeest".
-- After that, were gonna change ``code: "glitch-worldwide-f",`` to ``code: "glitch-worldwide-2"``. 
+- After that, were gonna change `code: "glitch-worldwide-f",` to `code: "glitch-worldwide-2"`.
 - What i did is this: Keep it as glitch cause thats what where using; Keep at as worldwide cause why not; replace the "f" with "2" becuase we want 2TDM. Remember, a list of all the gamemodes is listed above.
 - And there we go, we should know have a working, custom client with a server selector! Horray!
+
 # Domains
+
 The client can be found at the following links:
 
 - <https://arras-mayhem.glitch.me>
@@ -127,14 +136,14 @@ The client can be found at the following links:
 - <https://arras-mayhem.netlify.app/>
 - <https://arras-mayhem.vercel.app/>
 - <https://seaguli.github.io/arras-mayhem/> (Styleless version)
-- <https://arras-mayhem.umineko.repl.co/> (Does not recieve client updates)
+- <https://arras.onrender.com/>
 
 # Chat System Tutorial
 
 **Add the code below to your server for the chat system to function!**
 
- First, you should find this code block:
-   
+First, you should find this code block:
+
      case "S":
             {
               // clock syncing
@@ -153,7 +162,9 @@ The client can be found at the following links:
               socket.talk("S", synctick, util.time());
             }
             break;
-Copy this code, which contains the main chat system and commands, paste it above the aforementioned code snippet         
+
+Copy this code, which contains the main chat system and commands, paste it above the aforementioned code snippet
+
 ```
 ///////////////////////COPY CODE BELOW!!!///////////////
           case "h":
@@ -187,14 +198,14 @@ Copy this code, which contains the main chat system and commands, paste it above
                   player.body.sendMessage("Invalid chat message.");
                   return 1;
                 }
- 
+
                 if (encodeURI(message).split(/%..|./).length > maxLen) {
                   player.body.sendMessage(
                     "Your message is too long. (<100 Characters)"
                   );
                   return 1;
                 }
-  
+
                 let playerName = socket.player.name
                   ? socket.player.name
                   : "Unnamed";
@@ -208,9 +219,9 @@ Copy this code, which contains the main chat system and commands, paste it above
             }
             break;
 ```
+
 your code should be looking like this now
 
-      
                case "h":
             if (!socket.status.deceased) {
               // Chat system!!.
@@ -241,14 +252,14 @@ your code should be looking like this now
                   player.body.sendMessage("Invalid chat message.");
                   return 1;
                 }
- 
+
                 if (encodeURI(message).split(/%..|./).length > maxLen) {
                   player.body.sendMessage(
                     "Your message is too long. (<100 Characters)"
                   );
                   return 1;
                 }
-  
+
                 let playerName = socket.player.name
                   ? socket.player.name
                   : "Unnamed";
@@ -280,7 +291,7 @@ your code should be looking like this now
             }
             break;
 
-then you should find this 
+then you should find this
 
      socket.status = {
           verified: false,
@@ -291,12 +302,13 @@ then you should find this
           needsFullMap: true,
           needsNewBroadcast: true,
           lastHeartbeat: util.time(),
-        };      
-add this below *lastHeartbeat: util.time(),*
+        };
 
-`        lastChatTime: util.time()`
-  
-  Then you should find this code block
+add this below _lastHeartbeat: util.time(),_
+
+` lastChatTime: util.time()`
+
+Then you should find this code block
 
      // Free the old view
               if (views.indexOf(socket.view) != -1) {
@@ -305,16 +317,17 @@ add this below *lastHeartbeat: util.time(),*
               }
               socket.player = socket.spawn(name);
 
-add this below *socket.player = socket.spawn(name);*
+add this below _socket.player = socket.spawn(name);_
 ` socket.player.name = name;`
 
 **And voila! Your chat system is working! This assumes you are remixing my client, which already has all the client-side code needed for the chat to function!**
 
 # Credits
+
 - Original Client by ProKameron
-<https://glitch.com/~imp-template2>
+  <https://glitch.com/~imp-template2>
 - Seaguli
 - Powfu [MG] Octo#9071
 - Various StackOverflow contributors (For webserver code)
 - CX and the various developers of arras.io
-
+- Music is from Koi ni, Kanmi o Soete/恋ニ、甘味ヲソエテ <https://www.youtube.com/watch?v=ZHDr-idDhAA&list=PLhaleE7sSnzOfIcxh-AuuSk4OeerTHALG>

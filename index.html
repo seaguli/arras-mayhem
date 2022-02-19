@@ -12,7 +12,9 @@
   <meta property="og:site_name" content="arras-mayhem">
   <meta property="og:image:width" content="80">
   <meta property="og:image:height" content="80">
-    <meta name="theme-color" content="#8abc3f">
+  <meta property="og:type" content="website">
+  <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#b493d3">
   <title>arras.io</title>
     <!-- Apple Web App stuff -->
   <link rel="apple-touch-icon" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/app.png" />
@@ -28,73 +30,64 @@
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
   <link rel="stylesheet" href="/main.css">
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="256x256" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arras.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="https://cdn.glitch.global/98153732-992a-4d57-b71f-86128add9d7f/download.png?v=1645171185622">
     <link rel="shortcut icon" href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arraslogo.png" type="image/x-icon">
 </head>
-<!https://discordapp.com/oauth2/authorize?client_id=427927499071160320&redirect_uri=http%3A%2F%2Farras.io%2Fcallback&response_type=code&scope=identify%20email -->
 <body oncontextmenu="return event.target.tagName === 'A'">
-                          <script>
-var bflat2 = new Audio();
-bflat2.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/syt.ogg");
+    <!-- Music and Audio -->
+  <script>
+var hover = new Audio();
+hover.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/syt.ogg");
 function PlaySound1() {
-  bflat2.load();   
-    bflat2.play();
+  hover.load();   
+    hover.play();
 }
 </script>
-                          <script>
-var bflat5 = new Audio();
-bflat5.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arras-mayhem.wav");
+    <script>
+var animevoice = new Audio();
+animevoice.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arras-mayhem.wav");
 function PlaySound5() {
-  bflat5.load();   
-    bflat5.play();
+  animevoice.load();   
+   animevoice.play();
 }
 </script>
-    
-
-                            <script>
+      <script>
 var music2 = new Audio();
-                                  const months = ["https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_10.ogg?v=1608943280133", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm05.ogg?v=1622665020987", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_39.ogg?v=1612744179994", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm01.ogg?v=1624907150795", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm018.ogg?v=1628736630203"];
-
-var rand = months[~~(Math.random() * months.length)];
+ const pmusic = ["https://cdn.glitch.global/fca666a2-8235-47b6-a711-c9926dc2248f/bgm002.ogg?v=1641828188671", "https://cdn.glitch.me/fca666a2-8235-47b6-a711-c9926dc2248f/bgm05.ogg?v=1640768277837", "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fbgm_39.ogg?v=1612744179994", "https://cdn.glitch.me/fca666a2-8235-47b6-a711-c9926dc2248f/bgm11.ogg?v=1640767898906","https://cdn.glitch.me/fca666a2-8235-47b6-a711-c9926dc2248f/bgm02.ogg?v=1640767732812"];
+var rand = pmusic[~~(Math.random() * pmusic.length)];
 music2.src = (rand);
 function PlayMusic() {
   music2.load();   
     music2.play();
 }
 </script>
-
-                          <script>
-                            
-                          function switchAudio() {
-                              if (document.getElementById("optSound").checked === true) {
-                                   music2.play()
-                                  music2.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-                              } else if (document.getElementById("optSound").checked === false) {
-                                   music2.pause()
-                              }
-                              return;
-                          }
-
-                          </script>
-                              <script>
-var bflat3 = new Audio();
-bflat3.src = ("https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fsound%2022.wav?v=1596003626717");
+    <script>   
+   function switchAudio() {
+      if (document.getElementById("optSound").checked === true) {
+           music2.play()
+    music2.addEventListener('ended', function() {this.currentTime = 0; this.play();}, false);
+     } else if (document.getElementById("optSound").checked === false) {
+          music2.pause()
+            }
+         return; } 
+  </script>
+       <script>
+var gears = new Audio();
+gears.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/gear.wav");
 function PlaySound3() {
-    bflat3.play();
+    gears.play();
 }
 </script> 
-                 <script>
-var bflat = new Audio();
-bflat.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg");
+    <script>
+var click = new Audio();
+click.src = ("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg");
 function PlaySound() {
-  bflat.load();   
-    bflat.play();
+  click.load();   
+    click.play();
 }
 </script>
       <audio id ="bflat" src="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg"></audio>
+    <!-- Main Code-->
    <div id="gameAreaWrapper">
     <canvas id="gameCanvas" tabindex="1"></canvas>
     <div id="respawn-banner" class="respawn-banner"><div id="arras-io_728x90"></div></div>
@@ -110,15 +103,14 @@ function PlaySound() {
         <div class="startMenuHolder">
           <div class="sliderHolder">
             <div class="slider startMenuSlidingContent">
-              <center><img src="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arras.png" onmouseover="PlaySound1()" onclick="PlaySound()" title="arras.io" class="icon" alt="arras icon"></center>
+              <center><img src="https://cdn.glitch.global/98153732-992a-4d57-b71f-86128add9d7f/download.png?v=1645171185622" onmouseover="PlaySound1()" onclick="PlaySound()" title="arras.io" class="icon" alt="arras icon"></center>
                <h1 onclick="PlaySound5()">arras.io</h1>
-    
-                                                      <noscript>
-    <h4>Please enable JavaScript to play!</h4>
-  </noscript>
-                         <div class="serverSelector shadowScroll"><table><tbody id="serverSelector"></tbody></table></div>
-              <input type="text" autofocus tabindex="1" title="Your name"  spellcheck="false" placeholder="Start the mayhem as" id="playerNameInput" maxlength="28">
-              <input type="password" tabindex="1"  title="Use this field if you have a Token for Testbed access" placeholder="Token" id="playerKeyInput" maxlength="48">
+               <noscript>
+                <h4>Please enable JavaScript to play!</h4>
+                 </noscript>
+                  <div class="serverSelector shadowScroll"><table><tbody id="serverSelector"></tbody></table></div>
+              <input type="text" autofocus tabindex="1" title="Your name"  spellcheck="false" placeholder="This is the tale of..." id="playerNameInput" maxlength="28">
+              <input type="text" tabindex="1"  title="Use this field if you have a Token for Testbed access" placeholder="Token" id="playerKeyInput" maxlength="48">
             </div>
             <div class="slider" id="startMenuSlidingTrigger" onmouseover="PlaySound1()" title="Options, controls and more links">
               <h3>
@@ -136,7 +128,6 @@ function PlaySound() {
                   </tr>
                   <tr>
                     <td><div><b data-key="KEY_LEVEL_UP">N</b><span> - </span>level up</div></td>
-                    <td><div><b data-key="KEY_KILL_YOURSELF">O</b><span> - </span>suicide</div></td>
                     <td><div><b data-key="KEY_REVERSE_MOUSE">B</b><span> - </span>god mode</div></td>
                   </tr>
                   <tr>
@@ -172,7 +163,6 @@ function PlaySound() {
                      <tr class="hidden">
                     <td><div><b data-key="KEY_CHAT" data-help="KEY_CHAT">/</b><span> - </span>chat</div></td>
                     <td><div><b data-key="KEY_ABILITY" data-help="KEY_ABILITY">F</b><span> - </span>ability</div></td>
-                    <td><div><b data-key="KEY_FUCK_YOU" data-help="KEY_FUCK_YOU">`</b><span> - </span>testbed</div></td>
                   </tr>
                        <tr class="hidden">
                     <td><div><b data-key="KEY_CHUNGUS" data-help="KEY_CHUNGUS">&gt;</b><span> - </span>grow</div></td>
@@ -189,22 +179,6 @@ function PlaySound() {
                 <option value="classic">Classic</option>
                                  <option value="obstar">Obstar</option>
                                                 <option value="diep">Diep.io</option>
-                <option value="pumpkin">Pumpkin Skeleton (Fan-made)</option>
-                <option value="forest">Forest (Fan-made)</option>
-                <option value="midnight">Midnight (Fan-made)</option>
-                <option value="pastel">Snow (Fan-made)</option>
-                <option value="ocean">Coral Reef (Fan-made)</option>
-                <option value="badlands">Badlands (Fan-made)</option>
-                <option value="bleach">Bleach (Fan-made)</option>
-                 <option value="confusion">Confusion (Fan-made)</option>
-                 <option value="nebula">Nebula (Fan-made)</option>
-                  <option value="space">Space (Fan-made)</option>
-                <option value="candy">Cotton Candy (Fan-made)</option>
-                              <option value="nightmare">Nightmare (Fan-made)</option>
-                    <option value="bubblegum">Bubblegum (Fan-made)</option>
-                 <option value="terminal">Terminal (Fan-made)</option>
-                <option value="borderless">Borderless (Fan-made)</option>
-                <option value="bordered">Bordered (Fan-made)</option>
                 <option value="custom">Custom</option>
               </select>
               <select id="optMobile" tabindex="-1">
@@ -249,13 +223,12 @@ function PlaySound() {
                   </div></td> <!-- Toggleable audio via checkbox -->
                 </tr>
               </table>
-        
               <div id="bottomHolder">
             <a style="background:#ffa500" onclick="PlaySound()" onmouseover="PlaySound1()" title="A link to the developer's patreon" href="https://www.patreon.com/arrasio" target="_blank" rel="noopener noreferrer">Support The Dev!</a>
                  <a style="background:#ffa500" onclick="PlaySound()" onmouseover="PlaySound1()" title="A custom theme creator" href="https://codepen.io/road-to-100k/full/MPyOeQ/" target="_blank" rel="noopener noreferrer">Theme Creator</a>
                        <a style="background:#ffa500" onclick="PlaySound()" onmouseover="PlaySound1()" title="A link to the Glitch beta server" href="https://arras-moe.glitch.me/" target="_blank" rel="noopener noreferrer">Beta Server</a>
                  <a style="background:#C98913" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://arras.io/#host=arrasio5.glitch.me" title="Use the offical arras.io client" target="_blank" rel="noopener noreferrer">Arras.io</a>
-            <a style="background:#C98913" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://discord.gg/yTZdDPA" title="Join our Discord server" target="_blank" rel="noopener noreferrer">Discord</a>
+                    <a style="background:#C98913" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://drive.google.com/drive/folders/1htLxrKc8_GuQFpPhiCKMC7wzjJPyQE80?usp=sharing" title="Arras Mayhem's screenshot and video gallery" target="_blank" rel="noopener noreferrer">Gallery</a>
             <a style="background:#C98913" onclick="PlaySound()" onmouseover="PlaySound1()" href="https://glitch.com/~arras-template" title="Create your own private server" target="_blank" rel="noopener noreferrer">Template</a>
           </div>
             </div>

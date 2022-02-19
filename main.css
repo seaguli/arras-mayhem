@@ -41,8 +41,7 @@ html, body, canvas {
   padding: 0;
 }
 canvas {
-  image-rendering: optimizeSpeed;
-  image-rendering: pixelated;
+image-rendering: auto;
 }
 h1 {
   padding: 0;

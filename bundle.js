@@ -1,25 +1,22 @@
      //just some code to make the sound work
-      var smallaudio = new Audio();
-      smallaudio.src =
+      var clicksound = new Audio();
+      clicksound.src =
         "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
       function PlaySound210() {
-        smallaudio.play();
+        clicksound.play();
       }
       var clicked = false;
 
       function doSomething() {
         if (clicked) {
-          var bflat25 = new Audio();
-          bflat25.src =
+          var optionclicksound = new Audio();
+           optionclicksound.src =
             "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/cancel.wav";
-          bflat25.load();
-          bflat25.play();
+          optionclicksound.load();
+           optionclicksound.play();
         } else {
-          var bflat33 = new Audio();
-          bflat33.src =
-            "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
-          bflat33.load();
-          bflat33.play();
+           clicksound.load();
+           clicksound.play();
         }
         clicked = !clicked;
       }
@@ -50,11 +47,11 @@
   function PlaySound215() {
     smallaudio6.play();
   }
-  var smallaudio4 = new Audio();
-  smallaudio4.src =
+  var camerasound = new Audio();
+  camerasound.src =
     "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/camera.wav";
   function PlaySound213() {
-    smallaudio4.play();
+    camerasound.play();
   }
 
 
@@ -824,76 +821,35 @@
         g.strokeStyle = u;
         g.stroke();
       }
-      var somethinglolcuzimlazy = ""; //no token here keep looking
-      function Qa(b, a, c, h, u) {
-        if (!(0.05 > u)) {
-          var d = c.render.status.getFade();
-          d *= d;
-          g.globalAlpha = d;
-          var f = c.size * h;
-          h = M[c.index];
-          h = (f / h.size) * h.realSize;
-          if (c.drawsHealth) {
-            let n = c.render.health.get(),
-              y = c.render.shield.get();
-            if (1 > n || 1 > y) {
-              let c = a + 1.1 * h + 15;
-              g.globalAlpha = u * u * d;
-              B.graphical.shieldbars
-                ? (K(b - f, b + f, c, 6 + B.graphical.barChunk, l.black),
-                  y
-                    ? (K(b - f, b - f + 2 * f * n, c + 1.5, 3, l.lgreen),
-                      (g.globalAlpha *= 0.7),
-                      K(b - f, b - f + 2 * f * y, c - 1.5, 3, l.teal))
-                    : K(b - f, b - f + 2 * f * n, c, 4, l.lgreen))
-                : (K(b - f, b + f, c, 3 + B.graphical.barChunk, l.black),
-                  K(b - f, b - f + 2 * f * n, c, 3, l.lgreen),
-                  y &&
-                    ((g.globalAlpha *= 0.3 + 0.3 * y),
-                    K(b - f, b - f + 2 * f * y, c, 3, l.teal)));
-              g.globalAlpha = d;
+      var somethinglolcuzimlazy = "THEBEES"
+                  function Qa(b, a, c, h, u) {
+                if (!(.05 > u)) {
+                    var d = c.render.status.getFade();
+                    d *= d;
+                    g.globalAlpha = d;
+                    var f = c.size * h;
+                    h = M[c.index];
+                    h = f / h.size * h.realSize;
+                    if (c.drawsHealth) {
+                        let n = c.render.health.get(),
+                            y = c.render.shield.get();
+                        if (1 >
+                            n || 1 > y) {
+                            let c = a + 1.1 * h + 15;
+                            g.globalAlpha = u * u * d;
+                            B.graphical.shieldbars ? (K(b - f, b + f, c, 6 + B.graphical.barChunk, l.black), y ? (K(b - f, b - f + 2 * f * n, c + 1.5, 3, l.lgreen), g.globalAlpha *= .7, K(b - f, b - f + 2 * f * y, c - 1.5, 3, l.teal)) : K(b - f, b - f + 2 * f * n, c, 4, l.lgreen)) : (K(b - f, b + f, c, 3 + B.graphical.barChunk, l.black), K(b - f, b - f + 2 * f * n, c, 3, l.lgreen), y && (g.globalAlpha *= .3 + .3 * y, K(b - f, b - f + 2 * f * y, c, 3, l.teal)));
+                            g.globalAlpha = d
+                        }
+                    } //name color
+                    if (somethinglolcuzimlazy == "") {
+                    c.nameplate && c.id !== A.playerid && (null == c.render.textobjs && (c.render.textobjs = [m(), m()]), d = c.name, f = l.guiwhite, !1 &&
+                        (d = d.slice(2), d.length && (f = T(l.yellow, f, .125))), g.globalAlpha = u, c.render.textobjs[0].draw(d, b, a - h - 30, 16, f, "center"), c.render.textobjs[1].draw(H.handleLargeNumber(c.score, !0), b, a - h - 16, 8, f, "center"), g.globalAlpha = 1) } else {
+                      c.nameplate && c.id !== A.playerid && (null == c.render.textobjs && (c.render.textobjs = [m(), m()]), d = c.name, f = l.guiwhite, z.key == somethinglolcuzimlazy &&
+                        (d = d.slice(2), d.length && (f = T(l.yellow, f, .125))), g.globalAlpha = u, c.render.textobjs[0].draw(d, b, a - h - 30, 16, f, "center"), c.render.textobjs[1].draw(H.handleLargeNumber(c.score, !0), b, a - h - 16, 8, f, "center"), g.globalAlpha = 1)
+                      
+                    }
+                }
             }
-          } //name color
-          if (somethinglolcuzimlazy == "") {
-            c.nameplate &&
-              c.id !== A.playerid &&
-              (null == c.render.textobjs && (c.render.textobjs = [m(), m()]),
-              (d = c.name),
-              (f = l.guiwhite),
-              !1 && ((d = d.slice(2)), d.length && (f = T(l.yellow, f, 0.125))),
-              (g.globalAlpha = u),
-              c.render.textobjs[0].draw(d, b, a - h - 30, 16, f, "center"),
-              c.render.textobjs[1].draw(
-                H.handleLargeNumber(c.score, !0),
-                b,
-                a - h - 16,
-                8,
-                f,
-                "center"
-              ),
-              (g.globalAlpha = 1));
-          } else {
-            c.nameplate &&
-              c.id !== A.playerid &&
-              (null == c.render.textobjs && (c.render.textobjs = [m(), m()]),
-              (d = c.name),
-              (f = l.guiwhite),
-              z.key == somethinglolcuzimlazy &&
-                ((d = d.slice(2)), d.length && (f = T(l.yellow, f, 0.125))),
-              (g.globalAlpha = u),
-              c.render.textobjs[0].draw(d, b, a - h - 30, 16, f, "center"),
-              c.render.textobjs[1].draw(
-                H.handleLargeNumber(c.score, !0),
-                b,
-                a - h - 16,
-                8,
-                f,
-                "center"
-              ),
-              (g.globalAlpha = 1));
-          }
-        }
-      }
 
       function za() {
         b.animLoopHandle = requestAnimationFrame(za);
@@ -1133,7 +1089,7 @@
             this.old = !1;
           }
           publish() {
-            let b = M[this.index];
+               let b = M[this.index];
             return {
               image: D(this.index, this.color),
               position: b.position,
@@ -1143,6 +1099,7 @@
             };
           }
         },
+            
         Ya = class {
           constructor() {
             this.entries = {};
@@ -1586,14 +1543,7 @@
                       }
                     });
                   })
-                    .then(() =>
-                      fetch("http://ip-p.arras.io:2020/poll/" + a + "/status")
-                    )
-                    .then(b => b.json())
-                    .then(b => {
-                      if (!b.ok) throw Error("Poll does not exist!");
-                      c = b.options;
-                    });
+     
                 L.onclick = () => {
                   L.remove();
                   let a = b
@@ -3722,7 +3672,7 @@
                     150 > Date.now() % 300 ? l.lgrey : l.lgrey,
                     "center"
                   );
-                if (z.name.includes("Dev⠀"))
+                if (z.name.includes("Seaguli"))
                   N.draw(
                     z.name,
                     Math.round(c + 165) + 0.5,
@@ -3813,7 +3763,7 @@
                   (m -= 40));
                 if (B.graphical.screenshotMode)
                   W[6].draw(
-                    "arras.io",
+                    "Arras.io",
                     h + 200,
                     m - 2,
                     15,
@@ -3823,7 +3773,7 @@
                 else {
                   if (b.showDebug) {
                     W[6].draw(
-                      "arras.io",
+                      "Arras.io",
                       h + 200,
                       m - 84 - 2,
                       15,
@@ -3860,7 +3810,7 @@
                     );
                   } else
                     W[6].draw(
-                      "arras.io",
+                      "Arras.io",
                       h + 200,
                       m - 42 - 2,
                       15,
@@ -3952,7 +3902,7 @@
                       "center",
                       !0
                     );
-                  if (b.label.includes("Dev⠀"))
+                  if (b.label.includes("Seaguli"))
                     ca[a].draw(
                       b.label + ": " + H.handleLargeNumber(Math.round(b.score)),
                       c + 100,
@@ -4367,11 +4317,11 @@
           m();
           var c = [
             [
-              "Be mindful of others! Refrain from using laggy tanks while others are present!",
+              "Want a taste of Testbed B without a token? Join the Event server!",
               "Stuck on connecting? Refresh the page, or try another server."
             ],
             [
-              "Press the Backslash key to chat!",
+              "Press the Backslash '/' key to chat!",
               "Tip: If arras is having a low frame rate, you can try enabling low graphics in the options menu.",
               "Want access to TESTBED? Join the Discord Server!",
               "Have you tried Diep.io yet?",
@@ -4595,6 +4545,7 @@
           `n-${a}-${e}.7e14.starter-us-west-2.openshiftapps.com`,
         glitch: a => `${a}.glitch.me`,
         replit: a => `${a}.repl.co`,
+        render: a => `${a}.onrender.com`,
         heroku: a => `${a}.herokuapp.com`,
         arras: (a, e = 5e3) => `ip-${a}.arras.io:${e}`,
         arrasUnknown: (a, e = 5e3) => `ipu-${a}.arras.io:${e}`
@@ -4685,6 +4636,7 @@
             glitch: "Glitch",
             linode: "Linode",
             vultr: "Vultr",
+            render: "Render",
             buyvm: "BuyVM",
             extravm: "ExtraVM",
             hetzner: "Hetzner",
@@ -4728,63 +4680,22 @@
         servers: [
           {
             visible: 0,
-            id: "Heroku-Beta",
+            id: "Glitch",
             type: "beta",
-            code: "heroku-frankfurt-4",
-            at: p.heroku("arrasdotio"),
+            code: "glitch-frankfurt-4",
+            at: p.glitch("arrasiosiege"),
             prefer: !0,
-            featured: 1 // For Featured Status.
+            featured: 0 // For Featured Status.
           },
           {
             visible: 0,
-            id: "Heroku-FFA",
+            id: "Heroku",
             type: "ffa",
             code: "heroku-frankfurt-f",
-            at: p.heroku("arras-moe"),
+            at: p.heroku("arrasiege"),
             prefer: !0,
-            featured: 1 // For Featured Status.
-          },
-          {
-            visible: 0,
-            id: "Glitch-Developer",
-            type: "dev",
-            code: "glitch-virginia-f",
-            at: p.glitch("arrasio5")
-            // featured: 1, // For Featured Status.
-          },
-          {
-            visible: 1,
-            id: "Glitch-Domination",
-            type: "dominaton",
-            code: "glitch-virginia-d",
-            at: p.glitch("jagged-petal-parenthesis")
-            // featured: 1, // For Featured Status.
-          },
-          {
-                   visible: 1,
-            id: "Glitch-Staging",
-            type: "ffa",
-            code: "glitch-virginia-a",
-            at: p.glitch("debonair-pushy-beam")
-            // featured: 1, // For Featured Status.
-          },
-          {
-            visible: 0,
-            id: "Heroku-Event",
-            type: "main",
-            code: "heroku-virginia-x",
-            at: p.heroku("arras-mayhem")
-            // featured: 1, // For Featured Status.
-          },
-          {
-            visible: 0,
-            id: "Repl.it-Legacy",
-            type: "legacy",
-            code: "replit-virginia-2",
-            at: p.replit("arras-mayhem-legacy.seaguli")
-            // featured: 1, // For Featured Status.
-          }
-        ]
+            featured: 0 // For Featured Status.
+          }]
           .map((a, e) => ({ data: a, i: e }))
           .sort((a, e) =>
             a.data.type < e.data.type

@@ -1,0 +1,19 @@
+{
+  "name": "arras-mayhem",
+  "description": "Arras.io with 10x the reload",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "keywords": [
+    "arras, game, arrasio"
+  ],
+    "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "contributors": [
+    {
+      "name": "Seaguli"
+    }
+  ]
+}
