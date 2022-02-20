@@ -4685,7 +4685,7 @@
             code: "glitch-frankfurt-4",
             at: p.glitch("arrasiosiege"),
             prefer: !0,
-            featured: 0 // For Featured Status.
+            featured: 1 // For Featured Status.
           },
           {
             visible: 0,
@@ -4695,6 +4695,14 @@
             at: p.heroku("arrasiege"),
             prefer: !0,
             featured: 0 // For Featured Status.
+          },
+          {
+            visible: 0,
+            id: "Heroku-Event",
+            type: "main",
+            code: "heroku-virginia-x",
+            at: p.heroku("arras-mayhem"),
+             featured: 1, // For Featured Status.
           }]
           .map((a, e) => ({ data: a, i: e }))
           .sort((a, e) =>
