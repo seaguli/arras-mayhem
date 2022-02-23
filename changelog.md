@@ -1,12 +1,13 @@
-# Updates (Servers)
-- none yet :)
+# Updates Siege
+- Fixed Bots attempting to ram as bullet classes
+- Fixed Scoreboard Bugs
+- buffed bots to 5
+- Nerfed Nyx
+- Upgrade from shotgun call Banger
+- added glass build bots as testing for new classes
+- added new triangle classes
 # Server Status
-- please don't use the heroku server, it doesn't work yet
-- servers which text color is yellow means they are working
-# Updates (Client)
+- Glitch Siege and Heroku Siege are running
+- Doublediep isn't active currently
+# Update
 - Finally Rewrite the Code!
-- added a chat system!
-- Commands!
-- More Colors 0-52!
-- better rainbow color!
-- improved look!

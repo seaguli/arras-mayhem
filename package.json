@@ -7,7 +7,7 @@
   "keywords": [
     "arras, game, arrasio"
   ],
-    "main": "index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index"
   },

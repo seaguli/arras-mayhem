@@ -16,6 +16,7 @@ The offical client for the arras.io siege remake
 - Deployment to Repl.it or Heroku! Still works with Glitch!
 - Webserver compatibility with 6 different languages!
 - In-game Chat!
+- Gay Jokes!
 
 The client is able to be hosted as either a Node.js Express, PHP, Go HTTP, Ruby Webrick, C or Python Flask webserver. Details below! Examples are linked as well.
 

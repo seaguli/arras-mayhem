@@ -1,4 +1,4 @@
-     //just some code to make the sound work
+//just some code to make the sound work
       var clicksound = new Audio();
       clicksound.src =
         "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
@@ -4669,8 +4669,9 @@
               { id: "4", to: "4 Team", end: "4TDM" }
             ],
             [
-              { id: "d", to: "4DOM" },
+              { id: "d", to: "Domination" },
               { id: "x", to: "Event" },
+              { id: "s", to: "Siege" },
               { id: "m", to: "Mothership", remove: "2" },
               { id: "a", to: "Assault", remove: "2" }
             ]
@@ -4682,28 +4683,39 @@
             visible: 0,
             id: "Glitch",
             type: "beta",
-            code: "glitch-frankfurt-4",
+            code: "glitch-worldwide-s",
             at: p.glitch("arrasiosiege"),
             prefer: !0,
-            featured: 1 // For Featured Status.
+            featured: 0 // For Featured Status.
           },
           {
             visible: 0,
             id: "Heroku",
-            type: "ffa",
-            code: "heroku-frankfurt-f",
+            type: "beta",
+            code: "heroku-worldwide-s",
             at: p.heroku("arrasiege"),
             prefer: !0,
             featured: 0 // For Featured Status.
           },
           {
             visible: 0,
-            id: "Heroku-Event",
-            type: "main",
-            code: "heroku-virginia-x",
-            at: p.heroku("arras-mayhem"),
-             featured: 1, // For Featured Status.
-          }]
+            id: "Glitch",
+            type: "beta",
+            code: "glitch-virginia-4",
+            at: p.heroku("doublediep"),
+            prefer: !0,
+            featured: 0 // For Featured Status.
+          },
+          {
+            visible: 0,
+            id: "Heroku",
+            type: "beta",
+            code: "heroku-worldwide-4",
+            at: p.heroku("doublediep"),
+            prefer: !0,
+            featured: 0 // For Featured Status.
+          },
+            ]
           .map((a, e) => ({ data: a, i: e }))
           .sort((a, e) =>
             a.data.type < e.data.type
